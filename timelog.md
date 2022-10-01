@@ -20,5 +20,7 @@
 - _1 hours_ created and initialized the relevant technologies for npm package setup, set up typescrip and some linting and the structure for testing.
 - _1.5 hours_ added basic Espruino connection methods, built a react testing environment to check these worked, **this has brough up concern that these methods may need to be asynchronous**.
 - _1 hour_ explored azure devops and jira as a way to effectively enforce the agile working method.
+- _0.5 hours_ set up an npm account.
+- _1 hour_ investigated puck.js and how it can be implemented in an easy to use way.
 
 ## Week 2
