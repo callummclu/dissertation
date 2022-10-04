@@ -36,4 +36,4 @@
 
 ### 4 Oct 2022
 
--
+- _1.5 hours_ created a presentation ahead of supervisor meeting.
