@@ -1,11 +1,9 @@
 # Plan
 
-- PROJECT TITLE
-- YOUR NAME
-- STUDENT ID
-- SUPERVISOR NAME
-
-Week-by-week plan for the whole project. Update this as you go along.
+- An asynchronous JavaScript library to control remote embedded devices [JavaScript, Promise, Arduino]
+- Callum McLuskey
+- 2469682M
+- Jonathan Grizou
 
 ## Winter semester
 
@@ -14,6 +12,9 @@ Week-by-week plan for the whole project. Update this as you go along.
   - get project repository set up
   - make a start on splitting the project into its smaller components.
 - **Week 2**
+  - Re-implement uart.js in typescript to be more bespoke to this project, potentially create a new npm package for it.
+  - implement azure devops and ci/cd.
+  - implement device specifc methods such as onPress()
 - **Week 3**
 - **Week 4**
 - **Week 5**
