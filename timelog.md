@@ -23,4 +23,17 @@
 - _0.5 hours_ set up an npm account.
 - _1 hour_ investigated puck.js and how it can be implemented in an easy to use way.
 
+### 2 Oct 2022
+
+- _1 hour_ investigated uart.js
+- _0.5 hour_ looked into reimplementing uart.js with a more custom implemented
+- _2 hour_ implemented the remaining base class functions such as writing to the device evaluating from the device and resetting the device.
+- _1 hour_ looked into puck.js functions and what should be implemented by my own implementation.
+- _1 hour_ implemented an onPress and onLongPress function for the puck device.
+- _1 hour_ fixed the implementation of of all implemented methods to work better with promises removing any guessing previous introduced.
+
 ## Week 2
+
+### 4 Oct 2022
+
+-
