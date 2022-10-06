@@ -37,3 +37,15 @@
 ### 4 Oct 2022
 
 - _1.5 hours_ created a presentation ahead of supervisor meeting.
+
+### 5 Oct 2022
+
+- _1 hour_ Implemented asyncronous connect and disconnect methods with LED incdicators for connection and disconnection
+- _1 hour_ Researched MD5 and why it had previously been used in last years project.
+
+### 6 Oct 2022
+
+- _2 hours_ Re-Implemented UART.js using typescript
+- _0.5 hours_ Created a package repository on github
+- _1.5 hours_ Put both the uart.js reimplementation and the device controller onto npm
+- _1 hour_ investigated ssg(static site generation) technologies to get a start on the documentation.

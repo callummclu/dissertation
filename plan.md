@@ -14,10 +14,16 @@
 - **Week 2**
   - Re-implement uart.js in typescript to be more bespoke to this project, potentially create a new npm package for it.
   - implement azure devops and ci/cd.
-  - implement device specifc methods such as onPress()
+  - investigate a simple way to get input from browser and send it to device/ get input from device and send to browser, should be on base method
 - **Week 3**
+  - implement device specific methods for puck, pixl and bangel.
+  - build documentation site.
+  - create easy way to create new devices, _maybe a cli command_.
 - **Week 4**
+  - investigate npx tooling.
+  - implement npx tool.
 - **Week 5**
+  - start working on interactive online environment.
 - **Week 6**
 - **Week 7**
 - **Week 8**
