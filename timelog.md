@@ -49,3 +49,10 @@
 - _0.5 hours_ Created a package repository on github
 - _1.5 hours_ Put both the uart.js reimplementation and the device controller onto npm
 - _1 hour_ investigated ssg(static site generation) technologies to get a start on the documentation.
+
+### 7 Oct 2022
+
+- _2 hours_ Looked at previous UART implementation to get a better understanding of design choices and see what can be improved, changed how the eval method works to solve eval problem in device-controller.
+- _2 hours_ Investigated why uart eval method was not working.
+- _2 hours_ Implemented extra Puck specific classes.
+- _0.5 hours_ Updated README with up to date documentation on the device controller repository.
