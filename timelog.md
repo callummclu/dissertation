@@ -56,3 +56,7 @@
 - _2 hours_ Investigated why uart eval method was not working.
 - _2 hours_ Implemented extra Puck specific classes.
 - _0.5 hours_ Updated README with up to date documentation on the device controller repository.
+
+### 8 Oct 2022
+
+- _1 hour_ Explored methods of displaying demos (found that enabling npm script to be used as a script tag package would make this a more straight forward task)
