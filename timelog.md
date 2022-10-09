@@ -60,3 +60,14 @@
 ### 8 Oct 2022
 
 - _1 hour_ Explored methods of displaying demos (found that enabling npm script to be used as a script tag package would make this a more straight forward task)
+- _1 hour_ Explored Methods of Creating documentation, looked at Jekyll, Hugo, Docusaurus.
+- _3 hours_ Set up Docusaurus site for documentation.
+
+### 9 Oct 2022
+
+- _1 hour_ Set up Azure Devops Organisation.
+- _2 hours_ investigated Azure dev ops CI/CD.
+- _1 hour_ Set up AWS Server to host Azure Pipeline.
+- _1 hour_ Hosted Azure pipeline in AWS EC2 Server.
+
+## Week 3
