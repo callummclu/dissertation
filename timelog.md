@@ -71,3 +71,19 @@
 - _1 hour_ Hosted Azure pipeline in AWS EC2 Server.
 
 ## Week 3
+
+### 10 Oct 2022
+
+- _2 hours_ Built React Demos site.
+- _1 hour_ Built remaining build pipelines for uart, demos, documentation.
+
+### 11 Oct 2022
+
+- _2 hours_ invsetigated hde keyboard, controls and mouse espruino packages.
+- _2 hours_ ran into issues of puck being stuck in bootloader mode, _still unresolved_
+- _1 hour_ prepared presentation for supervisor
+
+### 12 Oct
+
+- _1 hour_ continued prep for presentation for supervisor
+- _1 hour_ met with supervisor
