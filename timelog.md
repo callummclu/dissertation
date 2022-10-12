@@ -69,6 +69,7 @@
 - _2 hours_ investigated Azure dev ops CI/CD.
 - _1 hour_ Set up AWS Server to host Azure Pipeline.
 - _1 hour_ Hosted Azure pipeline in AWS EC2 Server.
+- _2 hours_ decided the puck methods to be implemented.
 
 ## Week 3
 
