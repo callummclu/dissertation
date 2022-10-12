@@ -19,8 +19,6 @@ Here's an overview of the structure as it stands:
 * `dissertation/` source and for your project dissertation
 * `presentation/` your presentation
 
-* Make sure you add a `.gitignore` or similar for your VCS for the tools you are using!
-* Add any appropriate continuous integration (e.g. Travis CI) in this directory.
 
 * Remove this `readme.md` file from any repository and replace it with something more appropriate!
 
