@@ -32,7 +32,7 @@
 - _1 hour_ implemented an onPress and onLongPress function for the puck device.
 - _1 hour_ fixed the implementation of of all implemented methods to work better with promises removing any guessing previous introduced.
 
-## Week 2 <!-- 27 hours-->
+## Week 2 <!-- 27 hours -->
 
 ### 4 Oct 2022 <!-- 1.5 hours-->
 
@@ -71,7 +71,7 @@
 - _1 hour_ Hosted Azure pipeline in AWS EC2 Server.
 - _2 hours_ decided the puck methods to be implemented.
 
-## Week 3 <!-- 25.5 hours **SOFAR** -->
+## Week 3 <!-- 32 hours -->
 
 ### 10 Oct 2022 <!-- 3 hours-->
 
@@ -104,6 +104,14 @@
 - _5 hours_ Implemented a method to grab code from the device and convert it to an array of objects containing function names and parameters, allowing for functions on device to be called from the web without using string versions of code.
 - _2 hours_ Investigated issues with pipeline publishing npm package from dev branch and production branch instead of just dev branch **no solution as of yet**.
 
-### 16 Oct
+### 16 Oct <!-- 7.5 hours -->
 
-## Week 4
+- _1 hour_ developed a style for new connection modal using figma.
+- _1 hour_ investigated methods of integrating css into javascript.
+- _3 hours_ implemented `jss` library into package and set new styling as default for package.
+- _2 hours_ implemented close modal button.
+- _0.5 hours_ investigated why device controller does not maintain the ability to close modal, **still unresolved**
+
+## Week 4 <!-- xx hours -->
+
+### 17 Oct <!-- x hours -->
