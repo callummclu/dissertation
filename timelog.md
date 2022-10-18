@@ -114,4 +114,13 @@
 
 ## Week 4 <!-- xx hours -->
 
-### 17 Oct <!-- x hours -->
+### 17 Oct <!-- 4 hours -->
+
+- _4 hours_ attempting to debug issue with closing modal **unresolved**
+
+### 18 Oct <!-- 8 hours -->
+
+- _4 hours_ resolved issue regarding closing modal, in turn allowed for evals to return either success or failure response giving more control to the user.
+- _2 hours_ investigated using an external style sheet with the new uart implementation, investigated forcing class names with jss.
+- _1 hour_ developed idea for showing styling guide in documentation, with idea of having multiple design choices.
+- _1 hour_ created presentation ahead of meeting with supervisor
