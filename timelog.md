@@ -124,3 +124,8 @@
 - _2 hours_ investigated using an external style sheet with the new uart implementation, investigated forcing class names with jss.
 - _1 hour_ developed idea for showing styling guide in documentation, with idea of having multiple design choices.
 - _1 hour_ created presentation ahead of meeting with supervisor
+
+### 19 Oct <!-- 3 hours -->
+
+- _2 hour_ Investigated car device documentation to gather how it could be used with espruino.
+- _1 hour_ Implemented and played about with a car class to allow for forward, right and left movement of the car.
