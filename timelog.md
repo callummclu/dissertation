@@ -112,7 +112,7 @@
 - _2 hours_ implemented close modal button.
 - _0.5 hours_ investigated why device controller does not maintain the ability to close modal, **still unresolved**
 
-## Week 4 <!-- xx hours -->
+## Week 4 <!-- 32.5 hours -->
 
 ### 17 Oct <!-- 4 hours -->
 
@@ -127,5 +127,38 @@
 
 ### 19 Oct <!-- 3 hours -->
 
-- _2 hour_ Investigated car device documentation to gather how it could be used with espruino.
+- _2 hours_ Investigated car device documentation to gather how it could be used with espruino.
 - _1 hour_ Implemented and played about with a car class to allow for forward, right and left movement of the car.
+
+### 21 Oct <!-- 9 hours -->
+
+- _2 hours_ implemented remaining puck methods.
+- _1 hour_ investigated implementing an npx tool.
+- _2 hours_ implemented the basis for an npx tool.
+- _2 hours_ implemented a standard javascript template to work from for other templates.
+- _2 hours_ implemented typescript, react and vue templates.
+
+### 22 Oct <!-- 8.5 hours -->
+
+- _2 hours_ made further changes to how the NPX tool works by giving a splash screen as an indication the package is successfully running
+- _3 hours_ designed and implemented a standard screen for when the npx tool is run and started as a default.
+- _1.5 hours_ investigated methods of cloning directories in github instead of whole repos
+- _2 hours_ investigated git submodules and how they could be used to link the templates to a main create-espruino-app repo.
+
+## Week 5 <!-- xx hours -->
+
+### 24 Oct <!-- 6 hours -->
+
+- _2 hours_ Investigated transpilers and how they work
+- _3 hours_ played around with implementing lexers and parsers
+- _1 hour_ came to conclusion that this should be implemented at the end of the project and instead a mini parser should be used to
+
+### 25 Oct <!-- 7.5 hours -->
+
+- _2 hours_ implemented git submodules by creating individual repos for each template, allowing for repo updates without need to republish the package.
+- _1 hour_ investigated best method of running typescript in a local server.
+- _2 hours_ translated javascript template to typescript, react and vue.
+- _1 hour_ linked up submodules and fixed switch case in npx tool to support these new templates.
+- _1.5 hours_ created a presentation ahead of supervisor meeting.
+
+### 26 Oct <!-- xx hours -->
