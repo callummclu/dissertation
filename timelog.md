@@ -5,7 +5,7 @@
 - 2469682M
 - Jonathan Grizou
 
-## Week 1 <!-- 16.5 hours -->
+## Week 2 <!-- 16.5 hours -->
 
 ### 30 Sep 2022 <!-- 3.5 hours -->
 
@@ -32,7 +32,7 @@
 - _1 hour_ implemented an onPress and onLongPress function for the puck device.
 - _1 hour_ fixed the implementation of of all implemented methods to work better with promises removing any guessing previous introduced.
 
-## Week 2 <!-- 27 hours -->
+## Week 3 <!-- 27 hours -->
 
 ### 4 Oct 2022 <!-- 1.5 hours-->
 
@@ -71,7 +71,7 @@
 - _1 hour_ Hosted Azure pipeline in AWS EC2 Server.
 - _2 hours_ decided the puck methods to be implemented.
 
-## Week 3 <!-- 32 hours -->
+## Week 4 <!-- 32 hours -->
 
 ### 10 Oct 2022 <!-- 3 hours-->
 
@@ -112,7 +112,7 @@
 - _2 hours_ implemented close modal button.
 - _0.5 hours_ investigated why device controller does not maintain the ability to close modal, **still unresolved**
 
-## Week 4 <!-- 32.5 hours -->
+## Week 5 <!-- 32.5 hours -->
 
 ### 17 Oct <!-- 4 hours -->
 
@@ -145,7 +145,7 @@
 - _1.5 hours_ investigated methods of cloning directories in github instead of whole repos
 - _2 hours_ investigated git submodules and how they could be used to link the templates to a main create-espruino-app repo.
 
-## Week 5 <!-- xx hours -->
+## Week 6 <!-- xx hours -->
 
 ### 24 Oct <!-- 6 hours -->
 
@@ -153,12 +153,14 @@
 - _3 hours_ played around with implementing lexers and parsers
 - _1 hour_ came to conclusion that this should be implemented at the end of the project and instead a mini parser should be used to
 
-### 25 Oct <!-- 7.5 hours -->
+### 25 Oct <!-- 9 hours -->
 
 - _2 hours_ implemented git submodules by creating individual repos for each template, allowing for repo updates without need to republish the package.
 - _1 hour_ investigated best method of running typescript in a local server.
 - _2 hours_ translated javascript template to typescript, react and vue.
 - _1 hour_ linked up submodules and fixed switch case in npx tool to support these new templates.
 - _1.5 hours_ created a presentation ahead of supervisor meeting.
+- _1 hour_ investigated mdx
+- _0.5 hours_ started an idea for npx documentation to ease starting progress
 
 ### 26 Oct <!-- xx hours -->
