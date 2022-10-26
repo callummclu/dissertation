@@ -164,3 +164,8 @@
 - _0.5 hours_ started an idea for npx documentation to ease starting progress
 
 ### 26 Oct <!-- xx hours -->
+
+- _2 hour_ investigated and implemented regex for mini parser
+- _1.5 hours_ investigated using husky for package versioning.
+- _0.5 hours_ added more information to presentation.
+- _0.5 hours_ investigated how I can translate code from deviceController code into native espruino code using javascript objects and `.replace()`
