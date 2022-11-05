@@ -145,7 +145,7 @@
 - _1.5 hours_ investigated methods of cloning directories in github instead of whole repos
 - _2 hours_ investigated git submodules and how they could be used to link the templates to a main create-espruino-app repo.
 
-## Week 6 <!-- xx hours -->
+## Week 6 <!-- 40 hours -->
 
 ### 24 Oct <!-- 6 hours -->
 
@@ -163,9 +163,61 @@
 - _1 hour_ investigated mdx
 - _0.5 hours_ started an idea for npx documentation to ease starting progress
 
-### 26 Oct <!-- xx hours -->
+### 26 Oct <!-- 11 hours -->
 
 - _2 hour_ investigated and implemented regex for mini parser
 - _1.5 hours_ investigated using husky for package versioning.
 - _0.5 hours_ added more information to presentation.
 - _0.5 hours_ investigated how I can translate code from deviceController code into native espruino code using javascript objects and `.replace()`
+- _2 hours_ implemented basic mini parser, _this can be improved on_
+- _1 hour_ resolved NPX Tool issues regarding vue and typescript.
+- _2 hours_ updated documentation fixing any issues left from before.
+- _1 hour_ added mini explanation/example of creating a custom device.
+
+### 27 Oct <!-- 4 hours -->
+
+- _2 hours_ Investigated PeerJS
+- _2 hours_ Started playing with peerJS and planning the direction of adding it to the package.
+
+### 28 Oct <!-- 4 hours -->
+
+- _2 hours_ Further investigation of peerjs.
+- _2 hours_ Planned and cleaned up device controller by fixing upload method and removing any test logging.
+
+### 29 Oct <!-- 6 hours -->
+
+- _3 hours_ updated documentation.
+- _2 hours_ investigated and added promises to NPX tool to allow for proper console output.
+  \_ _1 hour_ changed NPX Tool to produce output from package installation.
+
+## Week 7 <!-- XX hours -->
+
+### 31 Oct <!-- 1 hour -->
+
+- _1 hour_ Explored CLI Spinner for NPX Tools
+
+### 1 Nov <!-- 7 hours -->
+
+- _2 hours_ added `--clean-install` tag to NPX Tool
+- _2 hours_ created and added robot custom device example to Documentation.
+- _3 hours_ designed and implemented modal for peerjs
+
+### 2 Nov <!-- 6 hours-->
+
+- _3 hours_ finally got an example of peerjs working
+- _1 hour_ created presentation for supervisor meeting
+- _1 hour_ met with supervisor
+- _1 hour_ investigated how to use https on localhost with webpack
+
+### 3 Nov <!-- 8 hours -->
+
+- _1 hour_ moved peerjs to its own package
+- _1 hour_ removed peer from devicecontroller
+- _1 hour_ depreciated devicecontroller and created new package core.
+- _2 hours_ fixed issues arisen from this change of package name.
+- _3 hours_ added `--peer` tag to npx tool and updated repos to support this.
+
+### 4 Nov <!-- X hours -->
+
+- _1 hour_ fixed AWS issues for pipeline
+- _2 hours_ added pipeline for new peer package and resolved issues with new core package.
