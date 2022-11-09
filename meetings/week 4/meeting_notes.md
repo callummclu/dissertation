@@ -7,4 +7,7 @@
 
 ## To do
 
-- 
+- resolve the devices issues
+- continue the reimplementation for device methods, with more concern for custom devices.
+- Create demos for work so far.
+- investigate documentation search.

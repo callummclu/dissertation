@@ -190,7 +190,7 @@
 - _2 hours_ investigated and added promises to NPX tool to allow for proper console output.
   \_ _1 hour_ changed NPX Tool to produce output from package installation.
 
-## Week 7 <!-- XX hours -->
+## Week 7 <!-- 34 hours -->
 
 ### 31 Oct <!-- 1 hour -->
 
@@ -217,7 +217,29 @@
 - _2 hours_ fixed issues arisen from this change of package name.
 - _3 hours_ added `--peer` tag to npx tool and updated repos to support this.
 
-### 4 Nov <!-- X hours -->
+### 4 Nov <!-- 3 hours -->
 
 - _1 hour_ fixed AWS issues for pipeline
 - _2 hours_ added pipeline for new peer package and resolved issues with new core package.
+
+### 5 Nov <!-- 6 hours -->
+
+- _3 hours_ resolved peer package issue with sending both video and data at the same time
+- _1 hours_ researched and implemented using https with react and vue
+- _2 hours_ updated cea repos with new working package
+
+### 6 Nov <!-- 3 hours-->
+
+- _3 hours_ populated documentation with everything done so far.
+
+## Week 8 <!-- XX hours -->
+
+### 7 Nox <!-- 2 hours -->
+
+- _1 hour_ fixed incorrect references and links in the device controller (now core) section.
+- _1 hour_ investigated angolia search with docusaurus.
+
+### 9 Nov <!-- XX hours -->
+
+- _1 hour_ created power point ahead of supervisor meeting.
+- _1 hour_ tested peerjs implementation ahead of supervisor meeting.
