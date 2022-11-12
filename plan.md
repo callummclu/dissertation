@@ -56,9 +56,11 @@
 - **Week 11 [PROJECT WEEK]**
   - dissertation writing.
   - investigate transpiler as its own package, potentially start an implementation of this.
+  - begin implementing tests, include this in the pipeline.
 - **Week 12 [PROJECT WEEK]** Status report submitted.
   - further writing on dissertation
   - more transpiler research. _assuming progress has been made update documentation_
+  - further implement tests, include this in the pipeline.
 
 ## Winter break
 

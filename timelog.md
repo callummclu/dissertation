@@ -248,8 +248,13 @@
 
 - _2 hours_ mad an attempt to clean up peer on js and ts templates for the npx tool, this did not get saved so will need to be redone in the future.
 
-### 11 Nov
+### 11 Nov <!-- 1 hour -->
 
 - _1 hour_ Made a post on the espruino form to try and get some recognition from the community for what has been done so far.
 
-### 12 Nov
+### 12 Nov <!-- 6 hours -->
+
+- _5 hours_ began making a start to writing the dissertation by making notes for each section in dynalist.
+- _1 hour_ investigated using codesandbox for documentation.
+
+### 13 Nov <!-- X hours -->
