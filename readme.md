@@ -16,7 +16,7 @@ Here's an overview of the structure as it stands:
 [x] `src/` source code for your project
 [] `status_report/` the status report submitted in December
 [x] `meetings/` Records of the meetings you have during the project.
-[] `dissertation/` source and for your project dissertation
+[x] `dissertation/` source and for your project dissertation
 [] `presentation/` your presentation
 
 
