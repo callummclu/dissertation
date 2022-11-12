@@ -239,7 +239,17 @@
 - _1 hour_ fixed incorrect references and links in the device controller (now core) section.
 - _1 hour_ investigated angolia search with docusaurus.
 
-### 9 Nov <!-- XX hours -->
+### 9 Nov <!-- 2 hours -->
 
 - _1 hour_ created power point ahead of supervisor meeting.
 - _1 hour_ tested peerjs implementation ahead of supervisor meeting.
+
+### 10 Nov <!-- 2 hours -->
+
+- _2 hours_ mad an attempt to clean up peer on js and ts templates for the npx tool, this did not get saved so will need to be redone in the future.
+
+### 11 Nov
+
+- _1 hour_ Made a post on the espruino form to try and get some recognition from the community for what has been done so far.
+
+### 12 Nov
