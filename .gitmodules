@@ -1,0 +1,21 @@
+[submodule "src/core"]
+	path = src/core
+	url = https://github.com/espruino-tools/core
+[submodule "src/peer"]
+	path = src/peer
+	url = https://github.com/espruino-tools/peer
+[submodule "src/uart"]
+	path = src/uart
+	url = https://github.com/espruino-tools/uart
+[submodule "src/create-espruino-app"]
+	path = src/create-espruino-app
+	url = https://github.com/espruino-tools/create-espruino-app
+[submodule "src/documentation"]
+	path = src/documentation
+	url = https://github.com/espruino-tools/documentation
+[submodule "src/demos"]
+	path = src/demos
+	url = https://github.com/espruino-tools/demos
+[submodule "src/online-environment"]
+	path = src/online-environment
+	url = https://github.com/espruino-tools/online-environment
