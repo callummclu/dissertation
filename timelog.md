@@ -266,4 +266,10 @@
 - _1 hour_ fixed npx tool importing of peer package to install on load instead of through static version.
 - _2 hours_ cleared any issues in all cea repos and branches, fixed imports, webpack, added .env file to js and ts repos for package name
 
-## Week 9
+## Week 9 <!-- XX hours -->
+
+### 14 Nov <!-- XX hours -->
+
+- _1 hour_ investigated unpkg
+- _3 hours_ added minified versions of core, uart and peer for usage with unpkg.
+- _0.5 hours_ added this new way of importing to the documentation.
