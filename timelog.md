@@ -232,7 +232,7 @@
 
 - _3 hours_ populated documentation with everything done so far.
 
-## Week 8 <!-- XX hours -->
+## Week 8 <!-- 22 hours -->
 
 ### 7 Nox <!-- 2 hours -->
 
@@ -248,13 +248,22 @@
 
 - _2 hours_ mad an attempt to clean up peer on js and ts templates for the npx tool, this did not get saved so will need to be redone in the future.
 
-### 11 Nov <!-- 1 hour -->
+### 11 Nov <!-- 3 hour -->
 
 - _1 hour_ Made a post on the espruino form to try and get some recognition from the community for what has been done so far.
+- _2 hours_ researched status report and dissertation layout.
 
 ### 12 Nov <!-- 6 hours -->
 
 - _5 hours_ began making a start to writing the dissertation by making notes for each section in dynalist.
 - _1 hour_ investigated using codesandbox for documentation.
 
-### 13 Nov <!-- X hours -->
+### 13 Nov <!-- 7 hours -->
+
+- _1 hour_ investigated using a single webpack file to be used for both build and web server
+- _1 hour_ fixed connection domain issue in peer package, added a link to bottom of modal.
+- _2 hours_ revamped js and ts repos with new peer directory layout.
+- _1 hour_ fixed npx tool importing of peer package to install on load instead of through static version.
+- _2 hours_ cleared any issues in all cea repos and branches, fixed imports, webpack, added .env file to js and ts repos for package name
+
+## Week 9
