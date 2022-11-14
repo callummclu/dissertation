@@ -1,4 +1,4 @@
-# Week 7 Meeting notes
+# Week 8 Meeting notes
 
 ## Discussion
 
