@@ -268,8 +268,9 @@
 
 ## Week 9 <!-- XX hours -->
 
-### 14 Nov <!-- XX hours -->
+### 14 Nov <!-- 6.5 hours -->
 
 - _1 hour_ investigated unpkg
 - _3 hours_ added minified versions of core, uart and peer for usage with unpkg.
 - _0.5 hours_ added this new way of importing to the documentation.
+- _2 hours_ cleaned up README pages and added badges to show build statuses.
