@@ -275,3 +275,18 @@
 - _0.5 hours_ added this new way of importing to the documentation.
 - _2 hours_ cleaned up README pages and added badges to show build statuses.
 - _1 hour_ created supervisor meeting powerpoint
+
+### 15 Nov <!-- 4 hours -->
+
+- _1 hour_ supervisor meeting
+- _3 hours_ explored google package for hand tracking.
+
+### 17 Nov <!-- 2 hours -->
+
+- _2 hours_ further investigated dissertation write up, added notes from findings.
+
+### 19 Nov <!-- 4 hours -->
+
+- _1 hour_ fixed minor errors in documentation
+- _2 hours_ added file structure for all repos into documentation
+- _1 hour_ updated all README.md files for relevant packages.
