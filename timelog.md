@@ -266,7 +266,7 @@
 - _1 hour_ fixed npx tool importing of peer package to install on load instead of through static version.
 - _2 hours_ cleared any issues in all cea repos and branches, fixed imports, webpack, added .env file to js and ts repos for package name
 
-## Week 9 <!-- XX hours -->
+## Week 9 <!-- 21.5 hours -->
 
 ### 14 Nov <!-- 6.5 hours -->
 
@@ -290,3 +290,18 @@
 - _1 hour_ fixed minor errors in documentation
 - _2 hours_ added file structure for all repos into documentation
 - _1 hour_ updated all README.md files for relevant packages.
+
+### 20 Nov <!-- 5 hours -->
+
+- _1 hour_ investigated getting data from media stream for peer package
+- _3 hour_ started developing robot demo (incomplete)
+- _1 hour_ investigated google tracking package further.
+
+## Week 10 <!-- XX hours -->
+
+### 21 Nov <!-- 5 hours -->
+
+- _1 hour_ created meeting presentation for wednesday.
+- _2 hours_ started adding information to latex demo.
+- _1 hour_ investigated making a latex pipeline on azure.
+- _1 hour_ more dissertation notes added.
