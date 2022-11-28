@@ -305,3 +305,18 @@
 - _2 hours_ started adding information to latex demo.
 - _1 hour_ investigated making a latex pipeline on azure.
 - _1 hour_ more dissertation notes added.
+
+### 22 Nov <!-- 4 hours -->
+
+- _2 hours_ created piano demo
+- _1 hour_ updated peer package with video data option
+- _1 hour_ more dissertation notes added
+
+### 23 Nov <!-- 2 hours -->
+
+- _1 hour_ met with supervisor.
+- _1 hour_ investigated rewriting abstract.
+
+### 28 Nov <!-- 2 hours -->
+
+- _2 hours_ designed new demo site.
