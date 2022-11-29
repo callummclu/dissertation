@@ -320,3 +320,7 @@
 ### 28 Nov <!-- 2 hours -->
 
 - _2 hours_ designed new demo site.
+
+### 29 Nov <!-- 0.5 hours -->
+
+- _0.5 hours_ create presentation ahead of supervisor meeting
