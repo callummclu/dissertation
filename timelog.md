@@ -324,3 +324,7 @@
 ### 29 Nov <!-- 0.5 hours -->
 
 - _0.5 hours_ create presentation ahead of supervisor meeting
+
+### 3 Dec <!-- 4 hours -->
+
+- _4 hours_ implemented most of new demo site, will be continued tomorrow
