@@ -328,3 +328,7 @@
 ### 3 Dec <!-- 4 hours -->
 
 - _4 hours_ implemented most of new demo site, will be continued tomorrow
+
+### 4 Dec <!-- 4.5 hours -->
+
+- _4.5 hours_ further added content to the demos page.
