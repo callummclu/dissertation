@@ -297,7 +297,7 @@
 - _3 hour_ started developing robot demo (incomplete)
 - _1 hour_ investigated google tracking package further.
 
-## Week 10 <!-- XX hours -->
+## Week 10 <!-- 11 hours -->
 
 ### 21 Nov <!-- 5 hours -->
 
@@ -316,6 +316,8 @@
 
 - _1 hour_ met with supervisor.
 - _1 hour_ investigated rewriting abstract.
+
+## Week 11 <!-- 11 hours -->
 
 ### 28 Nov <!-- 2 hours -->
 
