@@ -334,3 +334,14 @@
 ### 4 Dec <!-- 4.5 hours -->
 
 - _4.5 hours_ further added content to the demos page.
+
+## Week 12 <!-- XX hours -->
+
+### 6 Dec <!-- 4 hours -->
+
+- _2 hours_ investigated JEST
+- _2 hours_ devised plan for utilising JEST with NPX and NPM
+
+### 7 Dec <!-- XX hours-->
+
+- _2 hours_ began implementing JEST to test the UART package
