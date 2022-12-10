@@ -342,6 +342,24 @@
 - _2 hours_ investigated JEST
 - _2 hours_ devised plan for utilising JEST with NPX and NPM
 
-### 7 Dec <!-- XX hours-->
+### 7 Dec <!-- 4 hours-->
 
 - _2 hours_ began implementing JEST to test the UART package
+- _2 hours_ removed peer error in cea-js and cea-ts
+
+### 8 Dec <!-- 9 hours -->
+
+- _6 hours_ fully implemented tests for uart package.
+- _1 hour_ added tests to pipeline.
+- _2 hours_ began refactoring uart.
+
+### 9 Dec <!-- 10 hours -->
+
+- _1 hour_ continued uart refactor.
+- _3 hours_ fully implemented tests for core package.
+- _5 hours_ fully implemented tests for npx package.
+- _1 hour_ added tests for both to pipeline.
+
+### 10 Dec <!-- XX hours -->
+
+- _1 hour_ added piano demo to demos site.
