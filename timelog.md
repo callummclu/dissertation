@@ -335,7 +335,7 @@
 
 - _4.5 hours_ further added content to the demos page.
 
-## Week 12 <!-- XX hours -->
+## Week 12 <!-- 28 hours -->
 
 ### 6 Dec <!-- 4 hours -->
 
@@ -360,6 +360,20 @@
 - _5 hours_ fully implemented tests for npx package.
 - _1 hour_ added tests for both to pipeline.
 
-### 10 Dec <!-- XX hours -->
+### 10 Dec <!-- 1 hours -->
 
 - _1 hour_ added piano demo to demos site.
+
+## Week 13 <!-- XX hours -->
+
+### 12 Dec <!-- 1.5 hour -->
+
+- _1.5 hours_ began writing notes for status report
+
+### 13 Dec <!-- X hours-->
+
+- _4 hours_ added husky to all package repositories, including empty transpiler repo
+- _1 hour_ improved status report notes.
+- _1 hour_ made presentation for supervisor meeting.
+- _2 hours_ converted status report notes into status report.
+- _1 hour_ began re-writing abstract.
