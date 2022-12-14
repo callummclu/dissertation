@@ -19,3 +19,6 @@
 [submodule "src/online-environment"]
 	path = src/online-environment
 	url = https://github.com/espruino-tools/online-environment
+[submodule "src/transpiler"]
+	path = src/transpiler
+	url = https://github.com/espruino-tools/transpiler
