@@ -5,7 +5,7 @@
 - 2469682M
 - Jonathan Grizou
 
-## Week 2 <!-- 16.5 hours -->
+## Week 2 <!-- thisWeek: 16.5hr, total:16.5hr -->
 
 ### 30 Sep 2022 <!-- 3.5 hours -->
 
@@ -32,7 +32,7 @@
 - _1 hour_ implemented an onPress and onLongPress function for the puck device.
 - _1 hour_ fixed the implementation of of all implemented methods to work better with promises removing any guessing previous introduced.
 
-## Week 3 <!-- 27 hours -->
+## Week 3 <!-- thisWeek: 27hr, total: 43.5hr -->
 
 ### 4 Oct 2022 <!-- 1.5 hours-->
 
@@ -71,7 +71,7 @@
 - _1 hour_ Hosted Azure pipeline in AWS EC2 Server.
 - _2 hours_ decided the puck methods to be implemented.
 
-## Week 4 <!-- 32 hours -->
+## Week 4 <!-- thisWeek: 32hr, total: 75.5hr -->
 
 ### 10 Oct 2022 <!-- 3 hours-->
 
@@ -112,7 +112,7 @@
 - _2 hours_ implemented close modal button.
 - _0.5 hours_ investigated why device controller does not maintain the ability to close modal, **still unresolved**
 
-## Week 5 <!-- 32.5 hours -->
+## Week 5 <!-- thisWeek: 32.5hr, total: 108hr -->
 
 ### 17 Oct <!-- 4 hours -->
 
@@ -145,7 +145,7 @@
 - _1.5 hours_ investigated methods of cloning directories in github instead of whole repos
 - _2 hours_ investigated git submodules and how they could be used to link the templates to a main create-espruino-app repo.
 
-## Week 6 <!-- 40 hours -->
+## Week 6 <!-- thisWeek: 40hr, total: 148hr -->
 
 ### 24 Oct <!-- 6 hours -->
 
@@ -190,7 +190,7 @@
 - _2 hours_ investigated and added promises to NPX tool to allow for proper console output.
   \_ _1 hour_ changed NPX Tool to produce output from package installation.
 
-## Week 7 <!-- 34 hours -->
+## Week 7 <!-- thisWeek: 34hr, total: 182hr -->
 
 ### 31 Oct <!-- 1 hour -->
 
@@ -232,7 +232,7 @@
 
 - _3 hours_ populated documentation with everything done so far.
 
-## Week 8 <!-- 22 hours -->
+## Week 8 <!-- thisWeek: 22hr, total: 204hr -->
 
 ### 7 Nox <!-- 2 hours -->
 
@@ -266,7 +266,7 @@
 - _1 hour_ fixed npx tool importing of peer package to install on load instead of through static version.
 - _2 hours_ cleared any issues in all cea repos and branches, fixed imports, webpack, added .env file to js and ts repos for package name
 
-## Week 9 <!-- 21.5 hours -->
+## Week 9 <!-- thisWeek: 21.5hr, total: 225.5hr -->
 
 ### 14 Nov <!-- 6.5 hours -->
 
@@ -297,7 +297,7 @@
 - _3 hour_ started developing robot demo (incomplete)
 - _1 hour_ investigated google tracking package further.
 
-## Week 10 <!-- 11 hours -->
+## Week 10 <!-- thisWeek: 11hr, total: 236.5hr  -->
 
 ### 21 Nov <!-- 5 hours -->
 
@@ -317,7 +317,7 @@
 - _1 hour_ met with supervisor.
 - _1 hour_ investigated rewriting abstract.
 
-## Week 11 <!-- 11 hours -->
+## Week 11 <!-- thisWeek: 11hr, total: 247.5hr -->
 
 ### 28 Nov <!-- 2 hours -->
 
@@ -335,7 +335,7 @@
 
 - _4.5 hours_ further added content to the demos page.
 
-## Week 12 <!-- 28 hours -->
+## Week 12 <!-- thisWeek: 28hr, total: 275.5hr -->
 
 ### 6 Dec <!-- 4 hours -->
 
@@ -364,16 +364,24 @@
 
 - _1 hour_ added piano demo to demos site.
 
-## Week 13 <!-- XX hours -->
+## Week 13 <!-- thisWeek:XXhr, total: XXhr -->
 
 ### 12 Dec <!-- 1.5 hour -->
 
 - _1.5 hours_ began writing notes for status report
 
-### 13 Dec <!-- X hours-->
+### 13 Dec <!-- 9 hours-->
 
 - _4 hours_ added husky to all package repositories, including empty transpiler repo
 - _1 hour_ improved status report notes.
 - _1 hour_ made presentation for supervisor meeting.
 - _2 hours_ converted status report notes into status report.
 - _1 hour_ began re-writing abstract.
+
+<!-- AS OF TODAY XXX hours -->
+
+### 14 Dec <!-- 5 hours -->
+
+- _2 hours_ Initial revamp of UART completed
+- _2 hours_ re-writing abstract.
+- _1 hour_ met with supervisor.
