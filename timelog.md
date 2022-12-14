@@ -364,7 +364,7 @@
 
 - _1 hour_ added piano demo to demos site.
 
-## Week 13 <!-- thisWeek:XXhr, total: XXhr -->
+## Week 13 <!-- thisWeek:19hr, total: 294.5hr -->
 
 ### 12 Dec <!-- 1.5 hour -->
 
@@ -378,10 +378,11 @@
 - _2 hours_ converted status report notes into status report.
 - _1 hour_ began re-writing abstract.
 
-<!-- AS OF TODAY XXX hours -->
-
-### 14 Dec <!-- 5 hours -->
+### 14 Dec <!-- 8.5 hours -->
 
 - _2 hours_ Initial revamp of UART completed
 - _2 hours_ re-writing abstract.
 - _1 hour_ met with supervisor.
+- _1 hour_ made changes to status report to ensure it reads as intended.
+- _0.5 hour_ fixed core package test issue.
+- _2 hours_ fixed uart pipeline and added pipelines for transpiler and online IDE to save time next semester.
