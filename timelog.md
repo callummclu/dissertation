@@ -405,3 +405,13 @@
 - _2 hours_ Investigated `EScodegen` a package which could convert AST's to code.
 - _3 hours_ began implementation of the transpiler using esprima and escodegen in a TDD manner
 - _3 hours_ Ran into issues with passing functions as parameters, eventually fixed this but it took longer than expected.
+
+## 14 Jan `<!-- 5.5 hours -->`
+
+- _4 hours_ spent today adding functionality for specific declarations and expressions within the transpiler
+- _0.5 hours_ added proper README.md to transpiler package
+- _1 hour_ Identified remaining declarations and expressions to be covered in the transpiler
+
+## 15 Jan `<!-- X hours -->`
+
+- _X hours_ _..._
