@@ -387,7 +387,7 @@
 - _0.5 hour_ fixed core package test issue.
 - _2 hours_ fixed uart pipeline and added pipelines for transpiler and online IDE to save time next semester.
 
-## Week 14 `<!-- thisWeek:XXhr, total: 294.5hr -->`
+## Week 14 `<!-- thisWeek:35.5hr, total: 330hr -->`
 
 ## 11 Jan 2023 `<!-- 9 hours -->`
 
@@ -412,7 +412,10 @@
 - _0.5 hours_ added proper README.md to transpiler package
 - _1 hour_ Identified remaining declarations and expressions to be covered in the transpiler
 
-## 15 Jan 2023 `<!-- X hours -->`
+## 15 Jan 2023 `<!-- 8 hours -->`
 
 - _2 hours_ converted demo site to use `espruino-demo.config.json` instead of `README.md`.
 - _1 hours_ added thumbnails to demo page list as well as fixed the positioning of the demos.
+- _5 hours_ Began work on the online IDE
+  - set up react project
+  - began an initial design, with code editor and terminal.
