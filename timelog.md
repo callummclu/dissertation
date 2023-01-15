@@ -414,4 +414,5 @@
 
 ## 15 Jan 2023 `<!-- X hours -->`
 
-- _X hours_ _..._
+- _2 hours_ converted demo site to use `espruino-demo.config.json` instead of `README.md`.
+- _1 hours_ added thumbnails to demo page list as well as fixed the positioning of the demos.
