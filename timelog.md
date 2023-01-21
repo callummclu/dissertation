@@ -429,4 +429,17 @@
 - _0.5 hour_ met with supervisor.
 - _4 hours_ resolved obvious transpiler missing details.
 
-### 19 Jan 2023 `<!-- X hours -->`
+### 19 Jan 2023 `<!-- 5 hours -->`
+
+- _4 hours_ added all of ast types to transpiler finialising implementation.
+- _1 hour_ began noting down all tests to be done.
+
+### 20 Jan 2023 `<!-- 5 hours -->`
+
+- _1 hours_ finalised notes for tests.
+- _4 hours_ added all tests, fixing functionality along the way.
+
+### 21 Jan 2023 `<!-- 4.5 hours -->`
+
+- _0.5 hours_ minor transpiler changes to allow code to be run without errors crashing.
+- _4 hours_ online IDE work, adding basic functionality to the site.
