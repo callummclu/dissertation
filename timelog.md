@@ -443,3 +443,8 @@
 
 - _0.5 hours_ minor transpiler changes to allow code to be run without errors crashing.
 - _4 hours_ online IDE work, adding basic functionality to the site.
+
+### 22 Jan 2023 `<!-- XX hours -->`
+
+- _0.5 hours_ removed unused dependencies from packages.
+- _1 hour_ added transpiler package to core package replacing miniParser
