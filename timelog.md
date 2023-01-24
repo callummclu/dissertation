@@ -420,7 +420,7 @@
   - set up react project
   - began an initial design, with code editor and terminal.
 
-## Week 15 `<!-- thisWeek:XXhr, total: XXXhr-->`
+## Week 15 `<!-- thisWeek:22hr, total: 352hr-->`
 
 ### 18 Jan 2023 `<!-- 6 hours -->`
 
@@ -444,7 +444,21 @@
 - _0.5 hours_ minor transpiler changes to allow code to be run without errors crashing.
 - _4 hours_ online IDE work, adding basic functionality to the site.
 
-### 22 Jan 2023 `<!-- XX hours -->`
+### 22 Jan 2023 `<!-- 1.5 hours -->`
 
 - _0.5 hours_ removed unused dependencies from packages.
 - _1 hour_ added transpiler package to core package replacing miniParser
+
+## Week 16 `<!-- thisWeek:XXhr, total: XXXhr-->`
+
+### 23 Jan 2023 `<!-- 3 hours -->`
+
+- _2 hours_ investigated lewis's issues
+- _1 hour_ explained to lewis what I thought was causing the issues or how he could resolve them.
+
+### 24 Jan 2023 `<!-- XX hours-->`
+
+- _1 hour_ redesigned IDE.
+- _1 hour_ researched new code editor.
+- _0.5 hour_ remimplemented code editor with new monaco.
+- _2 hours_ added get device functions button.
