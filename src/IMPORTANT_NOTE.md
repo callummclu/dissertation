@@ -5,14 +5,14 @@ Before submitting turn these repos into code, including:
 
 clone
 
-- [x] core
+- [ ] core
 - [ ] cea
 - [ ] demos
-- [x] documentation
+- [ ] documentation
 - [ ] online-environment
 - [ ] peer
-- [x] transpiler
-- [x] uart
+- [ ] transpiler
+- [ ] uart
 - [ ] cea-javascript
   - [ ] normal, clean-install, peer
 - [ ] cea-typescript
