@@ -456,9 +456,18 @@
 - _2 hours_ investigated lewis's issues
 - _1 hour_ explained to lewis what I thought was causing the issues or how he could resolve them.
 
-### 24 Jan 2023 `<!-- XX hours-->`
+### 24 Jan 2023 `<!-- 5.5 hours-->`
 
 - _1 hour_ redesigned IDE.
 - _1 hour_ researched new code editor.
 - _0.5 hour_ remimplemented code editor with new monaco.
 - _2 hours_ added get device functions button.
+- _1 hour_ added documentation for transpiler and online IDE.
+
+### 28 Jan 2023 `<!-- XX hours -->`
+
+- _2 hours_ investigated PWAs (progressive web apps)
+- _2 hours_ added tabs to code editor.
+- _2 hours_ fixed UART slow transfer rate.
+- _1 hour_ updated all packages using UART to support new method.
+- _1 hour_ investigated Lewis' test repository. Also checked to see if UART had made a difference which it had.
