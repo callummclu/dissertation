@@ -472,3 +472,16 @@
 - _1 hour_ updated all packages using UART to support new method.
 - _1 hour_ investigated Lewis' test repository. Also checked to see if UART had made a difference which it had.
 - _X hour_ ...
+
+## Week 17
+
+### 6 Feb 2023
+
+- _1 hour_ investigated UART issue
+- _6 hours_ wrote out a first draft for the background and tools / technologies sections 
+
+### 7 Feb 2024
+
+- _1 hour_ investigated UART issue
+- _2 hours_ made transpiler and puck demos
+- _0.5 hours_ made presentation ahead of advisor meeting
