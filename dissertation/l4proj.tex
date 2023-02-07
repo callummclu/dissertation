@@ -72,7 +72,7 @@
 
 \text Remote embedded systems is a sector of engineering which provides developers with a hands on experience allowing for code to be developed into a tangible object providing developers with a rewarding end product.However  the  currently  implementations  of  this  such  as  Arduino  have  a  high  learning  curve  using  C++ as the language to program their devices or micro python which while removing the high learning curve leaves developers with non-transferable skills due to its high abstraction from the core python language.By working with the Espruino catalog of devices we by pass these issues.  Despite this development with Espruino devices still provides a closed in understanding of how JavaScript works leaving the developer with  non  transferable  skills.   This  project  helps  prepare  future  programmers  and  software  engineers  for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice.
 
-\section{Aims /& Goals}
+\section{Aims / Goals}
 
 \textbf{[THIS IS A PLACEHOLDER NEEDS EXPANDING]}
 
@@ -82,28 +82,37 @@
 
 %==================================================================================================================================
 \chapter{Background}
-What did other people do, and how is it relevant to what you want to do?
+
+\textbf{NONE OF THIS IS FINAL AND NEEDS TO BE REWRITTEN}
+
 \section{Espruino Devices}
-\text    
-    Espruino are a set of remote embedded devices which run on javascript. Why Espruino, not arduino, micropython (Javascript native)
+\text 
+The Espruino micro-controller provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to both hobbyists and students who are eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
     
 \section{UART}
-\text Universal asynchronous receiver-transmitter, this is what the espruino devices are built using. This enables web bluetooth connection between the computer and espruino device.
+\text UART, or Universal Asynchronous Receiver/Transmitter, is a widely used communication protocol in the world of microcontrollers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization.
+
+\begin{center}
+    \includegraphics[width=60mm,scale=0.5]{dissertation/images/UART_diagram.png}
+\end{center}
+
 
 \section{WebBluetooth}
-\text Provides a method for Bluetooth Low Energy(BLE) devices to connect to supported browsers
+\text WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
+
+WebBluetooth represents a milestone in the integration of BLE devices into the web, as it offers a common platform for web developers to interact with these devices, regardless of their origin or operating system. It expands the possibilities for BLE devices, including the ability to control smart home technology or track fitness information through a web application.
 
 \section{NPM}
-\text a package mangager for javascript using the node.js runtime.
+\text NPM is a tool utilized in the world of JavaScript programming to manage software packages. It serves as a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
 
 \section{NPX}
-\text Node package runner, what is a package runner. This provides a way of creating CLI tools to aid in node development
+\text NPX is a tool for executing Node.js packages, including those installed through npm (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
 
 \section{WebRTC}
-\text open source project to allow web browsers to contain real time communication through peer to peer communication. maybe include websocket comparison
+\text WebRTC (Web Real-Time Communication) is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing.
 
 \section{Open Source}
-\text source code that is freely able to be used and modified. Mention gh organisation.
+\text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors, rather than by a single entity. The objective of open source is to promote collaboration, transparency, and innovation in software development, and to give users more control and choice over their software. Notable open source projects include the Linux operating system and the Python programming language.
 
 \section{Existing Projects}
 \text Espruino native language / online IDE.
@@ -171,8 +180,6 @@ Why not parcel or snowpack or another bundler
 \section{React}
 \text Why is react used for demos and online IDE vs Vue, Angular, vanilla or any other. Using a framework benefits.
 comparing frameworks
-\section{JSS}
-\text Why style in javascript. No need to package/ bundle css, provides benefits of scss, sass.
 \section{peerJS}
 \text Why use existing package
 \section{qrcode Package}
