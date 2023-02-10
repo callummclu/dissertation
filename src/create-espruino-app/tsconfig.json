@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "declaration": true,
+        "outDir": "./bin",
+        "strict": false,
+        "allowJs": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules","**/__tests__/*","src/__tests__/*"]
+}

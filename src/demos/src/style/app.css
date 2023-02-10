@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body{
+    background-color: white !important;
+    margin:0;
+    font-family: 'Varela Round', sans-serif !important;
+}
+
+.mantine-Tabs-tab[data-active=true]{
+    background:white;
+}
+
+.mantine-Text-root, .mantine-Title-root{
+    font-family: 'Varela Round', sans-serif !important;
+}
+
+.breadcrumb-container{
+    display:block;
+}
+
+.breadcrumb-mobile{
+    display: none;
+    background-color: rgb(242, 242, 242);
+}
+
+@media screen and (max-width:600px) {
+    .breadcrumb-container{
+        display:none;
+    }
+    .breadcrumb-mobile{
+        display: block;
+    }
+}
