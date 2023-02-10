@@ -68,15 +68,22 @@
 
 \section{Motivation}
 
-\textbf{[THIS IS A PLACEHOLDER NEEDS EXPANDING]}
-
-\text Remote embedded systems is a sector of engineering which provides developers with a hands on experience allowing for code to be developed into a tangible object providing developers with a rewarding end product.However  the  currently  implementations  of  this  such  as  Arduino  have  a  high  learning  curve  using  C++ as the language to program their devices or micro python which while removing the high learning curve leaves developers with non-transferable skills due to its high abstraction from the core python language.By working with the Espruino catalog of devices we by pass these issues.  Despite this development with Espruino devices still provides a closed in understanding of how JavaScript works leaving the developer with  non  transferable  skills.   This  project  helps  prepare  future  programmers  and  software  engineers  for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice.
+\text 
+The area of remote embedded systems has seen significant growth in recent years due to the growing need for interconnected devices and the Internet of Things (IoT). It offers developers the chance to craft physical objects that interact with the real world, resulting in a final product they can take pride in. However, the current setup of remote embedded systems, like Arduino, has a challenging learning curve due to the utilization of C++ as the programming language.
+\\ \\
+An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. Espruino presents a reduced entry barrier and eliminates the requirement to learn a new language, which can be daunting for some. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
+\\ \\
+Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
+\\ \\
+This project aims to tackle these challenges by providing developers with a cutting-edge JavaScript-based platform for building their remote embedded systems. By utilizing contemporary JavaScript, developers will gain a deeper understanding of the language and its features, as well as acquire in-demand skills that can be applied to other areas of software engineering.
+\\ \\
+This project aims to help prepare future programmers and software engineers for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in-demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice.
 
 \section{Aims / Goals}
 
 \textbf{[THIS IS A PLACEHOLDER NEEDS EXPANDING]}
 
-\text This project will provide an ecosystem of packages to reduce the entry barrier to remote embedded systems programming whilst allowing experienced developers to still benefit from the ease of life additions brought forth with them.  On top of this these packages are built with web technologies at the fore front allowing both experienced and new developers to improve their grasp on current web technologies while developing their embedded systems
+\text This effort will create a collection of packages aimed at lowering the threshold for individuals looking to get into programming in the remote embedded systems area, yet still offering benefits for experienced coders through its streamlining of the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers with an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
 
 
 
@@ -87,18 +94,19 @@
 
 \section{Espruino Devices}
 \text 
-The Espruino micro-controller provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to both hobbyists and students who are eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
+The Espruino micro-controller provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
+
     
 \section{UART}
 \text UART, or Universal Asynchronous Receiver/Transmitter, is a widely used communication protocol in the world of microcontrollers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=60mm,scale=0.5]{dissertation/images/UART_diagram.png}
 
-    \caption{UART communication}
-    \label{fig:my_label}
-\end{figure}
+\begin{center}
+    % ADD FIGURE DETAILS LIKE A CAPTION
+    \includegraphics[width=60mm,scale=0.5]{dissertation/images/UART_diagram.png}
+\end{center}
+
+
 
 
 \section{WebBluetooth}
@@ -123,30 +131,34 @@ WebBluetooth represents a milestone in the integration of BLE devices into the w
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
-What is the problem that you want to solve, and how did you arrive at it?
 \section{Functional Requirements}
-\text What are functional requirements
 \subsection{Must Have}
+\text An overhaul to the uart.js package incorportaing modern ecmascript standards, A package which simplifies the development process to allow focus on learning or building, demos to display how this package helps, A well populated documentation site (helps new and existing programmers, fixes issue with standard espruino having hard to navigate documentation)
 \subsection{Should Have}
+\text placeholder text
 \subsection{Could Have}
+\text placeholder text
 \section{Non-Functional Requirements}
 \text What are non-functional requirements
 \subsection{Must Have}
+\text placeholder text
 \subsection{Should Have}
+\text placeholder text
 \subsection{Could Have}
+\text placeholder text
 
 \section{Specification changes}
 \subsection{Peer to Peer}
-\text Why does this mater
+\text A separate package which allows users to easily integrate a connection between mobile devices and their browser to bridge the gap in espruino only being able to be used on specific devices.
 
 \subsection{Transpiler}
-\text how does this help
+\text Provide a program which can translate ... to fully allow for the code to work on any given espruino platform be that their online IDE or even directly written onto the device.
 
 \subsection{NPX Tool}
-\text how does this help
+\text Improve the time required to set up a development environment to allow more focus on the code and less on the logistics of how to get an environment set up.
 
 \subsection{Online Environment}
-\text Why?
+\text Allow users to have an environment in which they can test new features without setting up a whole development environment. This can be used to test functionality or even develop whole projects.
 %==================================================================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
@@ -168,35 +180,56 @@ How is this problem to be approached, without reference to specific implementati
 %==================================================================================================================================
 \chapter{Tools / Technologies}
 
-\section{TypeScript}
-\text Improved typing, compiles into js, so on. Why even bother with it why not just use javascript.(static typing and why this makes a difference, improves developments)
-\section{NPM}
-\text Why not just have a minified js file hosted online.
-\section{NPX}
-\text What is this why is it important, provides a platform to build a CLI tool that doesn’t need to be downloaded before running a command
-\section{UNPKG}
-\text Why support both, what does this do. Avoids need to host cdn, is perfectly in sync with npm including package versioning
-\section{Azure Devops}
-\text Pipelines, issue tracker, explain why over gitlab, travis or jenkins, visualisation of builds for better error handling / management
-\section{Webpack}
+\section{general}
+
+\subsection{TypeScript}
+\text TypeScript offers several benefits over JavaScript when building a software package. It is a statically typed superset of JavaScript, providing improved code quality through static typing and a better understanding of large codebases through its type system. TypeScript also offers better scalability with features like interfaces, classes, and modules, as well as better tooling support through better integration with modern development tools. Additionally, TypeScript includes features that are part of upcoming versions of JavaScript, making code written in it future-proof.
+
+\subsection{NPM}
+\text Using the Node Package Management (NPM) system when developing a JavaScript application presents numerous benefits. NPM eases the management of packages, guaranteeing the right version is installed correctly. The NPM network boasts a significant community of developers and a vast collection of programs, minimizing the need for repeated efforts and making it easy to integrate new features. NPM standardizes the system for versioning packages and enables seamless distribution of programs to the community. The adoption of NPM also enables automation of processes like building, testing, and deploying packages, reducing the workload associated with managing the project.
+
+
+\subsection{UNPKG}
+\text The utilization of inline JavaScript imports through UNPKG provides numerous advantages. The ability to integrate small amounts of code through inline imports enables a fast and straightforward method for experimenting with various components and evaluating different solutions. Utilising both inline imports and NPM package imports simultaneously presents a versatile and efficient development process, empowering developers to select the most suitable approach for their project needs.
+
+\subsection{Azure Devops}
+\text Azure DevOps is a unified platform for software development that consolidates various tools and services. It offers a complete solution for source control, continuous integration/testing/deployment, and project management. Azure DevOps streamlines the development process by providing features such as automated builds, continuous deployment, and team collaboration, outperforming alternative approaches that utilize individual tools like Jenkins or Jira.
+
+\subsection{Webpack}
 \text can use new js features and compile into older widely used, enables typescript.Other webpack benefits converts all code into es5 by choice (why es5)
 Why not parcel or snowpack or another bundler
-\section{React}
+
+\subsection{React}
 \text Why is react used for demos and online IDE vs Vue, Angular, vanilla or any other. Using a framework benefits.
 comparing frameworks
-\section{peerJS}
-\text Why use existing package
-\section{qrcode Package}
-\text Why generate a qr code with this package
-\section{Docusaurus}
-\text why this over jekyll, hugo. MDX, agolia search
-\section{Husky}
+
+\subsection{Husky}
 \text what is it (runs git hooks), what are git hooks
 auto package versioning
 commit sanitizing
-\section{Esprima}
+
+\section{create-espruino-app}
+
+\subsection{NPX}
+\text What is this why is it important, provides a platform to build a CLI tool that doesn’t need to be downloaded before running a command
+
+\section{peer}
+
+\subsection{peerJS}
+\text Why use existing package
+\subsection{qrcode Package}
+\text Why generate a qr code with this package
+
+\section{Documentation}
+
+\subsection{Docusaurus}
+\text why this over jekyll, hugo. MDX, agolia search
+
+\section{Transpiler}
+
+\subsection{Esprima}
 \text why use existing parse/tokeniser
-\section{EsCodeGen}
+\subsection{EsCodeGen}
 \text Why use this instead of building your own.
 %==================================================================================================================================
 \chapter{Implementation}
