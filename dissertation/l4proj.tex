@@ -13,7 +13,7 @@
 %% METADATA
 \title{Espruino Tools - An asynchronous JavaScript library to control remote embedded devices [JavaScript, Promise, Arduino]}
 \author{Callum McLuskey}
-\date{Month 00, 2023}
+\date{24 March, 2023}
 
 \maketitle
 
@@ -22,12 +22,12 @@
 \begin{abstract}
     \textbf{THIS IS UNFINISHED}
 
-    The personal usage of remote embedded devices is a growing area in engineering allowing for anybody to get started building robotics systems at home or even develop skill sets in programming and electronic engineering. A big name in this scene is Arduino a product which allows hobbyists to build and design systems to suit personal project needs; The Espruino project takes this in a different direction by utilising a javascript interpreter which aims to bring remote embedded systems programming to the web. This project intends to improve the development experience of remote embedded devices by refining the process and allowing users to focus more on their ideas and less on the semantics required to implement them. To achieve this the project introduces many packages providing functionality such as easy device connection[ADD LINK], peer-to-peer[ADD LINK] connection for mobile device inputs to be used, and the refined syntax to allow developers to get started regardless of skill or prior knowledge with wide and detailed documentation to avoid confusion when developing. In addition to this to further ease development, a CLI tool has been developed to create projects preset with all the functionality a beginner user could need, setting anybody up for programming Espruino devices, an activity which had no clear direction before of how to be done. By utilising user studies throughout the project a variety of users from different experience levels have been considered during the development process allowing for the project to be as accessible as possible.
+    The personal usage of remote embedded devices is a growing area in engineering allowing for anybody to get started building robotics systems at home or even develop skill sets in programming and electronic engineering. A big name in this scene is Arduino a product which allows hobbyists to build and design systems to suit personal project needs; The Espruino project takes this in a different direction by utilising a JavaScript interpreter which aims to bring remote embedded systems programming to the web. This project intends to improve the development experience of remote embedded devices by refining the process and allowing users to focus more on their ideas and less on the semantics required to implement them. To achieve this the project introduces many packages providing functionality such as easy device connection[ADD LINK], peer-to-peer[ADD LINK] connection for mobile device inputs to be used, and the refined syntax to allow developers to get started regardless of skill or prior knowledge with wide and detailed documentation to avoid confusion when developing. In addition to this to further ease development, a CLI tool has been developed to create projects preset with all the functionality a beginner user could need, setting anybody up for programming Espruino devices, an activity which had no clear direction before of how to be done. By utilising user studies throughout the project a variety of users from different experience levels have been considered during the development process allowing for the project to be as accessible as possible.
 
 \end{abstract}
 
 \def\consentname {Callum McLuskey} % your full name
-\def\consentdate {XX March 2023} % the date you agree
+\def\consentdate {23 March 2023} % the date you agree
 
 \educationalconsent
 
@@ -92,13 +92,15 @@ This project aims to help prepare future programmers and software engineers for 
 
 \textbf{NONE OF THIS IS FINAL AND NEEDS TO BE REWRITTEN}
 
+\section{Something about current state of learning programming}
+
 \section{Espruino Devices}
 \text 
 The Espruino micro-controller provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
 
     
-\section{UART}
-\text UART, or Universal Asynchronous Receiver/Transmitter, is a widely used communication protocol in the world of microcontrollers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization.
+\subsection{UART}
+\text Espruino devices communicate with the browser by utilising UART, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. \textbf{[EXPAND ON THIS AND INCLUDE MORE ABOUT HOW IT ACTUALLY WORKS]}
 
 
 \begin{center}
@@ -109,18 +111,26 @@ The Espruino micro-controller provides an innovative solution for individuals se
 
 
 
-\section{WebBluetooth}
-\text WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
+\subsection{WebBluetooth}
+\text UART connection with a web browser as mentioned above is facilitated via WebBluetooth. WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
 
 WebBluetooth represents a milestone in the integration of BLE devices into the web, as it offers a common platform for web developers to interact with these devices, regardless of their origin or operating system. It expands the possibilities for BLE devices, including the ability to control smart home technology or track fitness information through a web application.
 
-\section{NPM}
+\section{Package Development}
+
+Passage about modern package development
+
+\subsection{NPM}
 \text NPM is a tool utilized in the world of JavaScript programming to manage software packages. It serves as a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
 
-\section{NPX}
+\subsection{NPX}
 \text NPX is a tool for executing Node.js packages, including those installed through npm (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
 
-\section{WebRTC}
+\section{Device to device communication}
+
+Small paragraph surrounding the current state of communicating between different devices. potentially mention adoption 
+
+\subsection{WebRTC}
 \text WebRTC (Web Real-Time Communication) is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing.
 
 \section{Open Source}
@@ -133,15 +143,15 @@ WebBluetooth represents a milestone in the integration of BLE devices into the w
 \chapter{Analysis/Requirements}
 \section{Functional Requirements}
 \subsection{Must Have}
-\text An overhaul to the uart.js package incorportaing modern ecmascript standards, A package which simplifies the development process to allow focus on learning or building, demos to display how this package helps, A well populated documentation site (helps new and existing programmers, fixes issue with standard espruino having hard to navigate documentation)
+\text An overhaul to the UART.js package incorporating modern ECMAScript standards, A package which simplifies the development process to allow focus on learning or building, demos to display how this package helps, A well populated documentation site (helps new and existing programmers, fixes issue with standard espruino having hard to navigate documentation)
 \subsection{Should Have}
-\text placeholder text
+\text Speed improvements over original UART.js.
 \subsection{Could Have}
 \text placeholder text
 \section{Non-Functional Requirements}
 \text What are non-functional requirements
 \subsection{Must Have}
-\text placeholder text
+\text A simplified entry point for new programmers, Ability to showcase projects through easy hosting (i.e. github pages)
 \subsection{Should Have}
 \text placeholder text
 \subsection{Could Have}
@@ -152,7 +162,7 @@ WebBluetooth represents a milestone in the integration of BLE devices into the w
 \text A separate package which allows users to easily integrate a connection between mobile devices and their browser to bridge the gap in espruino only being able to be used on specific devices.
 
 \subsection{Transpiler}
-\text Provide a program which can translate ... to fully allow for the code to work on any given espruino platform be that their online IDE or even directly written onto the device.
+\text Provide a program which can translate ... to fully allow for the code to work on any given espruino platform be that their online IDE or even directly written onto the device. Mention this came up after discussion about providing an online environment and ability for less boxed in code processing.
 
 \subsection{NPX Tool}
 \text Improve the time required to set up a development environment to allow more focus on the code and less on the logistics of how to get an environment set up.
@@ -180,10 +190,14 @@ How is this problem to be approached, without reference to specific implementati
 %==================================================================================================================================
 \chapter{Tools / Technologies}
 
+The section will discuss the usage of technologies throughout the project splitting them into relevant sections containing technologies used by specific areas of the project.
+
 \section{general}
 
-\subsection{TypeScript}
-\text TypeScript offers several benefits over JavaScript when building a software package. It is a statically typed superset of JavaScript, providing improved code quality through static typing and a better understanding of large codebases through its type system. TypeScript also offers better scalability with features like interfaces, classes, and modules, as well as better tooling support through better integration with modern development tools. Additionally, TypeScript includes features that are part of upcoming versions of JavaScript, making code written in it future-proof.
+The packages discussed below are used throughout the full ecosystem and help provide the vital structure of the package development.
+
+\subsection{Typescript}
+\text Typescript offers several benefits over JavaScript when building a software package. It is a statically typed super-set of JavaScript, providing improved code quality through static typing and a better understanding of large code-bases through its type system. Typescript also offers better scalability with features like interfaces, classes, and modules, as well as better tooling support through better integration with modern development tools. Additionally, Typescript includes features that are part of upcoming versions of JavaScript, making code written in it future-proof.
 
 \subsection{NPM}
 \text Using the Node Package Management (NPM) system when developing a JavaScript application presents numerous benefits. NPM eases the management of packages, guaranteeing the right version is installed correctly. The NPM network boasts a significant community of developers and a vast collection of programs, minimizing the need for repeated efforts and making it easy to integrate new features. NPM standardizes the system for versioning packages and enables seamless distribution of programs to the community. The adoption of NPM also enables automation of processes like building, testing, and deploying packages, reducing the workload associated with managing the project.
@@ -192,45 +206,50 @@ How is this problem to be approached, without reference to specific implementati
 \subsection{UNPKG}
 \text The utilization of inline JavaScript imports through UNPKG provides numerous advantages. The ability to integrate small amounts of code through inline imports enables a fast and straightforward method for experimenting with various components and evaluating different solutions. Utilising both inline imports and NPM package imports simultaneously presents a versatile and efficient development process, empowering developers to select the most suitable approach for their project needs.
 
-\subsection{Azure Devops}
+\subsection{Azure DevOps}
 \text Azure DevOps is a unified platform for software development that consolidates various tools and services. It offers a complete solution for source control, continuous integration/testing/deployment, and project management. Azure DevOps streamlines the development process by providing features such as automated builds, continuous deployment, and team collaboration, outperforming alternative approaches that utilize individual tools like Jenkins or Jira.
 
-\subsection{Webpack}
-\text can use new js features and compile into older widely used, enables typescript.Other webpack benefits converts all code into es5 by choice (why es5)
+\subsection{Webpack [!!NEEDS WORK!!]}
+\text can use new javascript features and compile into older widely used, enables typescript.Other webpack benefits converts all code into es5 by choice (why es5)
 Why not parcel or snowpack or another bundler
 
-\subsection{React}
+\subsection{React [!!NEEDS WORK!!]}
 \text Why is react used for demos and online IDE vs Vue, Angular, vanilla or any other. Using a framework benefits.
 comparing frameworks
 
-\subsection{Husky}
+\subsection{Husky [!!NEEDS WORK!!]}
 \text what is it (runs git hooks), what are git hooks
 auto package versioning
 commit sanitizing
 
-\section{create-espruino-app}
+\section{CLI tool [!!NEEDS WORK!!]}
 
-\subsection{NPX}
-\text What is this why is it important, provides a platform to build a CLI tool that doesn’t need to be downloaded before running a command
+The CLI tool takes a different approach in development to the NPM packages as there is a requirement to be run through the command line.
 
-\section{peer}
+\subsection{NPX [!!NEEDS WORK!!]}
+\text NPX is a command line package runner allowing for the execution of node based JavaScript packages through a specified command. This has avid usage within the javascript development scene for building starting point directories, popular examples include React's create-react-app and Vue's vue-cli to name a few.
+
+\section{Peer [!!NEEDS WORK!!]}
+
+Integrating a peer-to-peer connection without utilising a self built and hosted back-end system provided an issue.
 
 \subsection{peerJS}
-\text Why use existing package
-\subsection{qrcode Package}
-\text Why generate a qr code with this package
+\text PeerJS provides an all-in-one solution which utilises WebRTC removing the issue of building a home made WebSocket back-end system to allow for real-time communication between devices this approach allows for developers to keep the simplicity of hosting static files without having to worry about the maintenance and cost of hosting of a back-end system.
 
-\section{Documentation}
+\subsection{qrcode Package [!!NEEDS WORK!!]}
+\text - ease of use
 
-\subsection{Docusaurus}
+\section{Documentation [!!NEEDS WORK!!]}
+
+\subsection{Docusaurus [!!NEEDS WORK!!]}
 \text why this over jekyll, hugo. MDX, agolia search
 
-\section{Transpiler}
+\section{Transpiler [!!NEEDS WORK!!]}
 
-\subsection{Esprima}
-\text why use existing parse/tokeniser
-\subsection{EsCodeGen}
-\text Why use this instead of building your own.
+\subsection{Esprima [!!NEEDS WORK!!]}
+\text why use existing parse/tokeniser, Mozilla standard for Javascript. Avoid re-inventing the wheel.
+\subsection{EsCodeGen [!!NEEDS WORK!!]}
+\text Why use this instead of building your own, Mozilla standard for Javascript. Avoid re-inventing the wheel.
 %==================================================================================================================================
 \chapter{Implementation}
 What did you do to implement this idea, and what technical achievements did you make?
