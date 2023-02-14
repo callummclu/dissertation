@@ -71,7 +71,7 @@
 \text 
 The area of remote embedded systems has seen significant growth in recent years due to the growing need for interconnected devices and the Internet of Things (IoT). It offers developers the chance to craft physical objects that interact with the real world, resulting in a final product they can take pride in. However, the current setup of remote embedded systems, like Arduino, has a challenging learning curve due to the utilization of C++ as the programming language.
 \\ \\
-An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. Espruino presents a reduced entry barrier and eliminates the requirement to learn a new language, which can be daunting for some. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
+An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. Espruino presents a reduced entry barrier and eliminates the requirement to learn a less than beginner friendly low level language such as C/C++, which can be daunting for some. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
 \\ \\
 Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
 \\ \\
@@ -84,6 +84,10 @@ This project aims to help prepare future programmers and software engineers for 
 \textbf{[THIS IS A PLACEHOLDER NEEDS EXPANDING]}
 
 \text This effort will create a collection of packages aimed at lowering the threshold for individuals looking to get into programming in the remote embedded systems area, yet still offering benefits for experienced coders through its streamlining of the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers with an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
+\begin{itemize}
+    \item List goals here in easy to read list
+    \item make easier for new programmers
+\end{itemize}
 
 
 
@@ -100,7 +104,7 @@ The Espruino micro-controller provides an innovative solution for individuals se
 
     
 \subsection{UART}
-\text Espruino devices communicate with the browser by utilising UART, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. \textbf{[EXPAND ON THIS AND INCLUDE MORE ABOUT HOW IT ACTUALLY WORKS]}
+\text Espruino devices communicate with the browser by utilising the UART protocol, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. \textbf{[EXPAND ON THIS AND INCLUDE MORE ABOUT HOW IT ACTUALLY WORKS]}
 
 
 \begin{center}
@@ -137,25 +141,45 @@ Small paragraph surrounding the current state of communicating between different
 \text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors, rather than by a single entity. The objective of open source is to promote collaboration, transparency, and innovation in software development, and to give users more control and choice over their software. Notable open source projects include the Linux operating system and the Python programming language.
 
 \section{Existing Projects}
-\text Espruino native language / online IDE.
+\text Small paragraph discussing the normal implementation of espruino
+
+\subsection{Espruino Javascript language}
+Discuss the features of the language extensions added for the espruino platform.
+
+\subsection{Espruino IDE}
+Discuss what the IDE does.
+
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
 \section{Functional Requirements}
+Short paragraph explaining the breakdown of the work items from the original specification
 \subsection{Must Have}
-\text An overhaul to the UART.js package incorporating modern ECMAScript standards, A package which simplifies the development process to allow focus on learning or building, demos to display how this package helps, A well populated documentation site (helps new and existing programmers, fixes issue with standard espruino having hard to navigate documentation)
+\begin{itemize}
+    \item An overhaul to the UART.js package incorporating modern ECMAScript standards [\textbf{WHY?}]
+    \item A package which simplifies the development process to allow focus on learning or building [\textbf{WHY?}]
+    \item demos easily "runnable" on local device to display how this package helps and to give context to how the packages work for new users [\textbf{WHY?}]
+    \item With focus on helping new programmers learn A well populated documentation site to cover the intricacies of the packages, (fixes issue with standard espruino having hard to navigate documentation)
+\end{itemize}
 \subsection{Should Have}
-\text Speed improvements over original UART.js.
+\begin{itemize}
+    \item Speed improvements over original UART.js.
+\end{itemize}
 \subsection{Could Have}
-\text placeholder text
+\begin{itemize}
+    \item A dedicated demo "hub" for users to showcase their projects.
+\end{itemize}
 \section{Non-Functional Requirements}
 \text What are non-functional requirements
 \subsection{Must Have}
-\text A simplified entry point for new programmers, Ability to showcase projects through easy hosting (i.e. github pages)
+\begin{itemize}
+    \item A simplified entry point for new programmers [\textbf{WHY?}]
+    \item Organisation to keep open-source code together [\textbf{WHY?}]
+\end{itemize} 
 \subsection{Should Have}
-\text placeholder text
-\subsection{Could Have}
-\text placeholder text
+\begin{itemize}
+    \item Ability to showcase projects through easy hosting (i.e. github pages) allowing for easy demonstration of projects.
+\end{itemize} 
 
 \section{Specification changes}
 \subsection{Peer to Peer}
@@ -172,6 +196,23 @@ Small paragraph surrounding the current state of communicating between different
 %==================================================================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
+
+\section{Development}
+
+Different packages/web applications required different approaches.
+
+\subsection{Feedback Driven Development}
+Fast iteration with focus on improving the features.
+\begin{itemize}
+    \item Forum feedback espruino forum
+    
+    \item User testing feedback from user study.
+    \item \textit{supervisor feedback [NOT SURE IF THIS SHOULD STAY]}
+\end{itemize}
+
+\subsection{Test Driven Development}
+Where possible this was implemented ensuring new package versions did not break anything.
+
 \section{Organisations}
 \subsection{Github}
 \text something about open source, keeping everything together.
@@ -180,9 +221,9 @@ How is this problem to be approached, without reference to specific implementati
 \section{NPX Tool Repositories}
 \text why react, vue, typescript. Why have `--clean-install`, `--peer`
 \subsection{Git Submodules}
-\text Why.
+\text Directory changes without package updates, framework specific updates can be done without package update.
 \subsection{Tags}
-\text `--clean-install` `--template` `--peer`
+\text `--clean-install` For experienced users `--template` allowing for further choice for the developer `--peer` allowing users without knowledge of webserver routing and ssl to also get started
 \section{UI/UX Improvements}
 \text modals, prototyping (Figma)
 \section{Agile Methodologies}
@@ -192,7 +233,7 @@ How is this problem to be approached, without reference to specific implementati
 
 The section will discuss the usage of technologies throughout the project splitting them into relevant sections containing technologies used by specific areas of the project.
 
-\section{general}
+\section{General}
 
 The packages discussed below are used throughout the full ecosystem and help provide the vital structure of the package development.
 
@@ -218,9 +259,17 @@ Why not parcel or snowpack or another bundler
 comparing frameworks
 
 \subsection{Husky [!!NEEDS WORK!!]}
-\text what is it (runs git hooks), what are git hooks
-auto package versioning
-commit sanitizing
+Command runner for git hooks allows for commands such as linting and testing to be run on git hooks such as commits or push.
+\begin{itemize}
+    \item provides simple git hook usage
+    \item Run linting / testing before a commit (package sanitising)
+\end{itemize}
+\subsection{Standard Version}
+Utilised by husky this package brings features necessary for package development such as:
+\begin{itemize}
+    \item auto package versioning
+    \item auto change log
+\end{itemize}
 
 \section{CLI tool [!!NEEDS WORK!!]}
 
@@ -237,12 +286,18 @@ Integrating a peer-to-peer connection without utilising a self built and hosted 
 \text PeerJS provides an all-in-one solution which utilises WebRTC removing the issue of building a home made WebSocket back-end system to allow for real-time communication between devices this approach allows for developers to keep the simplicity of hosting static files without having to worry about the maintenance and cost of hosting of a back-end system.
 
 \subsection{qrcode Package [!!NEEDS WORK!!]}
-\text - ease of use
+\begin{itemize}
+    \item Allow easy device connection through camera
+\end{itemize}
 
 \section{Documentation [!!NEEDS WORK!!]}
 
 \subsection{Docusaurus [!!NEEDS WORK!!]}
 \text why this over jekyll, hugo. MDX, agolia search
+\begin{itemize}
+    \item components through MDX
+    \item search
+\end{itemize}
 
 \section{Transpiler [!!NEEDS WORK!!]}
 
@@ -253,31 +308,153 @@ Integrating a peer-to-peer connection without utilising a self built and hosted 
 %==================================================================================================================================
 \chapter{Implementation}
 What did you do to implement this idea, and what technical achievements did you make?
-\section{Feature / Packages / Web Apps}
-You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
+\section{Packages}
+Small introduction of the packages and why this approach was taken.
 \subsection{core}
+
+\text What does it do.
+\begin{itemize}
+    \item provides a simplified approach to developing with espruino devices, \textbf{EXPLAIN WHY}.
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item removes any confusion by incorporating everything you need into a single import based on device.
+    \item allows for easy development of new devices via inheritance incorporating all basic functionality of the device (lightweight as well).
+\end{itemize}
 \subsection{peer}
+
+\textbf{What does it do.}
+\begin{itemize}
+    \item WebRTC
+    \item simplify the interaction between mobile devices and web browsers (QR Code).
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item easy to add to a site, simple configuration.
+\end{itemize}
 \subsection{uart}
+
+\textbf{What does it do.}
+\begin{itemize}
+    \item Connection between Espruino devices and the webbrowsers
+    \item improved user interaction with the package, (UI/UX)
+    \item Overhaul of old package using modern javascript
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item utilises modern ECMAScript classes, allowing users to take advantage of inheritance for building their own UART implementations removing any issues with 
+\end{itemize}
+
 \subsection{create-espruino-app}
-\subsection{online IDE}
+
+\textbf{What does it do.}
+\begin{itemize}
+    \item provides a simple one line command for users to get started. 
+    \item provides a series of tags to customise the users development style from clean installing where no boilerplate files are provided to starting up a peer package directory.
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item Covers multiple modern development frameworks such as react and vue
+\end{itemize}
 \subsection{Transpiler}
 
+\textbf{What does it do.}
+\begin{itemize}
+    \item Provides platform for writing core code and converting into native espruino code.
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item works as importable package and runnable CLI, allowing for full directory conversion similar to other transpiler/preprocessors such as typescript or the older coffeescript.
+\end{itemize}
+
+\section{Web Apps}
+\subsection{online IDE}
+
+\textbf{What does it do.}
+\begin{itemize}
+    \item Provides environment for online development similar to online compiler X.
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item showcases code saved on device
+    \item showcases transpiled code, can be used for better understanding of the "lower level" code.
+\end{itemize}
+
+\subsection{Demo's Hub}
+\textbf{What does it do.}
+\begin{itemize}
+    \item provides a hub for new or experienced users to browse projects built with espruino tools with easy downloading and a code viewer to see the process
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item PR based adding to site, no need for a backend Static site generation.
+    \item something about config file for page population.
+\end{itemize}
 \section{Documentation}
-\text Just why this is so important for a collection of packages.
+\textbf{What does it do.}
+\begin{itemize}
+    \item place for all documentation all in one well organised place.
+    \item full site searching
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item everything is built with components allowing for new pages to be built with next to no need for configuration or hassle.
+\end{itemize}
 \section{CI/CD}
 \text How the product functionality was checked, Azure using the pipeline to run build checks and tests.
+\\
+\textbf{What does it do.}
+\begin{itemize}
+    \item automated testing, building, deployment.
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item automated deployment.
+\end{itemize}
+
 
 \section{Testing}
 \text JEST, javascript testing suite. Cypress,Front end testing suite (this may only be applicable for demo site and online IDE.
+\\
+\textbf{What does it do.}
+
+\\
+\textbf{What is impressive about it.}
+
 
 
 \section{Deployment}
 \subsection{Packages}
-\text How the packages are deployed using azure pipelines ,npm and unpkg to host package.
+\text How the packages are deployed using azure pipelines ,npm and unpkg to host package. using webpack for building minified and non minified packages (from typescript).
+\\
+\textbf{What does it do.}
+\begin{itemize}
+    \item deployed via CI/CD through npm publish, minified script is hosted automatically through UNPKG
+\end{itemize}
+\\
+\textbf{What is impressive about it.}
+\begin{itemize}
+    \item automated versioning through husky.
+    \item automated changelog based on commit messages.
+    \item automated deployment via secondary pipeline for every package which runs on production merge after original pipeline run on development, helped via branch protection.
+\end{itemize}
 \subsection{Web Apps}
 \text How the web apps are deployed. Vercel, what is vercel and why use it?
-
-
+\\
+\textbf{What does it do/what is impressive}
+\begin{itemize}
+    \item runs its own CI/CD ontop of mine
+    \item provides deployments for development versions to test features before full production deployment.
+\end{itemize}
 
 \chapter{Evaluation} 
 How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
