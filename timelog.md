@@ -449,7 +449,7 @@
 - _0.5 hours_ removed unused dependencies from packages.
 - _1 hour_ added transpiler package to core package replacing miniParser
 
-## Week 16 `<!-- thisWeek:XXhr, total: XXXhr-->`
+## Week 16 `<!-- thisWeek:16.5hr, total: 368.5hr-->`
 
 ### 23 Jan 2023 `<!-- 3 hours -->`
 
@@ -464,24 +464,47 @@
 - _2 hours_ added get device functions button.
 - _1 hour_ added documentation for transpiler and online IDE.
 
-### 28 Jan 2023 `<!-- XX hours -->`
+### 28 Jan 2023 `<!-- 8 hours -->`
 
 - _2 hours_ investigated PWAs (progressive web apps)
 - _2 hours_ added tabs to code editor.
 - _2 hours_ fixed UART slow transfer rate.
 - _1 hour_ updated all packages using UART to support new method.
 - _1 hour_ investigated Lewis' test repository. Also checked to see if UART had made a difference which it had.
-- _X hour_ ...
 
-## Week 17
+## Week 17 `<!-- thisWeek:15hr, total: 385.5hr -->`
 
-### 6 Feb 2023
+### 6 Feb 2023 `<!-- 7 hours -->`
 
 - _1 hour_ investigated UART issue
-- _6 hours_ wrote out a first draft for the background and tools / technologies sections 
+- _6 hours_ wrote out a first draft for the background and tools / technologies sections
 
-### 7 Feb 2024
+### 7 Feb 2023 `<!-- 3.5 hours -->`
 
 - _1 hour_ investigated UART issue
 - _2 hours_ made transpiler and puck demos
 - _0.5 hours_ made presentation ahead of advisor meeting
+
+### 9 Feb 2023 `<!-- 1 hour-->`
+
+- _1 hour_ dissertation writing
+
+### 10 Feb 2023 `<!-- 2 hours -->`
+
+- _2 hour_ dissertation writing
+
+### 12 Feb 2023 `<!-- 3.5 hours -->`
+
+- _1 hour_ dissertation writing
+- _2.5 hours_ issue with icloud syncing and losing progress that wasnt committed.
+
+## Week 18 `<!-- thisWeek:XXhr, total: XXXhr -->`
+
+### 13 Feb 2023 `<!-- 2 hours -->`
+
+- _1 hour_ made presentation ahead of meeting.
+- _1 hour_ further investigated links sent in by supervisor.
+
+### 14 Feb 2023 `<!-- 4 hours -->`
+
+- _4 hour_ dissertation writing.
