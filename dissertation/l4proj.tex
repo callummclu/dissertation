@@ -6,6 +6,12 @@
 %
 % put any additional packages here
 %
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,    
+    urlcolor=cyan,
+    }
 
 \begin{document}
 
@@ -14,6 +20,7 @@
 \title{Espruino Tools - An asynchronous JavaScript library to control remote embedded devices [JavaScript, Promise, Arduino]}
 \author{Callum McLuskey}
 \date{24 March, 2023}
+
 
 \maketitle
 
@@ -32,6 +39,7 @@
 \educationalconsent
 
 \tableofcontents
+\listoffigures
 
 %==============================================================================
 %% Notes on formatting
@@ -79,14 +87,13 @@ This project aims to tackle these challenges by providing developers with a cutt
 \\ \\
 This project aims to help prepare future programmers and software engineers for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in-demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice.
 
-\section{Aims / Goals}
-
-\textbf{[THIS IS A PLACEHOLDER NEEDS EXPANDING]}
+\section{Aims}
 
 \text This effort will create a collection of packages aimed at lowering the threshold for individuals looking to get into programming in the remote embedded systems area, yet still offering benefits for experienced coders through its streamlining of the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers with an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
+\subsubsection{Goals}
 \begin{itemize}
-    \item List goals here in easy to read list
-    \item make easier for new programmers
+    \item Provide a platform for beginner programmers to easily get started with embedded systems programming.
+    \item \textbf{PUT MORE POINTS IN HERE AIM FOR AROUND 5}
 \end{itemize}
 
 
@@ -104,12 +111,15 @@ Small paragraph about the current state of programming
     \item Maybe a quick survey surrounding if students know how to turn their programming language knowledge into working products or how learning for example python relates to something like a web application.
 \end{itemize}
 
+
 \subsection{Code boot camps / online courses}
 This section is a maybe, its worth mentioning other avenues taken by programmers.
 \begin{itemize}
+    \item highly specialised, (front-end, back-end) 
     \item focus on job ready skills.
     \item heavily web focused.
     \item avoids a lot of theoretical.
+    \item can result in people thinking they know how to program because theyve copied word for word from a tutorial.
 \end{itemize}
 
 \subsection{The job market}
@@ -127,10 +137,14 @@ The Espruino micro-controller provides an innovative solution for individuals se
 \text Espruino devices communicate with the browser by utilising the UART protocol, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. \textbf{[EXPAND ON THIS AND INCLUDE MORE ABOUT HOW IT ACTUALLY WORKS]}
 
 
+\begin{figure}[!ht]
 \begin{center}
     % ADD FIGURE DETAILS LIKE A CAPTION
     \includegraphics[width=60mm,scale=0.5]{dissertation/images/UART_diagram.png}
 \end{center}
+\caption{UART}
+    \label{fig:UART}
+\end{figure}
 
 
 
@@ -179,33 +193,33 @@ Discuss what the IDE does.
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
+
+\text Due to the nature of this project having multiple smaller packages / applications the analysis of these mini projects were done separately. To accomplish this a MOSCOW analysis was undertaken on each project individually. Below is a compilation of the main points from these individual analysis including overlapping themes and important points from each project with the full MOSCOW requirements for each project referenced within the appendix \ref{appendix:MOSCOWAnalysis}.
+
 \section{Functional Requirements}
 Short paragraph explaining the breakdown of the work items from the original specification
 \subsection{Must Have}
 \begin{itemize}
-    \item An overhaul to the UART.js package incorporating modern ECMAScript standards [\textbf{WHY?}]
-    \item A package which simplifies the development process to allow focus on learning or building [\textbf{WHY?}]
-    \item demos easily "runnable" on local device to display how this package helps and to give context to how the packages work for new users [\textbf{WHY?}]
-    \item With focus on helping new programmers learn A well populated documentation site to cover the intricacies of the packages, (fixes issue with standard espruino having hard to navigate documentation)
+    \item 
 \end{itemize}
 \subsection{Should Have}
 \begin{itemize}
-    \item Speed improvements over original UART.js.
+    \item 
 \end{itemize}
 \subsection{Could Have}
 \begin{itemize}
-    \item A dedicated demo "hub" for users to showcase their projects.
+    \item 
 \end{itemize}
 \section{Non-Functional Requirements}
 \text What are non-functional requirements
 \subsection{Must Have}
 \begin{itemize}
-    \item A simplified entry point for new programmers [\textbf{WHY?}]
-    \item Organisation to keep open-source code together [\textbf{WHY?}]
+    \item 
+    
 \end{itemize} 
 \subsection{Should Have}
 \begin{itemize}
-    \item Ability to showcase projects through easy hosting (i.e. github pages) allowing for easy demonstration of projects.
+    \item 
 \end{itemize} 
 
 \section{Specification changes}
@@ -277,15 +291,15 @@ The packages discussed below are used throughout the full ecosystem and help pro
 \subsection{Azure DevOps}
 \text Azure DevOps is a unified platform for software development that consolidates various tools and services. It offers a complete solution for source control, continuous integration/testing/deployment, and project management. Azure DevOps streamlines the development process by providing features such as automated builds, continuous deployment, and team collaboration, outperforming alternative approaches that utilize individual tools like Jenkins or Jira.
 
-\subsection{Webpack [!!NEEDS WORK!!]}
+\subsection{Webpack}
 \text can use new javascript features and compile into older widely used, enables typescript.Other webpack benefits converts all code into es5 by choice (why es5)
 Why not parcel or snowpack or another bundler
 
-\subsection{React [!!NEEDS WORK!!]}
+\subsection{React }
 \text Why is react used for demos and online IDE vs Vue, Angular, vanilla or any other. Using a framework benefits.
 comparing frameworks
 
-\subsection{Husky [!!NEEDS WORK!!]}
+\subsection{Husky }
 Command runner for git hooks allows for commands such as linting and testing to be run on git hooks such as commits or push.
 \begin{itemize}
     \item provides simple git hook usage
@@ -298,43 +312,108 @@ Utilised by husky this package brings features necessary for package development
     \item auto change log
 \end{itemize}
 
-\section{CLI tool [!!NEEDS WORK!!]}
+\section{CLI tool }
 
 The CLI tool takes a different approach in development to the NPM packages as there is a requirement to be run through the command line.
 
-\subsection{NPX [!!NEEDS WORK!!]}
+\subsection{NPX }
 \text NPX is a command line package runner allowing for the execution of node based JavaScript packages through a specified command. This has avid usage within the javascript development scene for building starting point directories, popular examples include React's create-react-app and Vue's vue-cli to name a few.
 
-\section{Peer [!!NEEDS WORK!!]}
+\section{Peer }
 
 Integrating a peer-to-peer connection without utilising a self built and hosted back-end system provided an issue.
 
 \subsection{peerJS}
 \text PeerJS provides an all-in-one solution which utilises WebRTC removing the issue of building a home made WebSocket back-end system to allow for real-time communication between devices this approach allows for developers to keep the simplicity of hosting static files without having to worry about the maintenance and cost of hosting of a back-end system.
 
-\subsection{qrcode Package [!!NEEDS WORK!!]}
+\subsection{qrcode Package }
 \begin{itemize}
     \item Allow easy device connection through camera
 \end{itemize}
 
-\section{Documentation [!!NEEDS WORK!!]}
+\section{Documentation }
 
-\subsection{Docusaurus [!!NEEDS WORK!!]}
+\subsection{Docusaurus }
 \text why this over jekyll, hugo. MDX, agolia search
 \begin{itemize}
     \item components through MDX
     \item search
 \end{itemize}
 
-\section{Transpiler [!!NEEDS WORK!!]}
+\section{Transpiler }
 
-\subsection{Esprima [!!NEEDS WORK!!]}
+\subsection{Esprima }
 \text why use existing parse/tokeniser, Mozilla standard for Javascript. Avoid re-inventing the wheel.
-\subsection{EsCodeGen [!!NEEDS WORK!!]}
+\subsection{EsCodeGen }
 \text Why use this instead of building your own, Mozilla standard for Javascript. Avoid re-inventing the wheel.
 %==================================================================================================================================
 \chapter{Implementation}
-What did you do to implement this idea, and what technical achievements did you make?
+
+\text Through the analysis of the projects specification a decision was made to separate functionality that is unrelated or can be used independently into their own packages or web applications. This approach resulted in the development of the following packages and web applications shown in figures \ref{fig:packages} and \ref{fig:webapps}.
+
+\begin{figure}[!ht]
+    
+\begin{center}
+\begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
+ \hline
+ \multicolumn{3}{|c|}{Packages} \\
+ \hline
+ Name  & Github repo& Documentation\\
+ \hline
+Core & \href{https://github.com/espruino-tools/core}{espruino-tools/core}  & \href{https://documentation-xi-liard.vercel.app/docs/category/core}{docs/category/core}  \\
+
+UART & \href{https://github.com/espruino-tools/uart}{espruino-tools/uart}  & \href{https://documentation-xi-liard.vercel.app/docs/category/uart}{docs/category/uart}  \\
+
+Peer & \href{https://github.com/espruino-tools/peer}{espruino-tools/peer}  & \href{https://documentation-xi-liard.vercel.app/docs/category/peer}{docs/category/peer}  \\
+
+Transpiler & \href{https://github.com/espruino-tools/transpiler}{espruino-tools/transpiler}  & \href{https://documentation-xi-liard.vercel.app/docs/category/transpiler}{docs/category/transpiler}  \\
+
+CLI Tool &  \href{https://github.com/espruino-tools/create-espruino-app}{espruino-tools/create-espruino-app}  & \href{https://documentation-xi-liard.vercel.app/docs/category/create-espruino-app}{docs/category/create-espruino-app}  \\
+ \hline
+\end{tabular}
+\end{center} 
+    \caption{Packages}
+    \label{fig:packages}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
+\hline
+\multicolumn{3}{|c|}{Web Apps} \\
+ \hline
+ Name & Github repo & Site Link\\
+ \hline
+Online IDE & \href{https://github.com/espruino-tools/online-environment}{espruino-tools/online-environment} & \href{https://online-environment.vercel.app/}{online-environment.vercel.app} \\
+Demo's Hub & \href{https://github.com/espruino-tools/demos}{espruino-tools/demos}  & \href{https://demos-mu.vercel.app/}{demos-mu.vercel.app} \\
+Documentation & \href{https://github.com/espruino-tools/documentation}{espruino-tools/documentation} & \href{https://documentation-xi-liard.vercel.app/}{documentation-xi-liard.vercel.app} \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Web Apps}
+\label{fig:webapps}
+\end{figure}
+
+Each of the packages has a unique dependency on each other, this choice of structure allows for users to get involved at any step and even develop their own solutions to improve their own custom work flow, the dependency graph is shown in figure \ref{fig:package_dep_graph}
+
+%========================
+%=
+%= 
+%= IMAGE LUCID SPARK FOR REWORK
+%= https://lucid.app/lucidchart/3338b1b0-2b62-481b-abb9-bbf9ce7b7a7d/edit?rtempr=1&invitationId=inv_25f074ac-b765-41ec-999b-6795aa3640dc&page=0_0#
+%= 
+%= 
+%========================
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/Package_dependency_graph.jpeg}
+    \caption{Dependency Graph}
+    \label{fig:package_dep_graph}
+\end{figure}
+
+The packages and web applications above serve as a general view of the structure of the ecosystem the following will showcase the functionality of the packages/web applications in more detail.
+
 \section{Packages}
 Small introduction of the packages and why this approach was taken.
 \subsection{core}
@@ -400,6 +479,7 @@ Small introduction of the packages and why this approach was taken.
 \end{itemize}
 
 \section{Web Apps}
+
 \subsection{online IDE}
 
 \textbf{What does it do.}
@@ -424,6 +504,7 @@ Small introduction of the packages and why this approach was taken.
     \item PR based adding to site, no need for a backend Static site generation.
     \item something about config file for page population.
 \end{itemize}
+
 \section{Documentation}
 \textbf{What does it do.}
 \begin{itemize}
@@ -436,7 +517,17 @@ Small introduction of the packages and why this approach was taken.
     \item everything is built with components allowing for new pages to be built with next to no need for configuration or hassle.
 \end{itemize}
 \section{CI/CD}
-\text How the product functionality was checked, Azure using the pipeline to run build checks and tests.
+\text The CI/CD pipeline built provides a platform the streamline the development process of the packages, this process provides the structure for how the packages are tested and prepared before deployment alongside how they are deployed leaving the developer to focus on the programming and less on the semantics of deploying an application. This is shown below in Figure \ref{fig:CICDPipeline}
+
+\begin{figure}[!ht]
+    \begin{center}
+        
+    
+    \includegraphics[width=14cm]{dissertation/images/CICD-structure.png}
+    \end{center}
+    \caption{CI/CD Pipeline}
+    \label{fig:CICDPipeline}
+\end{figure}
 \\
 \textbf{What does it do.}
 \begin{itemize}
@@ -450,7 +541,7 @@ Small introduction of the packages and why this approach was taken.
 
 
 \section{Testing}
-\text JEST, javascript testing suite. Cypress,Front end testing suite (this may only be applicable for demo site and online IDE.
+\text JEST, javascript testing suite. Cypress,Front end testing suite, Mocking, JSDOM. (this may only be applicable for demo site and online IDE.
 \\
 \textbf{What does it do.}
 
@@ -462,6 +553,14 @@ Small introduction of the packages and why this approach was taken.
 \section{Deployment}
 \subsection{Packages}
 \text How the packages are deployed using azure pipelines ,npm and unpkg to host package. using webpack for building minified and non minified packages (from typescript).
+
+\begin{figure}[!ht]
+    \begin{center}
+    \includegraphics[width=14cm]{dissertation/images/Deployment.png}
+    \end{center}
+    \caption{Deployment}
+    \label{fig:deployment}
+\end{figure}
 \\
 \textbf{What does it do.}
 \begin{itemize}
@@ -508,7 +607,204 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
 %  APPENDICES  
 
 \begin{appendices}
-\chapter{Appendices}
+\chapter{Individual MOSCOW Analysis}
+
+\label{appendix:MOSCOWAnalysis}
+
+Below are the individual MOSCOW analysis of each project. These will go further into depth about the state of each individual project analysis and provide more detail surrounding the priorities.
+
+%== CORE
+
+\section{Core}
+\subsection{Must Have}
+\begin{itemize}
+    \item Implement all device specific functionality into Device Objects
+    \item Provide a more readable syntax for beginner users without restricting functionality
+    \item Support TypeScript
+    \item Be open-source
+    \item Support any package import method (i.e. NPM, script tag imports)
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item The ability to call on device functions that are already on the device.
+    \item Functionality to gather device code in a readable manor, (gather functions on the device with parameters)
+    \item upload code to the device.
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item In-line documentation for package usage in IDE
+\end{itemize}
+
+%== UART
+
+\section{UART}
+\subsection{Must Have}
+\begin{itemize}
+    \item Improved UI/UX (cleaner modal, option to close modal)
+    \item Support Typescript
+    \item Be open-source
+    \item Support any package import method (i.e. NPM, script tag imports)
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Speed Improvements (remove unused code, reduce package size, replace waits with promises)
+    \item Improve device detection, current IOS detection does not work and WebBluetooth is not compatible with IOS.
+    \item Use more readable javascript/typescript (original used bad code practices such as repeated code, bad variable names, global variables for everything)
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item Call log to see what was last called on device.
+    \item In-line documentation for package usage in local IDE.
+\end{itemize}
+\subsection{Would be nice to Have}
+\begin{itemize}
+    \item Options on creation for user specified maximum wiat time for device response.
+\end{itemize}
+
+%== PEER
+
+\section{Peer}
+\subsection{Must Have}
+\begin{itemize}
+    \item Support Typescript.
+    \item Be open source.
+    \item Support any package import method (i.e. NPM, script tag).
+    \item Simplify setup of peerjs package to suit a standard use case without limiting the usage.
+
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Provide QR code for device connection.
+    \item Support simultaneous front and back camera streaming.
+
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item Provide notifications to show users connection has been initialised or closed.
+    \item In-line documentation for package usage in IDE
+
+\end{itemize}
+\subsection{Would be nice to Have}
+\begin{itemize}
+    \item Have consistent styling with UART package.
+\end{itemize}
+
+%== TRANSPILER
+
+\section{Transpiler}
+\subsection{Must Have}
+\begin{itemize}
+    \item Support Typescript
+    \item Be open source
+    \item Support any package import method (i.e. NPM, script tag)
+
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Convert code regardless of syntax errors (for usage with newly released commands in espruino spec that arent currently supported).
+    \item Support modern javascript syntax such as classes and arrow functions.
+    \item Have options to transpile modules or scripts.
+
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item A CLI tool to build full directories into espruino native code.
+    \item In-line documentation for package usage in IDE
+
+\end{itemize}
+
+%== CLI TOOL
+
+\section{CLI Tool}
+\begin{itemize}
+    \item 
+\end{itemize}
+\subsection{Must Have}
+\begin{itemize}
+    \item Be open source
+    \item Create a working directory with the latest versions of the core package.
+
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Support multiple frameworks / coding templates such as typescript, react, vue and plain javascript.
+    \item Have a template for peer setup allowing users to get started with the peer package.
+    \item Error handling for incorrect command input to prevent a directory from being built on failure.
+
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item Have clear progress letting the user know where the tool is in its installing progress.
+\end{itemize}
+\subsection{Would be nice to Have}
+\begin{itemize}
+    \item Support for custom templates via a github clone and set of commands to be run
+\end{itemize}
+
+%== ONLINE ENVIRONMENT
+
+\section{Online Environment}
+\subsection{Must Have}
+\begin{itemize}
+    \item Be open source
+    \item Support live development being able to run code directly on device.
+    \item Show terminal output
+
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Ability to see transpiled code.
+    \item upload code from computer.
+    \item save code to computer.
+    \item Ability to see code on the device.
+
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item Ability to save code editor code to device.
+\end{itemize}
+\subsection{Would be nice to Have}
+\begin{itemize}
+    \item A progressive web app conversion to allow for the site to be used as a local app for offline development.
+\end{itemize}
+
+%== DEMOS HUB
+
+\section{Demos Hub}
+\subsection{Must Have}
+\begin{itemize}
+    \item Be open source
+    \item Support community uploads of demos.
+    \item Show video of demo
+    \item Show code from specified repository in read-only code editor.
+
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Have optionally specified links.
+\end{itemize}
+\subsection{Could Have}
+\begin{itemize}
+    \item config file to specify all information required to build the page.
+\end{itemize}
+\subsection{Would be nice to Have}
+\begin{itemize}
+    \item A page for showing users how to upload their own demos.
+\end{itemize}
+
+%== DOCUMENTATION
+
+\section{Documentation}
+\subsection{Must Have}
+\begin{itemize}
+    \item Be open source (Allow community edits)
+    \item Accurately describe functionality of all packages
+\end{itemize}
+\subsection{Should Have}
+\begin{itemize}
+    \item Have searching functionality
+    \item Provide examples of code working
+\end{itemize}
 \end{appendices}
 
 %==================================================================================================================================
