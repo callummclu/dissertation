@@ -508,3 +508,14 @@
 ### 14 Feb 2023 `<!-- 4 hours -->`
 
 - _4 hour_ dissertation writing.
+
+### 15Feb 2023 `<!-- 2 hours -->`
+
+- _1 hour_ supervisor meeting on writing.
+- _1 hour_ continued writing dissertation.
+
+### 17 Feb 2023 `<!-- 7 hours -->`
+
+- _1 hour_ creating images for dissertation
+- _5 hours_ dissertation writing.
+- _1 hour_ collating MOSCOW analysis of each project into abstarct of dissertation.
