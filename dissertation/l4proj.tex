@@ -11,7 +11,8 @@
     colorlinks=true,
     linkcolor=black,    
     urlcolor=cyan,
-    }
+    citecolor=black
+}
 
 \begin{document}
 
@@ -77,9 +78,9 @@
 \section{Motivation}
 
 \text 
-The area of remote embedded systems has seen significant growth in recent years due to the growing need for interconnected devices and the Internet of Things (IoT). It offers developers the chance to craft physical objects that interact with the real world, resulting in a final product they can take pride in. However, the current setup of remote embedded systems, like Arduino, has a challenging learning curve due to the utilization of C++ as the programming language.
+The area of remote embedded systems has seen significant growth in recent years due to the growing need for interconnected devices and the Internet of Things (IoT). It offers developers the chance to craft physical objects that interact with the real world, resulting in a final product they can take pride in. However, the current setup of remote embedded systems, like Arduino, has a challenging learning curve due to the utilization of C++ as the programming language alongside a requirement for developers to install drivers to get started.
 \\ \\
-An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. Espruino presents a reduced entry barrier and eliminates the requirement to learn a less than beginner friendly low level language such as C/C++, which can be daunting for some. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
+An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. The usage of JavaScript promotes learning a language which has a wide variety of use cases such as web development, machine learning and even mobile apps. Espruino presents a reduced entry barrier and eliminates the requirement to learn a less than beginner friendly low level language such as C/C++, which can be daunting for some and for most will not translate to other aspects of their coding career. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
 \\ \\
 Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
 \\ \\
@@ -102,8 +103,11 @@ This project aims to help prepare future programmers and software engineers for 
 \chapter{Background}
 
 \section{The Current state of learning programming}
-Small paragraph about the current state of programming
+
+Learning how to program is an increasingly popular avenue for young professionals in recent years due to the market demand for software engineers and appeal of working in a creative, challenging and constantly evolving field; because of this increase in desire to learn how to code many people are funneled into the following avenues each with their own advantages and drawbacks.
+
 \subsection{Formal Teaching of programming}
+Many students find themselves learning how to program for the first time during a degree at university.
 \begin{itemize}
     \item how is programming currently taught at universities
     \item very theoretical
@@ -156,65 +160,77 @@ WebBluetooth represents a milestone in the integration of BLE devices into the w
 
 \section{Package Development}
 
-Passage about modern package development
+Software packages are method of extending the functionality of a given language through externally written code. With the wide adoption of node.js in web development many package developers have adopted the UNIX philosophy of building clean, modular, transparent and robust code, \cite{TheArtOfUNIXProgramming}. This is achieved in modern web development through the Node Package Manager(NPM).
 
 \subsection{NPM}
 \text NPM is a tool utilized in the world of JavaScript programming to manage software packages. It serves as a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
 
 \subsection{NPX}
-\text NPX is a tool for executing Node.js packages, including those installed through npm (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
+\text NPX is a tool for executing Node.js packages, including those installed through NPM (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
 
 \section{Device to device communication}
 
-Small paragraph surrounding the current state of communicating between different devices. potentially mention adoption 
+Within web development the challenge of real time communication between devices is a tricky subject. Examples of well implemented real time communication systems are instant messaging services such as WhatsApp and Facebook Messenger or Voice over Internet Protocol (VoIP) services such as Zoom. These services all have a theme of utilising either Web-Sockets or Peer to Peer (P2P) connection.
 
 \subsection{WebRTC}
-\text WebRTC (Web Real-Time Communication) is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing.
+\text WebRTC (Web Real-Time Communication) is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing. WebRTC stands out from the crowd by allowing users to connect with each other through a standardised Peer to Peer connection this skips the requirement of sending messages from a user to a server then back to a different user and instead just uses an external server for signalling a service that helps locate and connect the users. This method allows for a reduce in server cost due to lowered requests as they are being send directly browser to browser.
 
 \section{Open Source}
 \text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors, rather than by a single entity. The objective of open source is to promote collaboration, transparency, and innovation in software development, and to give users more control and choice over their software. Notable open source projects include the Linux operating system and the Python programming language.
 
 \section{Existing Projects}
-\text Small paragraph discussing the normal implementation of espruino
+\text The Espruino project is an ambitious attempt at bringing embedded systems programming to the masses through an easy to get started with ecosystem which takes advantage of many in house tools to provide the best experience possible for the developers. These tools aim to not change the way we develop but extend upon it through the usage of the below tools we can see this approach.
 
-\subsection{Espruino Javascript language}
-Discuss the features of the language extensions added for the espruino platform.
-\begin{itemize}
-    \item introduces specific embedded systems related keywords and syntax into standard javascript.
-\end{itemize}
+\subsection{Espruino JavaScript language}
+The Espruino native language is an extension of the standard JavaScript library introducing embedded systems specific keywords such as \textit{SetWatch} and pin manipulation through the syntax \textit{PIN.method()}. The addition of these keywords allow developers to interact and control embedded devices in a manor akin to alternatives such as Arduino or Micro Python. This extension of of the language transforms JavaScript into a capable systems programming language aimed at Espruino micro controller boards.
 
 \subsection{Espruino IDE}
-Discuss what the IDE does.
-\begin{itemize}
-    \item Provides an online environment in which no setup is required for the developer 
-    \item provides log of device output
-    
-\end{itemize}
+The Espruino IDE provides an online platform for developers to get started working with their espruino devices without the need to set up any local environments. This web application provides many features such as device console logs and programming directly onto the device all round providing a perfect learning environment for new programmers whilst also acting as an ideal debugging environment for more experienced developers.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/espruino-ide.png}
+    \caption{Espruino IDE}
+    \label{fig:espruino-ide}
+\end{figure}
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
 
 \text Due to the nature of this project having multiple smaller packages / applications the analysis of these mini projects were done separately. To accomplish this a MOSCOW analysis was undertaken on each project individually. Below is a compilation of the main points from these individual analysis including overlapping themes and important points from each project with the full MOSCOW requirements for each project referenced within the appendix \ref{appendix:MOSCOWAnalysis}.
 
+\section{Problem specification}
+
+\begin{itemize}
+    \item publush information from embedded device to web page.
+    \item add ability to use an espruino device almost as a javascript module.
+    \item promote an environment which allows both begineers and experienced programmers to work with remote embedded devices, i.e. no limitations with straight forward syntax.
+    \item remove need to write code as a string to send to device.
+\end{itemize}
+
 \section{Functional Requirements}
 Short paragraph explaining the breakdown of the work items from the original specification
 \subsection{Must Have}
 \begin{itemize}
-    \item 
+    \item A fully open-source ecosystem to allow for community contribution and overall clarity of how the project works at the code level.
+    \item Clean and accessible syntax for the end developer to get started with including inline documentation through IDE comments.
+    \item Improve the development process of Espruino device introducing a modular method of programming compared to the current almost terminal based approach.
 \end{itemize}
 \subsection{Should Have}
 \begin{itemize}
-    \item 
+    \item Support any style favoured style of programming including but not limited to JavaScript frameworks. A practice that will not discourage programmers at any level from jumping in to something they are already familiar or comfortable with. This will include imports through script tags as well as NPM.
+    \item Refined user interface to ensure integration into existing sites is not a hassle nor an eyesore. This should be consistent across all products.
 \end{itemize}
 \subsection{Could Have}
 \begin{itemize}
-    \item 
+    \item Easily extendable packages including only the core functionality of the packages to allow developers to extend and implement features they desire without being held back by any limitations.
 \end{itemize}
 \section{Non-Functional Requirements}
 \text What are non-functional requirements
 \subsection{Must Have}
 \begin{itemize}
-    \item 
+    \item A well populated documentation site to explain the in's and out's of each package in depth.
+    \item A hub for users to explore in depth projects built on the espruino-tools platform whilst allowing them to show off their own creations to the public.
     
 \end{itemize} 
 \subsection{Should Have}
@@ -415,11 +431,18 @@ Each of the packages has a unique dependency on each other, this choice of struc
 The packages and web applications above serve as a general view of the structure of the ecosystem the following will showcase the functionality of the packages/web applications in more detail.
 
 \section{Packages}
-Small introduction of the packages and why this approach was taken.
+Small introduction of the packages and why this approach was taken:
+
+\begin{itemize}
+    \item package approach, splitting functionality into independent parts, UNIX ideology reference.
+\end{itemize}
+
 \subsection{core}
 
 \text What does it do.
 \begin{itemize}
+    \item removes need to directly send strings of code to a device.
+    \item removes need for waits and provides an asynchronous model for data transfer
     \item provides a simplified approach to developing with espruino devices, \textbf{EXPLAIN WHY}.
 \end{itemize}
 \\
@@ -479,6 +502,14 @@ Small introduction of the packages and why this approach was taken.
 \end{itemize}
 
 \section{Web Apps}
+
+\text small paragraph about why web apps are required in this project, mention:
+
+\begin{itemize}
+    \item describe what packages do
+    \item show users what the packages can do and how they can do it themselves
+    \item provide an environment for users to test out functionality without committing to a project.
+\end{itemize}
 
 \subsection{online IDE}
 
@@ -608,6 +639,7 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
 
 \begin{appendices}
 \chapter{Individual MOSCOW Analysis}
+
 
 \label{appendix:MOSCOWAnalysis}
 
@@ -805,6 +837,25 @@ Below are the individual MOSCOW analysis of each project. These will go further 
     \item Have searching functionality
     \item Provide examples of code working
 \end{itemize}
+
+\chapter{Project demos}
+
+
+\label{appendix:projdemos}
+
+\section{Core}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=8cm]{dissertation/images/light-sensor-demo.png}
+    \caption{\href{https://demos-mu.vercel.app/demo/light-sensor}{Light Sensor Demo}}
+\end{figure}
+
+
+
+\section{Peer}
+\section{Transpiler}
+\section{create-espruino-app}
 \end{appendices}
 
 %==================================================================================================================================
