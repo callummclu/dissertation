@@ -498,7 +498,7 @@
 - _1 hour_ dissertation writing
 - _2.5 hours_ issue with icloud syncing and losing progress that wasnt committed.
 
-## Week 18 `<!-- thisWeek:XXhr, total: XXXhr -->`
+## Week 18 `<!-- thisWeek:25hr, total: 410.5hr -->`
 
 ### 13 Feb 2023 `<!-- 2 hours -->`
 
@@ -519,3 +519,16 @@
 - _1 hour_ creating images for dissertation
 - _5 hours_ dissertation writing.
 - _1 hour_ collating MOSCOW analysis of each project into abstarct of dissertation.
+
+### 18 Feb 2023 `<!-- 4 hours -->`
+
+- _4 hours_ writing dissertation. (expanding on implementation)
+
+### 19 Feb 2023 `<!-- 6 hours -->`
+
+- _1 hour_ creating diagrams for background and implementation
+- _1 hour_ collating links relavant for background
+- _2 hours_ resolving comments on dissertation
+- _2 hours_ continued writing
+
+## Week 19 `<!-- thisWeek: XX hours, total XXX hours-->`
