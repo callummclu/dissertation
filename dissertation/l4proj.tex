@@ -28,7 +28,6 @@
 %==============================================================================
 %% ABSTRACT
 \begin{abstract}
-    \textbf{THIS IS UNFINISHED}
 
     The personal usage of remote embedded devices is a growing area in engineering allowing for anybody to get started building robotics systems at home or even develop skill sets in programming and electronic engineering. A big name in this scene is Arduino a product which allows hobbyists to build and design systems to suit personal project needs; The Espruino project takes this in a different direction by utilising a JavaScript interpreter which aims to bring remote embedded systems programming to the web. This project intends to improve the development experience of remote embedded devices by refining the process and allowing users to focus more on their ideas and less on the semantics required to implement them. To achieve this the project introduces many packages providing functionality such as easy device connection[ADD LINK], peer-to-peer[ADD LINK] connection for mobile device inputs to be used, and the refined syntax to allow developers to get started regardless of skill or prior knowledge with wide and detailed documentation to avoid confusion when developing. In addition to this to further ease development, a CLI tool has been developed to create projects preset with all the functionality a beginner user could need, setting anybody up for programming Espruino devices, an activity which had no clear direction before of how to be done. By utilising user studies throughout the project a variety of users from different experience levels have been considered during the development process allowing for the project to be as accessible as possible.
 
@@ -82,21 +81,36 @@ The area of remote embedded systems has seen significant growth in recent years 
 \\ \\
 An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. The usage of JavaScript promotes learning a language which has a wide variety of use cases such as web development, machine learning and even mobile apps. Espruino presents a reduced entry barrier and eliminates the requirement to learn a less than beginner friendly low level language such as C/C++, which can be daunting for some and for most will not translate to other aspects of their coding career. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
 \\ \\
-Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
+Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies as developers are not getting exposed to aspects of the language outside of the native language. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
 \\ \\
-This project aims to tackle these challenges by providing developers with a cutting-edge JavaScript-based platform for building their remote embedded systems. By utilizing contemporary JavaScript, developers will gain a deeper understanding of the language and its features, as well as acquire in-demand skills that can be applied to other areas of software engineering.
+This project aims to tackle these challenges by providing developers with a modern JavaScript-based platform for building their remote embedded systems. By utilizing contemporary JavaScript, developers will gain a deeper understanding of the language and its features, as well as acquire in-demand skills that can be applied to other areas of software engineering.
 \\ \\
-This project aims to help prepare future programmers and software engineers for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in-demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice.
+This project aims to help prepare future programmers and software engineers for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in-demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice. By incorporating embedded device development into the learning process beginner programmers are able to engage with tangible creations whilst introducing them into the idea of bringing in other sectors of industry into their programming.
 
 \section{Aims}
 
 \text This effort will create a collection of packages aimed at lowering the threshold for individuals looking to get into programming in the remote embedded systems area, yet still offering benefits for experienced coders through its streamlining of the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers with an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
-\subsubsection{Goals}
-\begin{itemize}
-    \item Provide a platform for beginner programmers to easily get started with embedded systems programming.
-    \item \textbf{PUT MORE POINTS IN HERE AIM FOR AROUND 5}
-\end{itemize}
-
+\subsection{Goals}
+\text From the aims stated above the problem is broken down into the following focal points.
+\\
+\subsubsection{Beginner friendly platform} \hfill\\
+\text Provide a platform for beginner programmers to easily get started with embedded systems programming without advanced programmers being deterred.
+\\
+\subsubsection{Easy browser to device communication} \hfill\\
+\text Introduce the idea of browser to device communication enabling programmers to have further control over input to devices by allowing them to utilise devices such as mobile phones, laptops or tablets as means to control their devices even using the device as a compliment to the web applications.
+\\
+\subsubsection{Reduce development time} \hfill\\
+\text Allow developers to focus more on their ideas and less on the semantics of implementing them or navigating bad documentation or cryptic method naming schemes by following industry standard conventions and language specific rules alongside an in-depth and well populated documentation site.
+\\
+\subsubsection{Bring everything into one place} \hfill\\
+\text Remove the requirement for developers to worry about compatibility with third party dependencies by providing a feature rich ecosystem with easy extension for more experienced developers.
+\\
+\subsubsection{Easy creation sharing}\hfill\\
+\text Provide a service which allows developers to easily show off their creations; allow users to host their projects without cost, hassle or knowledge in web servers.
+\\
+\subsubsection{Flexibility in development style}\hfill\\
+\text Build an ecosystem which works regardless of how the developer decides to work by supporting package importing through all available avenues as well as documentation/demos which show off this functionality to allow for no confusion in the process.
+\\
 
 
 %==================================================================================================================================
@@ -107,39 +121,25 @@ This project aims to help prepare future programmers and software engineers for 
 Learning how to program is an increasingly popular avenue for young professionals in recent years due to the market demand for software engineers and appeal of working in a creative, challenging and constantly evolving field; because of this increase in desire to learn how to code many people are funneled into the following avenues each with their own advantages and drawbacks.
 
 \subsection{Formal Teaching of programming}
-Many students find themselves learning how to program for the first time during a degree at university.
+Many students find themselves learning how to program for the first time during a degree at university. Within the University of Glasgow the current method of teaching provides students with an intricate understanding of programming without a proper understanding of how programming results in an end software product. This approach to programming is aimed towards providing students with enough knowledge to understand the following course content such as algorithms and data structures.
 \begin{itemize}
-    \item how is programming currently taught at universities
-    \item very theoretical
-    \item little focus how the languages are used within a working environment
     \item Maybe a quick survey surrounding if students know how to turn their programming language knowledge into working products or how learning for example python relates to something like a web application.
 \end{itemize}
 
 
 \subsection{Code boot camps / online courses}
-This section is a maybe, its worth mentioning other avenues taken by programmers.
-\begin{itemize}
-    \item highly specialised, (front-end, back-end) 
-    \item focus on job ready skills.
-    \item heavily web focused.
-    \item avoids a lot of theoretical.
-    \item can result in people thinking they know how to program because theyve copied word for word from a tutorial.
-\end{itemize}
+On the other side of the spectrum many aspiring software engineers take the route of code "boot camps" such as \href{https://www.freecodecamp.org/}{freeCodeCamp} or \href{https://www.schoolofcode.co.uk/}{School of Code}. These intensive courses have the goal of producing work ready skills whilst avoiding theoretical skills that help programmers gather a better understanding of how the underlying programs work. These courses are usually highly specialised and web focuses meaning developers can potentially finish with a lack of transferable skills harming the ability for developers to transfer to new technologies and grow as a developer. An issue that comes with code boot camps are programmers who have followed tutorials word for word without absorbing the content itself resulting in people who believe they know how to develop systems without any real idea.
 
 \subsection{The job market}
-\begin{itemize}
-    \item What the market is looking for (maybe a linkedin study)
-    \item something about self learning
-\end{itemize}
+The job market for software engineers is an ever evolving market which rewards a developers skill to constantly learn on the job. Despite this languages such as JavaScript remain within the most used within the area within the \href{https://survey.stackoverflow.co/2022/#technology-most-popular-technologies}{Stack Overflow Developer Survey} we can see current trends. With an ever evolving job market it is important that anybody learning to program is able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
 
 \section{Espruino Devices}
 \text 
-The Espruino micro-controller provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
+The \href{https://www.espruino.com/}{Espruino micro-controller} provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
 
     
 \subsection{UART}
-\text Espruino devices communicate with the browser by utilising the UART protocol, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. \textbf{[EXPAND ON THIS AND INCLUDE MORE ABOUT HOW IT ACTUALLY WORKS]}
-
+\text Espruino devices communicate with the browser by utilising the UART protocol, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. UART works by utilising a transmission control line (TX) and a reception control line (RX); UART will begin by sending a start bit from TX to RX to initiate the start of a data transfer from here data is transferred bit by bit over a single data line starting with the least significant bit (LSB) and finishing with the most significant bit (MSB) following this a stop bit is sent to signal data transfer has finished. This is detailed in figure \ref{fig:UART}.
 
 \begin{figure}[!ht]
 \begin{center}
@@ -150,11 +150,8 @@ The Espruino micro-controller provides an innovative solution for individuals se
     \label{fig:UART}
 \end{figure}
 
-
-
-
 \subsection{WebBluetooth}
-\text UART connection with a web browser as mentioned above is facilitated via WebBluetooth. WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
+\text UART connection with a web browser as mentioned above is facilitated via \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API}{WebBluetooth}. WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
 
 WebBluetooth represents a milestone in the integration of BLE devices into the web, as it offers a common platform for web developers to interact with these devices, regardless of their origin or operating system. It expands the possibilities for BLE devices, including the ability to control smart home technology or track fitness information through a web application.
 
@@ -163,17 +160,24 @@ WebBluetooth represents a milestone in the integration of BLE devices into the w
 Software packages are method of extending the functionality of a given language through externally written code. With the wide adoption of node.js in web development many package developers have adopted the UNIX philosophy of building clean, modular, transparent and robust code, \cite{TheArtOfUNIXProgramming}. This is achieved in modern web development through the Node Package Manager(NPM).
 
 \subsection{NPM}
-\text NPM is a tool utilized in the world of JavaScript programming to manage software packages. It serves as a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
+\href{https://www.npmjs.com/}{NPM} \text is a tool utilized in the world of JavaScript programming to manage software packages. It serves as a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
 
 \subsection{NPX}
-\text NPX is a tool for executing Node.js packages, including those installed through NPM (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
+\href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} \text is a tool for executing Node.js packages, including those installed through NPM (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
 
 \section{Device to device communication}
 
-Within web development the challenge of real time communication between devices is a tricky subject. Examples of well implemented real time communication systems are instant messaging services such as WhatsApp and Facebook Messenger or Voice over Internet Protocol (VoIP) services such as Zoom. These services all have a theme of utilising either Web-Sockets or Peer to Peer (P2P) connection.
+Within web development the challenge of real time communication between devices is a tricky subject. Examples of well implemented real time communication systems are instant messaging services such as WhatsApp and Facebook Messenger or \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} services such as Zoom. These services all have a theme of utilising either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
 
 \subsection{WebRTC}
-\text WebRTC (Web Real-Time Communication) is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing. WebRTC stands out from the crowd by allowing users to connect with each other through a standardised Peer to Peer connection this skips the requirement of sending messages from a user to a server then back to a different user and instead just uses an external server for signalling a service that helps locate and connect the users. This method allows for a reduce in server cost due to lowered requests as they are being send directly browser to browser.
+\href{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API}{WebRTC (Web Real-Time Communication)} \text is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing. WebRTC stands out from the crowd by allowing users to connect with each other through a standardised Peer to Peer connection this skips the requirement of sending messages from a user to a server then back to a different user and instead just uses an external server for signalling a service that helps locate and connect the users. This method allows for a reduce in server cost due to lowered requests as they are being send directly browser to browser.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=5cm]{dissertation/images/web-rtc-diagram.png}
+    \caption{WebRTC}
+    \label{fig:webRTC}
+\end{figure}
 
 \section{Open Source}
 \text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors, rather than by a single entity. The objective of open source is to promote collaboration, transparency, and innovation in software development, and to give users more control and choice over their software. Notable open source projects include the Linux operating system and the Python programming language.
@@ -182,10 +186,10 @@ Within web development the challenge of real time communication between devices 
 \text The Espruino project is an ambitious attempt at bringing embedded systems programming to the masses through an easy to get started with ecosystem which takes advantage of many in house tools to provide the best experience possible for the developers. These tools aim to not change the way we develop but extend upon it through the usage of the below tools we can see this approach.
 
 \subsection{Espruino JavaScript language}
-The Espruino native language is an extension of the standard JavaScript library introducing embedded systems specific keywords such as \textit{SetWatch} and pin manipulation through the syntax \textit{PIN.method()}. The addition of these keywords allow developers to interact and control embedded devices in a manor akin to alternatives such as Arduino or Micro Python. This extension of of the language transforms JavaScript into a capable systems programming language aimed at Espruino micro controller boards.
+The \href{https://www.espruino.com/Reference#top}{Espruino native language} is an extension of the standard JavaScript library introducing embedded systems specific keywords such as \textit{SetWatch} and pin manipulation through the syntax \textit{PIN.method()}. The addition of these keywords allow developers to interact and control embedded devices in a manor akin to alternatives such as Arduino or Micro Python. This extension of of the language transforms JavaScript into a capable systems programming language aimed at Espruino micro controller boards.
 
 \subsection{Espruino IDE}
-The Espruino IDE provides an online platform for developers to get started working with their espruino devices without the need to set up any local environments. This web application provides many features such as device console logs and programming directly onto the device all round providing a perfect learning environment for new programmers whilst also acting as an ideal debugging environment for more experienced developers.
+The \href{https://www.espruino.com/ide/}{Espruino IDE} provides an online platform for developers to get started working with their espruino devices without the need to set up any local environments. This web application provides many features such as device console logs and programming directly onto the device all round providing a perfect learning environment for new programmers whilst also acting as an ideal debugging environment for more experienced developers.
 
 \begin{figure}[!ht]
     \centering
@@ -370,7 +374,7 @@ Integrating a peer-to-peer connection without utilising a self built and hosted 
 \begin{figure}[!ht]
     
 \begin{center}
-\begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
+\begin{tabular}{|p{2.25cm}|p{5.25cm}|p{5.25cm}|}
  \hline
  \multicolumn{3}{|c|}{Packages} \\
  \hline
@@ -394,7 +398,7 @@ CLI Tool &  \href{https://github.com/espruino-tools/create-espruino-app}{espruin
 
 \begin{figure}[!ht]
 \begin{center}
-\begin{tabular}{|p{2.5cm}|p{5.5cm}|p{5.5cm}|}
+\begin{tabular}{|p{2.25cm}|p{5.25cm}|p{5.25cm}|}
 \hline
 \multicolumn{3}{|c|}{Web Apps} \\
  \hline
@@ -446,7 +450,7 @@ Small introduction of the packages and why this approach was taken:
     \item provides a simplified approach to developing with espruino devices, \textbf{EXPLAIN WHY}.
 \end{itemize}
 \\
-\textbf{What is impressive about it.}
+\textbf{What is impressive about it.} 
 \begin{itemize}
     \item removes any confusion by incorporating everything you need into a single import based on device.
     \item allows for easy development of new devices via inheritance incorporating all basic functionality of the device (lightweight as well).
