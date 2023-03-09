@@ -6,6 +6,28 @@
 %
 % put any additional packages here
 %
+\usepackage{float}
+
+\usepackage{listings}
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, async, await, if, in, while, do, let, const, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]",
+morestring=[b]`
+}
+
+\lstset{ 
+    language=JavaScript
+}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -18,7 +40,7 @@
 
 %==============================================================================
 %% METADATA
-\title{Espruino Tools - An asynchronous JavaScript library to control remote embedded devices [JavaScript, Promise, Arduino]}
+\title{Espruino Tools - A JavaScript package ecosystem to promote programming education through remote embedded systems.}
 \author{Callum McLuskey}
 \date{24 March, 2023}
 
@@ -29,7 +51,7 @@
 %% ABSTRACT
 \begin{abstract}
 
-    The personal usage of remote embedded devices is a growing area in engineering allowing for anybody to get started building robotics systems at home or even develop skill sets in programming and electronic engineering. A big name in this scene is Arduino a product which allows hobbyists to build and design systems to suit personal project needs; The Espruino project takes this in a different direction by utilising a JavaScript interpreter which aims to bring remote embedded systems programming to the web. This project intends to improve the development experience of remote embedded devices by refining the process and allowing users to focus more on their ideas and less on the semantics required to implement them. To achieve this the project introduces many packages providing functionality such as easy device connection[ADD LINK], peer-to-peer[ADD LINK] connection for mobile device inputs to be used, and the refined syntax to allow developers to get started regardless of skill or prior knowledge with wide and detailed documentation to avoid confusion when developing. In addition to this to further ease development, a CLI tool has been developed to create projects preset with all the functionality a beginner user could need, setting anybody up for programming Espruino devices, an activity which had no clear direction before of how to be done. By utilising user studies throughout the project a variety of users from different experience levels have been considered during the development process allowing for the project to be as accessible as possible.
+    The personal usage of remote embedded devices is a growing area in engineering, allowing anybody to start building robotics systems at home or even develop skill sets in programming and electronic engineering. A big name in this scene is Arduino, a product which allows hobbyists to build and design systems to suit personal project needs; The Espruino project takes this in a different direction by utilising a JavaScript interpreter, which aims to bring remote embedded systems programming to the web. This project intends to improve the development experience of remote embedded devices by refining the process and allowing users to focus more on their ideas and less on the semantics required to implement them. The project introduces many packages providing functionality such as easy \href{https://github.com/espruino-tools/core}{device connection}, \href{https://github.com/espruino-tools/peer}{peer-to-peer} connection for mobile device inputs to be used, and the refined syntax to allow developers to get started regardless of skill or prior knowledge with comprehensive and detailed documentation to avoid confusion when developing. In addition, to further ease development, a CLI tool has been developed to create projects preset with all the functionality a beginner user could need, setting anybody up for programming Espruino devices. This activity had yet to have a clear direction of how to be done. By utilising user studies throughout the project, various users from different experience levels have been considered during the development process allowing the project to be as accessible as possible.
 
 \end{abstract}
 
@@ -77,40 +99,39 @@
 \section{Motivation}
 
 \text 
-The area of remote embedded systems has seen significant growth in recent years due to the growing need for interconnected devices and the Internet of Things (IoT). It offers developers the chance to craft physical objects that interact with the real world, resulting in a final product they can take pride in. However, the current setup of remote embedded systems, like Arduino, has a challenging learning curve due to the utilization of C++ as the programming language alongside a requirement for developers to install drivers to get started.
+Remote embedded systems have grown significantly in recent years due to the growing need for interconnected devices and the Internet of Things (IoT). It allows developers to craft physical objects that interact with the real world, resulting in a final product they can take pride in. However, the current setup of remote embedded systems, like Arduino, has a challenging learning curve due to the utilization of C++ as the programming language alongside a requirement for developers to install drivers to get started.
 \\ \\
-An alternate solution to this is presented by Espruino devices, which make use of JavaScript, a language that is more accessible to a broader range of developers. The usage of JavaScript promotes learning a language which has a wide variety of use cases such as web development, machine learning and even mobile apps. Espruino presents a reduced entry barrier and eliminates the requirement to learn a less than beginner friendly low level language such as C/C++, which can be daunting for some and for most will not translate to other aspects of their coding career. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
+An alternate solution to this is presented by Espruino devices, which use JavaScript, a language that is more accessible to a broader range of developers. Using JavaScript promotes learning a language with various use cases, such as web development, machine learning, and even mobile apps. Espruino presents a reduced entry barrier and eliminates the requirement to learn a less than beginner-friendly low-level language such as C/C++, which can be daunting for some and, for most, will not translate to other aspects of their coding career. This makes it easier for developers to commence with remote embedded systems and begin constructing their projects.
 \\ \\
-Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies as developers are not getting exposed to aspects of the language outside of the native language. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
+Even though using Espruino devices can tackle some of the issues linked to traditional remote embedded systems, it still gives a restricted comprehension of JavaScript and its fundamental technologies, as developers are not exposed to aspects of the language outside of the native language. This can result in a limited skill set that is not readily transferable to other areas of software engineering.
 \\ \\
-This project aims to tackle these challenges by providing developers with a modern JavaScript-based platform for building their remote embedded systems. By utilizing contemporary JavaScript, developers will gain a deeper understanding of the language and its features, as well as acquire in-demand skills that can be applied to other areas of software engineering.
+This project aims to tackle these challenges by providing developers with a modern JavaScript-based platform for building their remote embedded systems. Furthermore, by utilizing contemporary JavaScript, developers will gain a deeper understanding of the language and its features and acquire in-demand skills that can be applied to other areas of software engineering.
 \\ \\
-This project aims to help prepare future programmers and software engineers for work within the embedded systems allowing them to achieve working systems as well as allowing for the development of in-demand skills through the usage of modern JavaScript with easy access to work with any modern JavaScript of their choice. By incorporating embedded device development into the learning process beginner programmers are able to engage with tangible creations whilst introducing them into the idea of bringing in other sectors of industry into their programming.
+This project aims to help prepare future programmers and software engineers for work within the embedded systems, allowing them to achieve working systems and develop in-demand skills through modern JavaScript with easy access to work with any modern JavaScript of their choice. Furthermore, by incorporating embedded device development into the learning process, beginner programmers can engage with tangible creations while introducing them to bringing other industry sectors in their programming.
 
 \section{Aims}
 
-\text This effort will create a collection of packages aimed at lowering the threshold for individuals looking to get into programming in the remote embedded systems area, yet still offering benefits for experienced coders through its streamlining of the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers with an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
+\text This effort will create a collection of packages to lower the threshold for individuals looking to get into programming in the remote embedded systems area yet still offering benefits for experienced coders by streamlining the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
 \subsection{Goals}
-\text From the aims stated above the problem is broken down into the following focal points.
+\text The problem is broken down into the following focal points from the aims stated above.
 \\
 \subsubsection{Beginner friendly platform} \hfill\\
-\text Provide a platform for beginner programmers to easily get started with embedded systems programming without advanced programmers being deterred.
+\text Provide a platform for beginner programmers to quickly and easily get started with embedded systems programming without advanced programmers being deterred.
 \\
 \subsubsection{Easy browser to device communication} \hfill\\
-\text Introduce the idea of browser to device communication enabling programmers to have further control over input to devices by allowing them to utilise devices such as mobile phones, laptops or tablets as means to control their devices even using the device as a compliment to the web applications.
+\text Introduce the idea of browser-to-device communication enabling programmers to have further control over input to devices by allowing them to utilize devices such as mobile phones, laptops, or tablets to control their devices, even using the device as a complement to the web applications.
 \\
 \subsubsection{Reduce development time} \hfill\\
-\text Allow developers to focus more on their ideas and less on the semantics of implementing them or navigating bad documentation or cryptic method naming schemes by following industry standard conventions and language specific rules alongside an in-depth and well populated documentation site.
+\text Let developers focus more on their ideas and less on the semantics of implementing them or navigating inadequate documentation or cryptic method naming schemes by following industry standard conventions and language-specific rules alongside an in-depth and well-populated documentation site.
 \\
 \subsubsection{Bring everything into one place} \hfill\\
-\text Remove the requirement for developers to worry about compatibility with third party dependencies by providing a feature rich ecosystem with easy extension for more experienced developers.
+\text Remove the requirement for developers to worry about compatibility with third-party dependencies by providing a feature-rich ecosystem with easy extensions for more experienced developers.
 \\
 \subsubsection{Easy creation sharing}\hfill\\
-\text Provide a service which allows developers to easily show off their creations; allow users to host their projects without cost, hassle or knowledge in web servers.
+\text Provide a service that allows developers to show off their creations easily; allow users to host their projects without cost, hassle, or knowledge in web servers.
 \\
 \subsubsection{Flexibility in development style}\hfill\\
-\text Build an ecosystem which works regardless of how the developer decides to work by supporting package importing through all available avenues as well as documentation/demos which show off this functionality to allow for no confusion in the process.
-\\
+\text Build an ecosystem that works regardless of how the developer decides to work by supporting package importing through all available avenues as well as documentation/demos, which show off this functionality to allow for no confusion in the process.
 
 
 %==================================================================================================================================
@@ -118,59 +139,64 @@ This project aims to help prepare future programmers and software engineers for 
 
 \section{The Current state of learning programming}
 
-Learning how to program is an increasingly popular avenue for young professionals in recent years due to the market demand for software engineers and appeal of working in a creative, challenging and constantly evolving field; because of this increase in desire to learn how to code many people are funneled into the following avenues each with their own advantages and drawbacks.
+Learning how to program is an increasingly popular avenue for young professionals in recent years due to the market demand for software engineers and the appeal of working in a creative, challenging, and constantly evolving field; because of this increase in desire to learn how to code, many people are funneled into the following avenues each with their advantages and drawbacks.
 
 \subsection{Formal Teaching of programming}
-Many students find themselves learning how to program for the first time during a degree at university. Within the University of Glasgow the current method of teaching provides students with an intricate understanding of programming without a proper understanding of how programming results in an end software product. This approach to programming is aimed towards providing students with enough knowledge to understand the following course content such as algorithms and data structures.
+Many students learn how to program for the first time during a degree at university. Within the University of Glasgow,, the current teaching method provides students with an intricate understanding of programming without a proper understanding of how programming results in an end software product. This programming approach is aimed at providing students with enough knowledge to understand the upcoming courses content, such as algorithms and data structures.
 \begin{itemize}
-    \item Maybe a quick survey surrounding if students know how to turn their programming language knowledge into working products or how learning for example python relates to something like a web application.
+    \item Maybe a quick survey surrounding if students know how to turn their programming language knowledge into working products or how learning, for example, python relates to something like a web application.
 \end{itemize}
 
 
 \subsection{Code boot camps / online courses}
-On the other side of the spectrum many aspiring software engineers take the route of code "boot camps" such as \href{https://www.freecodecamp.org/}{freeCodeCamp} or \href{https://www.schoolofcode.co.uk/}{School of Code}. These intensive courses have the goal of producing work ready skills whilst avoiding theoretical skills that help programmers gather a better understanding of how the underlying programs work. These courses are usually highly specialised and web focuses meaning developers can potentially finish with a lack of transferable skills harming the ability for developers to transfer to new technologies and grow as a developer. An issue that comes with code boot camps are programmers who have followed tutorials word for word without absorbing the content itself resulting in people who believe they know how to develop systems without any real idea.
+On the other side of the spectrum, many aspiring software engineers take the route of code "boot camps" such as \href{https://www.freecodecamp.org/}{freeCodeCamp} or \href{https://www.schoolofcode.co.uk/}{School of Code}. These intensive courses have the goal of producing work-ready skills whilst avoiding theoretical skills that help programmers gather a better understanding of how the underlying programs work. These courses are usually highly specialized and web focused meaning developers can potentially finish with a lack of transferable skills harming the ability for developers to transfer to new technologies and grow as a developer. An issue that comes with code boot camps is programmers who have followed tutorials word for word without absorbing the content itself, resulting in people who believe they know how to develop systems without any real idea.
 
 \subsection{The job market}
-The job market for software engineers is an ever evolving market which rewards a developers skill to constantly learn on the job. Despite this languages such as JavaScript remain within the most used within the area within the \href{https://survey.stackoverflow.co/2022/#technology-most-popular-technologies}{Stack Overflow Developer Survey} we can see current trends. With an ever evolving job market it is important that anybody learning to program is able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
+The job market for software engineers is ever-evolving that rewards a developer's skill to learn on the job constantly. Despite this, languages such as JavaScript remain the most used area within the \href{https://survey.stackoverflow.co/2022/#technology-most-popular-technologies}{Stack Overflow Developer Survey} we can see current trends. With an ever evolving job market anybody learning to program must be able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
 
 \section{Espruino Devices}
 \text 
 The \href{https://www.espruino.com/}{Espruino micro-controller} provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/espruino_devices.jpg}
+    \caption{Espruino devices}
+    \label{fig:espruinodevices}
+\end{figure}
     
 \subsection{UART}
-\text Espruino devices communicate with the browser by utilising the UART protocol, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. UART works by utilising a transmission control line (TX) and a reception control line (RX); UART will begin by sending a start bit from TX to RX to initiate the start of a data transfer from here data is transferred bit by bit over a single data line starting with the least significant bit (LSB) and finishing with the most significant bit (MSB) following this a stop bit is sent to signal data transfer has finished. This is detailed in figure \ref{fig:UART}.
+\text Espruino devices communicate with the browser by utilizing the \href{https://erg.abdn.ac.uk/users/gorry/eg3576/UART.html}{UART protocol}, or Universal Asynchronous Receiver/Transmitter, a widely used communication protocol in the world of micro-controllers and embedded systems. It doesn't require a fixed clock rate between the sender and receiver and instead uses start and stop bits for data transmission synchronization. UART works by utilizing a transmission control line (TX) and a reception control line (RX); UART will begin by sending a start bit from TX to RX to initiate the start of a data transfer from here, data is transferred bit by bit over a single data line starting with the least significant bit (LSB) and finishing with the most significant bit (MSB) following this a stop bit is sent to signal data transfer has finished. This is detailed in figure \ref{fig:UART}.
 
 \begin{figure}[!ht]
 \begin{center}
-    % ADD FIGURE DETAILS LIKE A CAPTION
-    \includegraphics[width=60mm,scale=0.5]{dissertation/images/UART_diagram.png}
+    \includegraphics[width=10cm]{dissertation/images/UART_diagram.png}
 \end{center}
 \caption{UART}
     \label{fig:UART}
 \end{figure}
 
 \subsection{WebBluetooth}
-\text UART connection with a web browser as mentioned above is facilitated via \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API}{WebBluetooth}. WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
+\text UART connection with a web browser is facilitated via \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API}{WebBluetooth}. WebBluetooth is an aspect of the Web API that facilitates communication between web applications and Bluetooth Low Energy (BLE) devices. This technology allows web developers to control and access BLE devices using JavaScript, providing a streamlined and standardized approach.
 
-WebBluetooth represents a milestone in the integration of BLE devices into the web, as it offers a common platform for web developers to interact with these devices, regardless of their origin or operating system. It expands the possibilities for BLE devices, including the ability to control smart home technology or track fitness information through a web application.
+WebBluetooth represents a milestone in integrating BLE devices into the web. It offers a common platform for web developers to interact with these devices, regardless of origin or operating system. It expands the possibilities for BLE devices, including the ability to control smart home technology or track fitness information through a web application.
 
 \section{Package Development}
 
-Software packages are method of extending the functionality of a given language through externally written code. With the wide adoption of node.js in web development many package developers have adopted the UNIX philosophy of building clean, modular, transparent and robust code, \cite{TheArtOfUNIXProgramming}. This is achieved in modern web development through the Node Package Manager(NPM).
+Software packages are methods of extending the functionality of a given language through externally written code. With the wide adoption of node.js in web development, many package developers have adopted the UNIX philosophy of building clean, modular, transparent, and robust code, \cite{TheArtOfUNIXProgramming}. This is achieved in modern web development through the Node Package Manager(NPM).
 
 \subsection{NPM}
-\href{https://www.npmjs.com/}{NPM} \text is a tool utilized in the world of JavaScript programming to manage software packages. It serves as a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
+\href{https://www.npmjs.com/}{NPM} \text is a tool utilized in JavaScript programming to manage software packages. It is a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
 
 \subsection{NPX}
-\href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} \text is a tool for executing Node.js packages, including those installed through NPM (Node Package Manager). It allows users to run a package's binary without having to install it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions, rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
+\href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} \text is a tool for executing Node.js packages, including those installed through NPM (Node Package Manager). It allows users to run a package's binary without installing it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
 
 \section{Device to device communication}
 
-Within web development the challenge of real time communication between devices is a tricky subject. Examples of well implemented real time communication systems are instant messaging services such as WhatsApp and Facebook Messenger or \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} services such as Zoom. These services all have a theme of utilising either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
+Within web development, the challenge of real-time communication between devices is a tricky subject. Examples of well-implemented real-time communication systems are instant messaging services such as WhatsApp and Facebook Messenger or \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} services such as Zoom. These services all have a theme of utilising either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
 
 \subsection{WebRTC}
-\href{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API}{WebRTC (Web Real-Time Communication)} \text is a freely available resource that enables web browsers and devices to communicate voice, video and data in real-time without the need for additional software. This technology has been engineered to operate on a variety of networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing. WebRTC stands out from the crowd by allowing users to connect with each other through a standardised Peer to Peer connection this skips the requirement of sending messages from a user to a server then back to a different user and instead just uses an external server for signalling a service that helps locate and connect the users. This method allows for a reduce in server cost due to lowered requests as they are being send directly browser to browser.
+\href{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API}{WebRTC (Web Real-Time Communication)} \text is a freely available resource that enables web browsers and devices to communicate voice, video, and data in real-time without the need for additional software. This technology has been engineered to operate on various networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing. WebRTC stands out from the crowd by allowing users to connect through a standardized Peer to Peer connection; this skips the requirement of sending messages from a user to a server and then back to a different user and instead uses an external server for signalling a service that helps locate and connect the users. This method reduces server cost due to lowered requests as they are being sent directly from browser to browser.
 
 \begin{figure}[!ht]
     \centering
@@ -180,196 +206,426 @@ Within web development the challenge of real time communication between devices 
 \end{figure}
 
 \section{Open Source}
-\text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors, rather than by a single entity. The objective of open source is to promote collaboration, transparency, and innovation in software development, and to give users more control and choice over their software. Notable open source projects include the Linux operating system and the Python programming language.
+\text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors rather than a single entity. Open source aims to promote collaboration, transparency, and innovation in software development and give users more control and choice over their software. Notable open-source projects include the Linux operating system and the Python programming language.
 
 \section{Existing Projects}
-\text The Espruino project is an ambitious attempt at bringing embedded systems programming to the masses through an easy to get started with ecosystem which takes advantage of many in house tools to provide the best experience possible for the developers. These tools aim to not change the way we develop but extend upon it through the usage of the below tools we can see this approach.
+\text The Espruino project is an ambitious attempt at bringing embedded systems programming to the masses through an easy-to-get-started ecosystem which takes advantage of many in-house tools to provide the best experience possible for the developers. These tools aim not to change the way we develop but extend upon it through the usage of the below tools we can see this approach.
 
 \subsection{Espruino JavaScript language}
-The \href{https://www.espruino.com/Reference#top}{Espruino native language} is an extension of the standard JavaScript library introducing embedded systems specific keywords such as \textit{SetWatch} and pin manipulation through the syntax \textit{PIN.method()}. The addition of these keywords allow developers to interact and control embedded devices in a manor akin to alternatives such as Arduino or Micro Python. This extension of of the language transforms JavaScript into a capable systems programming language aimed at Espruino micro controller boards.
+The \href{https://www.espruino.com/Reference#top}{Espruino native language} is an extension of the standard JavaScript library introducing embedded systems specific keywords such as \textit{SetWatch} and pin manipulation through the syntax \textit{PIN.method()}. Adding these keywords allows developers to interact and control embedded devices in a manner akin to alternatives such as Arduino or Micro Python. This extension of the language transforms JavaScript into a capable systems programming language aimed at Espruino microcontroller boards.
 
 \subsection{Espruino IDE}
-The \href{https://www.espruino.com/ide/}{Espruino IDE} provides an online platform for developers to get started working with their espruino devices without the need to set up any local environments. This web application provides many features such as device console logs and programming directly onto the device all round providing a perfect learning environment for new programmers whilst also acting as an ideal debugging environment for more experienced developers.
+The \href{https://www.espruino.com/ide/}{Espruino IDE} provides an online platform for developers to get started working with their Espruino devices without the need to set up any local environments. This web application provides many features, such as device console logs and programming directly onto the device all around providing a perfect learning environment for new programmers and acting as an ideal debugging environment for more experienced developers.
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=10cm]{dissertation/images/espruino-ide.png}
-    \caption{Espruino IDE}
-    \label{fig:espruino-ide}
-\end{figure}
+% THIS MAY BE ADDED BACK IN BUT HAS BEEN REMOVED FOR SPACE
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=10cm]{dissertation/images/espruino-ide.png}
+%     \caption{Espruino IDE}
+%     \label{fig:espruino-ide}
+% \end{figure}
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
 
-\text Due to the nature of this project having multiple smaller packages / applications the analysis of these mini projects were done separately. To accomplish this a MOSCOW analysis was undertaken on each project individually. Below is a compilation of the main points from these individual analysis including overlapping themes and important points from each project with the full MOSCOW requirements for each project referenced within the appendix \ref{appendix:MOSCOWAnalysis}.
+\text Due to the nature of this project having multiple smaller packages/applications, these mini projects were analysed separately. To accomplish this, a MOSCOW analysis was undertaken on each project individually. Below is a compilation of the main points from this individual analysis, including overlapping themes and essential points from each project with the complete MOSCOW requirements for each project referenced within the appendix \ref{appendix:MOSCOWAnalysis}.
 
 \section{Problem specification}
+The Espruino platform provides an unopinionated approach to how users should use their platform, resulting in less-than-perfect tools being used out of necessity. These tools are uninviting for new programmers and lack many features for experienced programmers, a few examples of which are shown below.
 
 \begin{itemize}
-    \item publush information from embedded device to web page.
-    \item add ability to use an espruino device almost as a javascript module.
-    \item promote an environment which allows both begineers and experienced programmers to work with remote embedded devices, i.e. no limitations with straight forward syntax.
-    \item remove need to write code as a string to send to device.
+    \item easily control embedded device from the web page with the ability to gather device data.
+    \item adds the ability to use an Espruino device as a JavaScript module.
+    \item develops an environment which allows both beginners and experienced programmers to work with remote embedded devices, i.e. no limitations with straightforward syntax.
+    \item removes the need to write code as a string to send to the device. With the current implementation, an approach as shown in figure \ref{fig:OLD_UART_DEVICE_WRITING_CODE} has to be taken. This removes both auto-complete functionalities and makes code less readable.
+
+    \begin{figure}[!ht]
+        \begin{lstlisting}
+            import UART from 'uart.js';
+        
+            let code = `setWatch(function () {
+                    LED1.set();
+                }, BTN, {
+                    edge: 'rising',
+                    repeat: true,
+                    debounce: 50
+                })`;
+
+            UART.write(`${code};\n`);
+            
+        \end{lstlisting}
+        \caption{UART.js device communication}
+        \label{fig:OLD_UART_DEVICE_WRITING_CODE}
+    \end{figure}
+
+     An additional issue with this approach is the requirement to end all code with a new line, as the interpreter will not execute the code otherwise. The code should be written as standard with code completion within the IDE. An example of how this could be done is shown in figure \ref{fig:NEW_DEVICE_WRITING_CODE}. An approach allows fewer errors at run time due to syntax highlighting. 
+
+     \begin{figure}[!ht]
+        \begin{lstlisting}
+            import Device from 'new_package';
+
+            let device = new Device()
+        
+            device.setWatch(function () {
+                    device.LED1.set();
+                }, device.BTN, {
+                    edge: 'rising',
+                    repeat: true,
+                    debounce: 50
+                })`;
+            
+        \end{lstlisting}
+        \caption{Proposed new device communication}
+        \label{fig:NEW_DEVICE_WRITING_CODE}
+    \end{figure}
 \end{itemize}
 
 \section{Functional Requirements}
-Short paragraph explaining the breakdown of the work items from the original specification
+The problem specification provided a platform allowing for an open-ended approach to the problem at hand. By taking an approach that aimed to improve the current approaches taken whilst creating a platform that encouraged beginner programmers to get involved and learn. The following breakdown is the result of these considerations.
+% Short paragraph explaining the breakdown of the work items from the original specification
 \subsection{Must Have}
 \begin{itemize}
     \item A fully open-source ecosystem to allow for community contribution and overall clarity of how the project works at the code level.
-    \item Clean and accessible syntax for the end developer to get started with including inline documentation through IDE comments.
-    \item Improve the development process of Espruino device introducing a modular method of programming compared to the current almost terminal based approach.
+    \item Clean and accessible syntax for the end developer to get started with, including inline documentation through IDE comments.
+    \item Improve the development process of the Espruino device by introducing a modular programming method compared to the current almost terminal-based approach.
 \end{itemize}
 \subsection{Should Have}
 \begin{itemize}
-    \item Support any style favoured style of programming including but not limited to JavaScript frameworks. A practice that will not discourage programmers at any level from jumping in to something they are already familiar or comfortable with. This will include imports through script tags as well as NPM.
+    \item Support any style favoured programming style, including but not limited to JavaScript frameworks. A practice that will not discourage programmers at any level from jumping into something they are already familiar or comfortable with. This will include imports through script flags as well as NPM.
     \item Refined user interface to ensure integration into existing sites is not a hassle nor an eyesore. This should be consistent across all products.
 \end{itemize}
 \subsection{Could Have}
 \begin{itemize}
-    \item Easily extendable packages including only the core functionality of the packages to allow developers to extend and implement features they desire without being held back by any limitations.
+    \item Easily extendable packages, including only the core functionality of the packages, to allow developers to extend and implement desired features without being held back by any limitations.
 \end{itemize}
 \section{Non-Functional Requirements}
-\text What are non-functional requirements
+\text The project aims to improve the Espruino platform whilst providing beginners a platform to grow their programming skills. An important aim is to produce an ecosystem of clear instructions and examples to follow along and fully understand the platform's capabilities.
 \subsection{Must Have}
 \begin{itemize}
-    \item A well populated documentation site to explain the in's and out's of each package in depth.
-    \item A hub for users to explore in depth projects built on the espruino-tools platform whilst allowing them to show off their own creations to the public.
+    \item A well-populated documentation site to explain the ins and outs of each package in depth.
+    \item A hub for users to explore in-depth projects built on the espruino-tools platform whilst allowing them to show off their creations to the public.
     
 \end{itemize} 
 \subsection{Should Have}
 \begin{itemize}
-    \item 
+    \item Easy contribution from the open-source community through the usage of modern standards and clear, clean code.
+    \item A platform with online guides and videos which clearly walk the developer through the process of building a project allowing beginners to get started with functioning examples whilst letting them explore the intricacies of the package.
 \end{itemize} 
 
 \section{Specification changes}
+
+\text As this project was very open-ended and heavily incorporated user testing, it allowed for an approach where feedback generated what was happening next. Through the development process, many smaller projects were built to improve the development experience; below are the significant changes to the original specification; each breakdown in the specification is expanded further through complete MOSCOW analysis within appendix \ref{appendix:MOSCOWAnalysis}.
+
 \subsection{Peer to Peer}
-\text A separate package which allows users to easily integrate a connection between mobile devices and their browser to bridge the gap in espruino only being able to be used on specific devices.
+\text During the development of the main package, a discussion occurred surrounding the limitations of the WebBluetooth API. As WebBluetooth is a new technology, the support for it is restricted; by viewing the \href{https://caniuse.com/?search=WebBluetooth}{caniuse} tool shown in figure \ref{fig:caniuse_webblue} we can see that only chromium based browsers support this API with no direct support for iOS devices.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/caniuse_webbluetooth.png}
+    \caption{caniuse WebBluetooth adoption}
+    \label{fig:caniuse_webblue}
+\end{figure}
+
+A problem this presents is that \href{https://gs.statcounter.com/os-market-share/mobile/united-kingdom}{statcounter}'s Mobile Operating System Market Share United Kingdom states that more than half (52.44\%) of smart device users are on iOS devices as shown in figure \ref{fig:smartdeviceusage}\\\\
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/mobile-operating-system-usage.png}
+    \caption{Mobile Operating System Market Share United Kingdom (Jan 2022 - Jan 2023)}
+    \label{fig:smartdeviceusage}
+\end{figure}
+
+Smartphones may be used within the remote embedded systems space due to the limitations of the device. Mobile phones present multiple input and output interfaces that Espruino devices do not have such as cameras (used in tracking), microphones (used in voice commands), or even touch controls that allow for a more comprehensive feature set than the simple buttons provided.
+\\ 
+
+To bypass this issue and allow unsupported control over these devices, a solution of utilising a peer-to-peer communication package made sense allowing unsupported devices to connect to a main supported device as shown in figure \ref{fig:mobile-computer-connection}. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=7cm]{dissertation/images/mobile-computer-connection.png}
+    \caption{Mobile - Computer connection}
+    \label{fig:mobile-computer-connection}
+\end{figure}
+
+This approach was taken to allow users with iOS devices to control espruino devices, expanding the scope of projects available to a broader audience. To incorporate this, it would need to have the following specifications:
+\\
+\begin{itemize}
+    \item Support for any mobile device type, including but not limited to iOS and Android devices.
+    \item Simplify the integration of peer-to-peer focusing on sending data and video whilst not restricting developer freedom.
+    \item Utilise an automatically generated QR code to allow easy device connection through the camera of a mobile device.
+\end{itemize}
 
 \subsection{Transpiler}
-\text Provide a program which can translate ... to fully allow for the code to work on any given espruino platform be that their online IDE or even directly written onto the device. Mention this came up after discussion about providing an online environment and ability for less boxed in code processing.
+As the main project began to incorporate more complex behaviour like nested statements for anonymous functions which contain scope code within them. This presented an issue where the previous approach of a mini parser utilised a map of possible espruino methods along with string manipulation to replace known configurations that could come up. This approach had a few problems, such as no freedom to name instances of espruino devices as well as no support for the use of variables or nested scoped code. This approach to solving the problem ended up making the development experience worse, going directly against the aims of the project. The following code was not possible in the original approach.
+
+\begin{lstlisting}
+    import { Puck } from '@espruino-tools/core';
+
+    let my_custom_puck_name = new Puck();
+    
+    my_custom_puck_name.onPress(async () => {
+    
+        let light_val = await my_custom_puck_name.getLightVal()
+        
+        if(light_val){
+            my_custom_puck_name.LED.on("red");
+        } else {
+            my_custom_puck_name.LED.off("red");
+        }
+    })
+\end{lstlisting}
+
+To solve this problem, an approach which took inspiration from transpiled languages such as TypeScript made the most sense. A Transpiler, in this case, allowed a new language to be built extending JavaScript's syntax this could then be compiled into plain JavaScript, which could be interpreted by Espruino's compiler. For the transpiler to be effective, it had to ensure to incorporate the following criteria.
+\\
+\begin{itemize}
+    \item successfully converts all standard JavaScript allowing for variable declaration, nested scoped code as well as imports/exports.
+    \item Allow for code written in either standard Espruino language or the new Espruino tools syntax for niche unsupported methods to not be restricted.
+    \item Support modern JavaScript programming including modules, classes and syntax such as arrow functions or async/await.
+\end{itemize}
 
 \subsection{NPX Tool}
-\text Improve the time required to set up a development environment to allow more focus on the code and less on the logistics of how to get an environment set up.
+\text By expanding the espruino platform to the NPM platform it became apparent that the setup of the package directory may become cumbersome for more experienced developers or downright difficult for beginner programmers with no previous node.js knowledge. By taking inspiration from React's \href{https://reactjs.org/docs/create-a-new-react-app.html}{create-react-app} tool it made the most sense to approach the problem in the same way by allowing users a simple command line prompt with avid customisation to allow a default project which fits the needs of most developers leaving heavily customised projects to the audience of people that needed it. To incorporate this, it would need to have the following specifications:
+\\
+\begin{itemize}
+    \item Create a working directory to allow users to get started directly after the command is run with no additional setup.
+    \item An effective build command to convert users' node.js project into its respected static files for easy hosting and sharing of projects.
+    \item Support for different JavaScript development approaches, including frameworks such as React and Vue or just plain JavaScript solutions such as vanilla JavaScript or TypeScript.
+\end{itemize}
 
 \subsection{Online Environment}
-\text Allow users to have an environment in which they can test new features without setting up a whole development environment. This can be used to test functionality or even develop whole projects.
+\text The original Espruino project includes an online environment which allows users to develop straight onto their Espruino devices removing the need to set up a local environment to test smaller features. As this project utilises a new syntax whilst bringing many useful development tools such as gathering device code effectively, it made sense to take inspiration from the Espruino IDE and create an environment which supports this new style of programming on Espruino devices whilst incorporating functionality aimed at improving the experience for developers. For this aspect of the project to be effective it had to meet the following criteria:
+\\
+\begin{itemize}
+    \item It must support live development with the ability to run code and see device output to allow developers to catch any bugs that may be missed in standard development.
+    \item Bring the ability for users to upload and download their code to allow easy integration into a larger project be that through debugging or just testing features first before bringing them into the project.
+    \item Allow users to directly see device code in a read-only code editor, allowing an improved debugging experience for developers.
+\end{itemize}
+
+% Allow users to have an environment in which they can test new features without setting up a whole development environment. This can be used to test functionality or even develop whole projects.
 %==================================================================================================================================
 \chapter{Design}
-How is this problem to be approached, without reference to specific implementation details? 
 
 \section{Development}
 
-Different packages/web applications required different approaches.
+Throughout the development of this project, multiple development approaches have been taken based on the project style. By utilising both a feedback-driven model alongside a test-driven approach, each aspect of the project has been allocated an appropriate development style to ensure robustness, cleanness and adequate feature sets. These approaches were enforced using agile methodologies by dividing specification points into work items and allocating them during week-long sprints furthering the quick approach to iterating the product.
 
 \subsection{Feedback Driven Development}
-Fast iteration with focus on improving the features.
-\begin{itemize}
-    \item Forum feedback espruino forum
-    
-    \item User testing feedback from user study.
-    \item \textit{supervisor feedback [NOT SURE IF THIS SHOULD STAY]}
-\end{itemize}
+By utilising a feedback-driven approach the project was able to constantly evolve into a product more suited to the people actually using it. To take full advantage of the Espruino community and ensure the project provided useful features three methods of gathering feedback were used.
+
+\text \\
+
+\subsubsection{Espruino Forum}\hfill\\
+The Espruino Forum pictured in figure \ref{fig:espruino-forum} is a platform used by the community to share new projects or to ask for help with problems ran into within the development cycle. The forum allowed for direct communication with Gordan Williams the creator of the Espruino platform. Discussion and feedback on the shared project allowed for further iterations of the project to be made.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/espruino-forum.png}
+    \caption{Espruino Forum}
+    \label{fig:espruino-forum}
+\end{figure}
+
+\text \\
+\subsubsection{User testing}\hfill\\
+Throughout the full project user testing was utilised allowing a constant flow of feedback from a developer using the packages to build their own substantial project utilising every aspect of the package suite. By incorporating this feedback this vital stage allowed for package-wide user testing as well as both suggestions for feature additions and help with finding bugs within the code.
+
+\text \\
+\subsubsection{Supervisor Feedback}\hfill\\
+Due to the supervisors' involvement within the Espruino ecosystem through the development of a new espruino device as well as a genuine interest in the products feedback from them was essential. By having somebody who knew about the platform and had an acute interest in the product themselves allowed for many discussion sessions where new features and ideas could be bounced back and forth allowing for a creative environment including new direction ideas or even how features could be improved.
+
+\text \\
+
+This approach allowed for very small iterations to be planned out developed and deployed in a very short period further allowing again for quick feedback surrounding the changes as well as a platform to test prototyped ideas as a smoke test for the final product.
+
 
 \subsection{Test Driven Development}
-Where possible this was implemented ensuring new package versions did not break anything.
+
+Test Driven Development (TDD) is the process of writing failing tests first and ensuring the criteria are met before writing the following tests until the end product is produced. Where possible Test Driven Development was used throughout the full package ecosystem. For all packages, the feedback-driven approach was used in tandem with test-driven development to ensure these feature-rich packages both did not break with massive changes as well as allowing them to maintain substantial test coverage. Overall this approach allowed for the code quality to be constantly improved without worries of breaking previous functionality and played a vital part in the development of the transpiler package and its conversion from the imperfect original core implementation.
 
 \section{Organisations}
-\subsection{Github}
-\text something about open source, keeping everything together.
+
+By utilising organisations within this project I was able to keep relevant code in a single place; this was important due to the open-source nature of the project by keeping everything together users or contributors are able to navigate the full code base with less hassle.
+
+\subsection{GitHub}
+The GitHub platform is widely used within the open-source community, a feature provided by GitHub is GitHub organisations. GitHub organisations provide a workspace that promotes contribution and collaboration through allowed permissions allowing for control over who has access to alter code. 
+
+\text Alongside this Github organisations allows for a project with multiple repositories to be grouped together keeping all relevant code in one place. Doing this allows newer developers to discover both how all the packages work and also see the catalogue of packages offered by the ecosystem. Below in figure \ref{fig:ghorg} we can see the GitHub organisation for this project.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/github-organisation.png}
+    \caption{\href{https://github.com/espruino-tools}{Github organisation}}
+    \label{fig:ghorg}
+\end{figure}
+
 \subsection{NPM}
-\text scoped packages, keeps everything together.
+
+NPM provides a solution similar to GitHub organisations through scoped packages. NPM's scoped packages provide similar benefits such as keeping related code together whilst adding others. One of the main draws to NPM's scoped packages is the ability to name your packages similarly to packages that have previously been built prepending a given organisation's name. This approach avoids cryptic package naming schemes whilst keeping the projects consistent. As seen below in figure \ref{fig:npmorg} each scoped package within the organisation maintains the syntax of \textbf{@espruino-tools/<package-name>}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/npm-scoped-packages.png}
+    \caption{NPM scoped package Organisation}
+    \label{fig:npmorg}
+\end{figure}
+
+\section{Packaging Naming scheme}
+A massive factor when developing NPM packages is how to correctly name them to both provide context for functionality without adding additional confusion. Whilst developing the package ecosystem 2 main questions arose, how can we group packages together and how do other successful package ecosystems do this? As previously stated in the sub-section 4.2.2 NPM's scoped packages allowed for a clean and clear representation of package grouping through the organisations' name, this solved this issue. Following this further research was done into successful package ecosystems such as \href{https://babeljs.io/}{babel}, \href{https://jestjs.io/}{jest} and \href{https://sentry.io/welcome/}{Sentry}. From this research, there seemed to be a clear unspoken naming convention for NPM packages this included.
+\begin{itemize}
+    \item \textbf{"core"} name for the main package.
+    \item short descriptive package names, usually a single word when appropriate.
+\end{itemize}
+
+The criteria provided from this research provided clear instructions on how the packages within this ecosystem should be named.
+
+\section{Package Versioning}
+To ensure the package was versioned correctly resulting in a reliable and secure experience for the end users an approach was taken from the official \href{https://docs.npmjs.com/about-semantic-versioning
+}{NPM website}. This approach is shown in figure \ref{fig:NPM-versioning}
+
+\begin{figure}[!ht]
+    
+\begin{center}
+\begin{tabular}{|p{2.25cm}|p{7.25cm}|p{3.25cm}|}
+ \hline
+ \textbf{Update Type} & \textbf{Example Change} & \textbf{Version Change} \\
+ \hline
+ \hline
+Bug Fix & Package updates or security fixes  &  x.x.1  \\
+ \hline
+Minor change & Non breaking additions such as functionality extension  &  x.1.x  \\
+ \hline
+Major change & Breaking changes such as changes in syntax, anything that is not backwards compatible  &  1.x.x  \\
+ \hline
+\end{tabular}
+\end{center} 
+    \caption{NPM Package Versioning}
+    \label{fig:NPM-versioning}
+\end{figure}
+
 \section{NPX Tool Repositories}
-\text why react, vue, typescript. Why have `--clean-install`, `--peer`
-\subsection{Git Submodules}
-\text Directory changes without package updates, framework specific updates can be done without package update.
-\subsection{Tags}
-\text `--clean-install` For experienced users `--template` allowing for further choice for the developer `--peer` allowing users without knowledge of webserver routing and ssl to also get started
+The NPX Tool aimed to generate directories based on a user's needs and aims to provide a wide variety of options to facilitate this. After exploring how React's \textbf{create-react-app} approached this problem we can see the team has opted to have directories for the \href{https://github.com/facebook/create-react-app/tree/main/packages/cra-template}{plain javascript implementation} and the \href{https://github.com/facebook/create-react-app/tree/main/packages/cra-template-typescript}{typescript implementation}. This dynamic approach provided by React's \textbf{create-react-app} inspired the design of the \textbf{create-espruino-app} in the following ways.
+
+\subsection{Git sub-modules}
+Whilst the \textbf{create-react-app} tool kept its templates within the same repository I believed this was a restrictive method and provided many downsides one of which being a bloated repository making it more difficult for developers to fully understand how the tool worked. To resolve this issue an approach using git sub-modules was taken. Git sub-modules allow for incorporating separate git repositories within one another; this would allow for the NPX tool repository to be linked to separate template repositories.
+
+By using a single repository per template we are able to update file structure, patch security bugs, and package dependencies and even change the best methods of approaching building the web app without having to re-publish the tool. This approach also allowed for branching to be used for further flags on templates such as \textit{--clean-install} or \textit{--peer} meaning the end product would have a cleaner setup with more readable repositories.
+
+\subsection{Flags}
+Within CLI tool development CLI flags are used to provide user input and customise the output of a command. In the case of the tool developed CLI flags are proposed to provide the end developer with as much control over their new project as possible by incorporating different templates for popular web frameworks, easy access to a functioning setup of the peer package and even options for advanced allowing them to start off with a clean slate. These tags consist of:
+
+\subsubsection{template}\hfill\\
+The template tag allows developers to get started with a template built with one of 4 options: Plain Javascript, TypeScript, React or Vue. These options were chosen due to consideration from figure \ref{fig:js_framework_lib_comp} whilst maintaining the need for plain javascript/typescript templates to allow for flexibility when not working with a framework. The template tag allows for package-specific formatting to be set up by default this could be routing or general file structure.
+
+\text \\
+
+\subsubsection{peer}\hfill\\
+The peer tag allows users to get started with the peer package without having to worry about the restrictions of the WebRTC API such as SSL requirements or separate pages needing to be hosted for it to function properly.
+
+\text \\
+
+\subsubsection{clean-install}\hfill\\
+clean-install is a flag which is aimed at not restricting the usage of the tool to just beginners by allowing a directory to be populated just by the required packages removing any example splash pages presented by the standard package. The goal of this flag was to not alienate more advanced programmers whilst still giving them the benefits of the tool.
+
 \section{UI/UX Improvements}
-\text modals, prototyping (Figma)
-\section{Agile Methodologies}
-\text choice for software architecture.
+Previous implementations of device connection through packages such as \href{https://www.espruino.com/UART.js}{uart.js} all fall short when it comes to user experience presenting users with a badly designed modal with little to no control for leaving the modal without processing a request first. To tackle this problem with inspiration from the react component library \href{https://mantine.dev/}{Mantine} a Figma prototype was prepared to improve the user interface and experience of the mandatory modal. In figure \ref{fig:old-connection-modal} we can see the old design with layout issues and a general lack of responsive design. In figure \ref{fig:new-connection-modal} we can see the newly thought-out design prototype incorporating an option to close the modal with a clearer design. 
+
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=6cm]{dissertation/images/old-modal-design.png}
+  \captionof{figure}{Old Connection Modal}
+  \label{fig:old-connection-modal}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=6cm]{dissertation/images/new-modal-design.png}
+  \captionof{figure}{New Connection Modal}
+  \label{fig:new-connection-modal}
+\end{minipage}
+\end{figure}
+
+This design process incorporated the previously mentioned feedback-driven approach going through many iterations to reach a final product with feedback from my supervisor who had previously mentioned issues with the prior connection modal.
+
+
 %==================================================================================================================================
 \chapter{Tools / Technologies}
 
-The section will discuss the usage of technologies throughout the project splitting them into relevant sections containing technologies used by specific areas of the project.
+This project was heavily dependent on the tools and technologies used within it as they acted as the fundamental building block which allowed it to be constructed.
 
 \section{General}
 
 The packages discussed below are used throughout the full ecosystem and help provide the vital structure of the package development.
 
 \subsection{Typescript}
-\text Typescript offers several benefits over JavaScript when building a software package. It is a statically typed super-set of JavaScript, providing improved code quality through static typing and a better understanding of large code-bases through its type system. Typescript also offers better scalability with features like interfaces, classes, and modules, as well as better tooling support through better integration with modern development tools. Additionally, Typescript includes features that are part of upcoming versions of JavaScript, making code written in it future-proof.
+\href{https://www.typescriptlang.org/}{Typescript} \text offers several benefits over JavaScript when building a software package. It is a statically typed superset of JavaScript, providing improved code quality through static typing and a better understanding of large code bases through its type system. Typescript also offers better scalability with features like interfaces, classes, and modules, as well as better tooling support through better integration with modern development tools. Additionally, Typescript includes features that are part of upcoming versions of JavaScript, making code written in it future-proof.
 
 \subsection{NPM}
-\text Using the Node Package Management (NPM) system when developing a JavaScript application presents numerous benefits. NPM eases the management of packages, guaranteeing the right version is installed correctly. The NPM network boasts a significant community of developers and a vast collection of programs, minimizing the need for repeated efforts and making it easy to integrate new features. NPM standardizes the system for versioning packages and enables seamless distribution of programs to the community. The adoption of NPM also enables automation of processes like building, testing, and deploying packages, reducing the workload associated with managing the project.
+\text Using the Node Package Management (\href{https://www.npmjs.com/}{NPM}) system when developing a JavaScript application presents numerous benefits. NPM eases the management of packages, guaranteeing the right version is installed correctly. The NPM network boasts a significant community of developers and a vast collection of programs, minimizing the need for repeated efforts and making it easy to integrate new features. NPM standardizes the system for versioning packages and enables the seamless distribution of programs to the community. The adoption of NPM also enables the automation of processes like building, testing, and deploying packages, reducing the workload associated with managing the project.
 
 
 \subsection{UNPKG}
-\text The utilization of inline JavaScript imports through UNPKG provides numerous advantages. The ability to integrate small amounts of code through inline imports enables a fast and straightforward method for experimenting with various components and evaluating different solutions. Utilising both inline imports and NPM package imports simultaneously presents a versatile and efficient development process, empowering developers to select the most suitable approach for their project needs.
+\text The utilization of inline JavaScript imports through \href{https://unpkg.com/}{UNPKG} provides numerous advantages. The ability to integrate small amounts of code through inline imports enables a fast and straightforward method for experimenting with various components and evaluating different solutions. Utilising both inline imports and NPM package imports simultaneously presents a versatile and efficient development process, empowering developers to select the most suitable approach for their project needs.
 
 \subsection{Azure DevOps}
-\text Azure DevOps is a unified platform for software development that consolidates various tools and services. It offers a complete solution for source control, continuous integration/testing/deployment, and project management. Azure DevOps streamlines the development process by providing features such as automated builds, continuous deployment, and team collaboration, outperforming alternative approaches that utilize individual tools like Jenkins or Jira.
+ \href{https://azure.microsoft.com/en-us/products/devops}{Azure DevOps} \text is a unified platform for software development that consolidates various tools and services. It offers a complete solution for source control, continuous integration/testing/deployment, and project management. Azure DevOps streamlines the development process by providing features such as automated builds, continuous deployment, and team collaboration, outperforming alternative approaches that utilize individual tools like Jenkins or Jira.
 
 \subsection{Webpack}
-\text can use new javascript features and compile into older widely used, enables typescript.Other webpack benefits converts all code into es5 by choice (why es5)
-Why not parcel or snowpack or another bundler
+\href{https://webpack.js.org/}{Webpack} \text is a popular module bundler used within node.js projects. It offers the ability to build JavaScript directories into efficiently bundled files by utilising methods like tree shaking, scope hoisting and file minification. A bonus of Webpack is the vast platform of packages allowing for incorporating other static files such as HTML and CSS into bundles, alongside this Webpack is heavily used in effectively building pre-processors and transpilers such as TypeScript and \href{https://sass-lang.com/}{SASS} which are both heavily used within the project. On top of this, Webpack's babel plugin allows for the usage of the latest version of ECMAScript whilst still compiling into ES5-compatible code. There are several Webpack alternatives such as \href{https://rollupjs.org/}{Rollup} and \href{https://parceljs.org/}{Parcel}; Webpack was chosen due to its large ecosystem of plugins, vast documentation and wider feature set. 
 
-\subsection{React }
-\text Why is react used for demos and online IDE vs Vue, Angular, vanilla or any other. Using a framework benefits.
-comparing frameworks
+\subsection{React}
 
-\subsection{Husky }
-Command runner for git hooks allows for commands such as linting and testing to be run on git hooks such as commits or push.
-\begin{itemize}
-    \item provides simple git hook usage
-    \item Run linting / testing before a commit (package sanitising)
-\end{itemize}
+ \href{https://reactjs.org/}{React} \text is a popular and widely used JavaScript library utilised for building user interfaces. Developed by Facebook, react has gained widespread adoption within the professional software field due to its flexibility and robust core feature set. React was chosen due to its component-based architecture allowing for a shared and consistent design throughout the web applications built into the project as well as its wide variety of packages. React has many competitors such as \href{https://vuejs.org/}{Vue} and \href{https://angular.io/}{Angular} all of which achieve the same goal of creating complex user interfaces whilst boasting impressive core feature sets of their own but due to React's ease of learning and wide adoption, it made the most sense to pick for an open-source project. Below we can see a survey taken by \href{https://2022.stateofjs.com/en-US/libraries/front-end-frameworks/}{stateofjs} highlighting the usage of React over the past six years showing the popularity of it in comparison to Vue and Angular.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=13cm]{dissertation/images/framework_popularity_comparison.png}
+    \caption{stateofjs JavaScript framework/library usage comparison}
+    \label{fig:js_framework_lib_comp}
+\end{figure}
+
+\subsection{Husky}
+\href{https://typicode.github.io/husky/#/}{Husky} is an open-source package which allows for easy control over git hooks within JavaScript projects. Husky allows for a developer to run commands on specific \href{https://git-scm.com/docs/githooks}{git hooks} such as \textit{pre-commit} and \textit{pre-commit-merge}. The addition of husky to a project allows for actions such as code testing and linting, presenting a solution to developers forgetting to perform these tasks before pushing code through the pipeline. Husky provides an ecosystem full of plugins and packages that can be used to improve the development of JavaScript packages.
+
 \subsection{Standard Version}
-Utilised by husky this package brings features necessary for package development such as:
-\begin{itemize}
-    \item auto package versioning
-    \item auto change log
-\end{itemize}
+\href{https://github.com/conventional-changelog/standard-version#readme}{Standard Version} is a package which allows for the automatic versioning of a project or packages alongside the automatic generation of a change-log based on commit messages. When used in tandem with Husky Standard Version provides a platform which eliminates the need for developers to manually perform package versioning or the difficult task of ensuring a change log is always up to date.
 
-\section{CLI tool }
+\section{CLI tool}
 
 The CLI tool takes a different approach in development to the NPM packages as there is a requirement to be run through the command line.
 
 \subsection{NPX }
-\text NPX is a command line package runner allowing for the execution of node based JavaScript packages through a specified command. This has avid usage within the javascript development scene for building starting point directories, popular examples include React's create-react-app and Vue's vue-cli to name a few.
+\href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} is a command line package runner allowing for the execution of node-based JavaScript packages through a specified command. This has avid usage within the javascript development scene for building starting point directories, popular examples include React's \href{https://reactjs.org/docs/create-a-new-react-app.html}{create-react-app} and Vue's \href{https://cli.vuejs.org/}{vue-cli} to name a few.
 
-\section{Peer }
+\section{Peer}
 
-Integrating a peer-to-peer connection without utilising a self built and hosted back-end system provided an issue.
+Integrating a peer-to-peer connection without utilising a self-built and hosted back-end system presented a problem.
 
 \subsection{peerJS}
-\text PeerJS provides an all-in-one solution which utilises WebRTC removing the issue of building a home made WebSocket back-end system to allow for real-time communication between devices this approach allows for developers to keep the simplicity of hosting static files without having to worry about the maintenance and cost of hosting of a back-end system.
+\href{https://peerjs.com/}{PeerJS} provides an all-in-one solution which utilises WebRTC removing the issue of building a homemade WebSocket back-end system to allow for real-time communication between devices this approach allows developers to keep the simplicity of hosting static files without having to worry about the maintenance and cost of hosting of a back-end system.
 
 \subsection{qrcode Package }
-\begin{itemize}
-    \item Allow easy device connection through camera
-\end{itemize}
+\text Building a bespoke QR code generator did not make sense for this project due to time constraints; to bypass this issue a pre-built solution \href{https://github.com/soldair/node-qrcode#readme}{qrcode} was used. qrcode provides a lightweight solution to building SVG QR codes easily embeddable into a web page. The package converts any given text into a scannable QR code including but not limited to urls and phone numbers. 
 
 \section{Documentation }
 
-\subsection{Docusaurus }
-\text why this over jekyll, hugo. MDX, agolia search
-\begin{itemize}
-    \item components through MDX
-    \item search
-\end{itemize}
+\subsection{Docusaurus}
+\href{https://docusaurus.io/}{Docusarus} is a documentation generator that takes inspiration from React to provide a platform for easily building and maintaining documentation websites. Developed by Facebook, it is a widely adopted solution for creating high-performing and highly customisable documentation sites thanks to its \href{https://mdxjs.com/}{MDX} support. MDX similar to \href{https://reactjs.org/docs/introducing-jsx.html}{JSX} used within React is a file format which allows the inclusion of componentised JSX within markdown allowing for consistent design with reduced development time. Additionally, Docusarus by default allows for \href{https://www.algolia.com/}{algolia} search integration, an option which adds a full site search to the static site to allow for site-wide searching functionality without the overhead of a backend system to support it. When comparing Docusaurus to the competition, other documentation generators such as \href{https://jekyllrb.com/}{jekyll} and \href{https://www.sphinx-doc.org/en/master/}{sphinx} Docusaurus despite being the newest competitor of the bunch has a wide community and dramatically increases the customizability and performance when compared to the others resulting in documentation sites that arent which can be better custom fit to the projects overall branding and style.
 
-\section{Transpiler }
+
+\section{Transpiler}
+
+Building a transpiler is a difficult task to do well, fortunately, there are many packages which can help with steps throughout the processes of parsing, tokenising and code generation allowing for more focus to be put on what needs to be changed.
 
 \subsection{Esprima }
-\text why use existing parse/tokeniser, Mozilla standard for Javascript. Avoid re-inventing the wheel.
+\href{https://esprima.org/}{Esprima} is a JavaScript parser written in JavaScript with the aim of simplifying parsing given ECMAScript 2016 code. Esprima provides functionality for the developer to tokenise and parse JavaScript code into an Abstract Syntax Tree (AST) to the Mozilla (\href{https://developer.mozilla.org/en-US/}{MDN}) JavaScript specification. By providing a comprehensive documentation site Esprima is able to take the hassle out of creating a parser for JavaScript allowing developers to not have to reinvent the wheel and instead put focus on altering the syntax trees to implement their syntax extensions/alterations. 
+
 \subsection{EsCodeGen }
-\text Why use this instead of building your own, Mozilla standard for Javascript. Avoid re-inventing the wheel.
+\href{https://github.com/estools/escodegen#readme}{EsCodeGen} is a code generator built for JavaScript which has the sole purpose of converting Mozilla (MDN) compatible Abstract Syntax Trees (ASTs) into readable JavaScript code. EsCodeGen has support for ECMAScript 2016 making it directly compatible with Esprima. This package was utilised due to Esprima's lack of a code generator and avoids the requirement of building a crude module to generate code from the generated ASTs.
+
 %==================================================================================================================================
 \chapter{Implementation}
 
-\text Through the analysis of the projects specification a decision was made to separate functionality that is unrelated or can be used independently into their own packages or web applications. This approach resulted in the development of the following packages and web applications shown in figures \ref{fig:packages} and \ref{fig:webapps}.
+\text Through the analysis of the project's specification a decision was made to separate functionality that is unrelated or can be used independently into their own packages or web applications. This approach resulted in the development of the following packages and web applications shown in figures \ref{fig:packages} and \ref{fig:webapps}.
 
 \begin{figure}[!ht]
     
@@ -378,7 +634,7 @@ Integrating a peer-to-peer connection without utilising a self built and hosted 
  \hline
  \multicolumn{3}{|c|}{Packages} \\
  \hline
- Name  & Github repo& Documentation\\
+ Name  & GitHub repository& Documentation\\
  \hline
 Core & \href{https://github.com/espruino-tools/core}{espruino-tools/core}  & \href{https://documentation-xi-liard.vercel.app/docs/category/core}{docs/category/core}  \\
 
@@ -402,7 +658,7 @@ CLI Tool &  \href{https://github.com/espruino-tools/create-espruino-app}{espruin
 \hline
 \multicolumn{3}{|c|}{Web Apps} \\
  \hline
- Name & Github repo & Site Link\\
+ Name & GitHub repository & Site Link\\
  \hline
 Online IDE & \href{https://github.com/espruino-tools/online-environment}{espruino-tools/online-environment} & \href{https://online-environment.vercel.app/}{online-environment.vercel.app} \\
 Demo's Hub & \href{https://github.com/espruino-tools/demos}{espruino-tools/demos}  & \href{https://demos-mu.vercel.app/}{demos-mu.vercel.app} \\
@@ -414,7 +670,7 @@ Documentation & \href{https://github.com/espruino-tools/documentation}{espruino-
 \label{fig:webapps}
 \end{figure}
 
-Each of the packages has a unique dependency on each other, this choice of structure allows for users to get involved at any step and even develop their own solutions to improve their own custom work flow, the dependency graph is shown in figure \ref{fig:package_dep_graph}
+Each of the packages has a unique dependency on each other, this choice of structure allows users to get involved at any step and even develop their own solutions to improve their own custom workflow, the dependency graph is shown in figure \ref{fig:package_dep_graph}
 
 %========================
 %=
@@ -432,127 +688,288 @@ Each of the packages has a unique dependency on each other, this choice of struc
     \label{fig:package_dep_graph}
 \end{figure}
 
-The packages and web applications above serve as a general view of the structure of the ecosystem the following will showcase the functionality of the packages/web applications in more detail.
+The packages and web applications above serve as a general view of the ecosystem's structure. The following will showcase the functionality of the packages/web applications in more detail.
 
 \section{Packages}
-Small introduction of the packages and why this approach was taken:
 
-\begin{itemize}
-    \item package approach, splitting functionality into independent parts, UNIX ideology reference.
-\end{itemize}
+To provide the end developers with the best possible development, an approach was taken in line with the UNIX ideology \cite{TheArtOfUNIXProgramming} in which functionality is split into their independent parts, maintaining small packages that are functional on their own but can come together to create a more complex project.
+
+\subsection{UART}
+
+The UART package is built to enable an easy connection between WebBluetooth/Web Serial devices (such as Espruino devices) and web browsers avoiding the requirement for users to build their own rudimentary solutions. The idea behind the UART package is to improve upon the \href{https://www.espruino.com/UART.js}{uart.js} package. 
+\\ \\
+uart.js is a library built by the creator of the Espruino platform with the goal of simplifying the interaction between WebBluetooth and Web Serial devices with a web browser. This small package provides users with a means to connect Espruino devices to a browser, but this is all it does leaving no room for user configuration by the developer as well as using old JavaScript methodologies. This approach has resulted in a package which restricts user understanding through a cryptic code base, forces users into incorporating an outdated design into their package in the way of a modal and results in a product that feels unfinished.
+\\ \\
+The development of the UART package resulted in a package which encapsulated the required functionality of the uart.js package whilst improving in the following aspects: 
+\\  
+\subsubsection{Modern ECMAScript}\hfill\\
+Modern ECMAScript was utilised in the rebuild allowing for a class structure to be used; this approach allows for the end developer to take the core functionality of the package and expand upon it to allow the creation of custom UART implementations, improving the life span of the package whilst not restricting users to using a package which does not offer what they need in their system. By further utilising modern ECMAScript in the development process, the end product produced had a clear direction removing any prior need for global variables or hacky methods of enforcing functionality whilst removing redundant code or code depreciated since the original development of the uart.js package.
+\\
+\subsubsection{Extension of Functionality}\hfill\\
+The original package lacked the functionality to check and alter the queue as well as what commands had previously been sent; this functionality, when used by more experienced developers, would allow for further optimisation during the development of a project with this package resulting in further customisation to fully optimise the end product a goal which is paramount in the development of remote embedded devices.
+\\ 
+\subsubsection{Improved UI/UX}\hfill\\
+By utilising a proper design process, a new non-intrusive modal was developed to both improve integration into a more modern style of website whilst improving users' experience by incorporating a close modal button omitted in the original package.
 
 \subsection{core}
 
-\text What does it do.
-\begin{itemize}
-    \item removes need to directly send strings of code to a device.
-    \item removes need for waits and provides an asynchronous model for data transfer
-    \item provides a simplified approach to developing with espruino devices, \textbf{EXPLAIN WHY}.
-\end{itemize}
-\\
-\textbf{What is impressive about it.} 
-\begin{itemize}
-    \item removes any confusion by incorporating everything you need into a single import based on device.
-    \item allows for easy development of new devices via inheritance incorporating all basic functionality of the device (lightweight as well).
-\end{itemize}
-\subsection{peer}
+The core package is the ecosystem's main package, which expands upon the UART package by providing users with an experience more akin to standard programming. It does this by bypassing issues that occur with sending data to the device; the UART package makes it so that sending code to a device requires the code to be in sting format, leaving the developer in a position where they receive no support from their IDE such as auto-complete suggestions or syntax error detection. The core package provides an importable object for each of the primary Espruino devices as well as an extendable standard import in which users can build their own devices with basic functionality such as connection writing and shared functionality already incorporated. Furthermore, the package provides a more descriptive syntax for the developer, clearing up any confusion or barely documented code. This new syntax can be seen in figures \ref{fig:old-code-approach} and \ref{fig:new-code-approach}.
 
-\textbf{What does it do.}
-\begin{itemize}
-    \item WebRTC
-    \item simplify the interaction between mobile devices and web browsers (QR Code).
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item easy to add to a site, simple configuration.
-\end{itemize}
-\subsection{uart}
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{6cm}
+  \centering
+  \begin{lstlisting}
+    let code = `setWatch(function () {
+        LED1.toggle();
+    }, BTN, {
+        edge: 'rising',
+        repeat: true,
+        debounce: 50
+    });`;
 
-\textbf{What does it do.}
-\begin{itemize}
-    \item Connection between Espruino devices and the webbrowsers
-    \item improved user interaction with the package, (UI/UX)
-    \item Overhaul of old package using modern javascript
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item utilises modern ECMAScript classes, allowing users to take advantage of inheritance for building their own UART implementations removing any issues with 
-\end{itemize}
+    UART.write(code);
+  \end{lstlisting}
+  
+  \captionof{figure}{UART code approach}
+  \label{fig:old-code-approach}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{6cm}
+  \centering
+  
+  \begin{lstlisting}
+let p = new Puck()
+
+p.onPress(function(){
+    p.LED.toggle('red')
+})
+  \end{lstlisting}
+  \captionof{figure}{Core code approach}
+  \label{fig:new-code-approach}
+\end{minipage}
+\end{figure}
+
+On top of this, the core package takes a fully asynchronous approach to development, taking advantage of JavaScript's \textbf{Promise} functionality utilising \textbf{async/await}. This allows the developer to not worry about using timeouts throughout their program but instead opt for a cleaner solution that presents data when it's ready instead of when a hard-coded timer has passed. This is baked-in functionality meaning the \textbf{async/await} keywords can be utilised to gather data from the device, as shown below in figure \ref{fig:async-await-core}.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{lstlisting}
+let p = new Puck();
+
+let temperature = await p.getTemperature();
+    \end{lstlisting}
+    \caption{Async/Await in core package}
+    \label{fig:async-await-core}
+\end{figure}
+
+\textit{We can see in the figure }\ref{fig:async-await-core} \textit{a top-level await is utilised, due to the usage of modern JavaScript throughout the package ecosystem, this option is available.}
+
+\subsection{Peer}
+\text Involving peer-to-peer connection within the package ecosystem required the addition of a WebRTC compatible package. To solve this problem the Peer package was built as an extension to the peer.js platform. peer.js is an open-source package that provides functionality to facilitate the peer-to-peer connection between two browsers. 
+\\ \\
+The Peer package extends upon the functionality of peer.js by adding some ease of life functionality such as simplified connection via a modal that combines a scannable QR code alongside a link which redirects to a page via query string this can be seen in figure \ref{fig:qr-scan}. 
+\\ \\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=6cm]{dissertation/images/QR-p2p-modal.png}
+    \caption{Peer QR Modal}
+    \label{fig:qr-scan}
+\end{figure}
+
+\text In addition to this the Peer package implements a simplified syntax for setting up data and video transmission between two browsers, this syntax can be seen below in figures \ref{fig:old-peer-syntax} and \ref{fig:new-peer-syntax} showing basic data connection.
+
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{7cm}
+  \centering
+  \begin{lstlisting}
+// Hosting page
+let p_host = new Peer();
+p_host.on('connection', (conn) => {
+  conn.on('data', (data) => {
+    console.log(data)
+  });
+});
+
+// Connecting page
+let p_connector = new Peer();
+let conn = p_connector.connect(peer_host.id);
+conn.on('open', () => {
+  conn.send('my message');
+});
+  \end{lstlisting}
+  
+  \captionof{figure}{peer.js package approach}
+  \label{fig:old-peer-syntax}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{5.5cm}
+  \centering
+  
+  \begin{lstlisting}
+// Hosting page
+let p_host = new Host();
+p_host.getData(data => {
+    console.log(data);
+});
+ 
+
+// Connecting page
+let p_connector = new Connector();
+p_connector.connectData();
+p_connector.conn
+    .send("my message");
+
+  \end{lstlisting}
+  \captionof{figure}{Peer package approach}
+  \label{fig:new-peer-syntax}
+\end{minipage}
+\end{figure}
+
+The examples above glosses over how the hosting site passes the id across, within the peer.js package a bespoke approach to this would be required whereas the Peer package will do this by default further removing another step of boilerplate configuration from the developer
+
 
 \subsection{create-espruino-app}
+To ensure users can get started with Espruino-tools as soon as possible and with as little setup as possible, the create-espruino-app package presents a CLI tool to allow the construction of a customised directory ready to start development with a single terminal command. The package will clone a specified git repository based on the provided flags and will provide a repository with a customised Webpack configuration that allows for localhost development alongside an easy build command to allow projects to be hosted directly on GitHub pages for easy project sharing. Below in figure \ref{fig:flag-comp} shows a table of flags available to the user alongside what they produce.
 
-\textbf{What does it do.}
-\begin{itemize}
-    \item provides a simple one line command for users to get started. 
-    \item provides a series of tags to customise the users development style from clean installing where no boilerplate files are provided to starting up a peer package directory.
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item Covers multiple modern development frameworks such as react and vue
-\end{itemize}
+\begin{figure}[!ht]
+    \centering
+    \begin{tabular}{|p{2.25cm}|p{10cm}|}
+ \hline
+ \multicolumn{2}{|c|}{Flags} \\
+ \hline
+ \textbf{Flag}  & \textbf{Use case}\\
+ \hline
+ template & This flag allows for users to specify the environment they want to get started with this includes plain JavaScript, TypeScript, React and Vue.\\ \hline
+
+ peer & Allows for an environment using the Peer package with two pages to be set up one for the Host page and one for the Connector page, this takes each template's routing systems into account and provides a routing system for those that do not have one.\\ \hline
+
+ clean-install & This allows users to get started with an environment from the template tag with no additional setup, this will just provide an empty page and the correct packages installed to allow full control over what the project does without guidance from the tool.\\
+ \hline
+    \end{tabular}
+    \caption{Flags details}
+    \label{fig:flag-comp}
+\end{figure}
+
+This tool works through NPX meaning that users are not required to install anything to utilise the tool. This choice was made to make the usage of the tool as accessible as possible to a wide audience of developers. An example of a command used to produce a React and Peer-enabled package in a directory called \textit{my-esp-app} is shown below in figure \ref{fig:npx-command}.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{lstlisting}[language=bash]
+        $ npx create-espruino-app my-esp-app --template react --peer
+    \end{lstlisting}
+    \caption{NPX command for React, Peer project}
+    \label{fig:npx-command}
+\end{figure}
+
 \subsection{Transpiler}
+As the development of the core package progressed, it became apparent that the previous implementation of converting the new syntax of code into espruino natively compatible code was not covering the code adequately and was resulting in basic features such as variable declaration or any statements with a scope not translating correctly. To counter this problem, the Transpiler package was created; the Transpiler package provides a platform for converting code in the espruino-tools syntax into native espruino code. The package utilises Esprima and escodegen, tools that convert code into abstract syntax trees (ASTs) and back, allowing the package to focus on transforming the ASTs for syntax conversions.
+\\ \\
+Due to the approach of constructing, transforming and building ASTs the Transpiler package creates a tool which only converts code recognised to be espruino-tools code leaving the rest to remain as standard JavaScript; this approach further allows users to incorporate native Espruino code into their projects meaning new features within the standard ecosystem are not restricted when using the espruino-tools ecosystem of packages.
+\\ \\ 
+An example of the input and output of the Transpiler package can be seen below in figures \ref{fig:transpiler-before} and \ref{fig:transpiler-after}.
 
-\textbf{What does it do.}
-\begin{itemize}
-    \item Provides platform for writing core code and converting into native espruino code.
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item works as importable package and runnable CLI, allowing for full directory conversion similar to other transpiler/preprocessors such as typescript or the older coffeescript.
-\end{itemize}
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{6cm}
+  \centering
+  \begin{lstlisting}
+let p = new Puck()
+p.mag.onMag((val)=>{
+    if(val > 2){
+        p.LED.on("blue")
+    } else {
+        p.LED.off("blue")
+    }
+})
+
+  \end{lstlisting}
+  
+  \captionof{figure}{Code before being transpiled}
+  \label{fig:transpiler-before}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{6cm}
+  \centering
+  
+  \begin{lstlisting}
+Puck.on('mag', function (val) {
+    if (val > 2) {
+        LED3.set();
+    } else {
+        LED3.reset();
+    }
+});
+  \end{lstlisting}
+  \captionof{figure}{Code after being transpiled}
+  \label{fig:transpiler-after}
+\end{minipage}
+\end{figure}
 
 \section{Web Apps}
+To provide developers with a complete ecosystem, web applications were also developed to provide a community for sharing projects as well as a platform to test the functionality of code on devices quickly.
 
-\text small paragraph about why web apps are required in this project, mention:
+\subsection{Online environment}
+The online environment provides a platform for users to develop their Espruino devices from a browser whilst having a terminal output to allow a more in-depth dive into bug diagnostics.
+\\ \\
+The online environment provides users with the functionality to quickly perform actions on Espruino devices. The platform can be used fully within the development of Espruino packages allowing users to upload code to the editor as well as download their code into a JavaScript file. Users can use the platform to connect and run code directly on the device, reset the device or gather both functions on the device alongside the code on the device itself this can be seen in figure \ref{fig:online-env-device-code}
 
-\begin{itemize}
-    \item describe what packages do
-    \item show users what the packages can do and how they can do it themselves
-    \item provide an environment for users to test out functionality without committing to a project.
-\end{itemize}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/online-env-device-code.png}
+    \caption{Online environment code on device}
+    \label{fig:online-env-device-code}
+\end{figure}
 
-\subsection{online IDE}
-
-\textbf{What does it do.}
-\begin{itemize}
-    \item Provides environment for online development similar to online compiler X.
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item showcases code saved on device
-    \item showcases transpiled code, can be used for better understanding of the "lower level" code.
-\end{itemize}
+Alongside this feature the web application provides the ability to view transpiled code, this could be used to gain the benefits of the clean concise espruino-tools code without using the packages themselves allowing for flexibility in the users' development style.
+\\ \\
+The environment utilises the Monaco editor, a code editor for web applications built by Microsoft to replicate the vs code editor, this choice was taken to keep the environment as similar as possible for the developer.
 
 \subsection{Demo's Hub}
-\textbf{What does it do.}
-\begin{itemize}
-    \item provides a hub for new or experienced users to browse projects built with espruino tools with easy downloading and a code viewer to see the process
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item PR based adding to site, no need for a backend Static site generation.
-    \item something about config file for page population.
-\end{itemize}
+To provide a platform for users to view what can be built with espruino-tools the Demo's Hub was built. This web application provides a place for new or experienced users to browse projects built with espruino tools including an experience with easy downloading of code as well as a code viewer to browse the code base required to produce the result. The site provides an individual page for each unique project this can be seen in figure \ref{fig:demo-page}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=10cm]{dissertation/images/demo-page.png}
+    \caption{Demo page}
+    \label{fig:demo-page}
+\end{figure}
+
+The page is customised by the developer by utilising the custom espruino demo configuration file, this JSON file allows developers to add videos via youtube's embedded link sharing, descriptions and custom links to fully cover what their page does an example of this JSON configuration file can be seen in the figure \ref{fig:demo-config}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{lstlisting}
+{
+    "projectHeader":{
+        "title":"Demo title",
+        "projectDescription":"demo header description"
+    },
+    "sidebarLinks":[
+        {"name":"github","link":"https://github.com/"},
+        {"name":"optional custom link","link":"https://..."}
+    ],
+    "video":{
+        "link":"https://www.youtube.com/embed/z0YW8AEI8LM",
+        "details":{
+            "title":"Video title",
+            "description":"video description"
+        }
+    }
+}
+    \end{lstlisting}
+    \caption{Demo configuration file}
+    \label{fig:demo-config}
+\end{figure}
+
+To allow users to add their own contributions without building and hosting a dedicated backend system due to time constraints, the demos hub is populated through the GitHub repositories \textit{demos} folder. This approach means that developers have to create a pull request within the demos repository adding their project, with clear instructions on the demo's hub site; this approach provides the benefits of a backend system not requiring the site to be rebuilt on an added change whilst bringing the benefits of a statically generated site not requiring any cost to host online.
 
 \section{Documentation}
-\textbf{What does it do.}
-\begin{itemize}
-    \item place for all documentation all in one well organised place.
-    \item full site searching
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item everything is built with components allowing for new pages to be built with next to no need for configuration or hassle.
-\end{itemize}
+Due to the package ecosystem incorporating many different concepts and packages, a documentation site was required to help provide a place for all documentation in one well-organised place. The implementation of the documentation produced a platform where users can search for concepts within any package available whilst being presented with tutorials on using the technologies and videos showcasing the products produced. The development of the documentation heavily utilised components for consistent styling, meaning that pages are based on a preset custom template which provides options for code editors, sandboxed environments as well as video implementation with little to no boilerplate code meaning new features can be added to the documentation with little to no effort ensuring an up to date and accurate documentation site can be easily maintained.
+
 \section{CI/CD}
-\text The CI/CD pipeline built provides a platform the streamline the development process of the packages, this process provides the structure for how the packages are tested and prepared before deployment alongside how they are deployed leaving the developer to focus on the programming and less on the semantics of deploying an application. This is shown below in Figure \ref{fig:CICDPipeline}
+The CI/CD pipeline built provides a platform that streamlines the development process of the packages; this process provides the structure for how the packages are tested and prepared before deployment alongside how they are deployed, leaving the focus on the programming and less on the semantics of deploying an application. This is shown below in Figure \ref{fig:CICDPipeline}
 
 \begin{figure}[!ht]
     \begin{center}
@@ -563,77 +980,278 @@ Small introduction of the packages and why this approach was taken:
     \caption{CI/CD Pipeline}
     \label{fig:CICDPipeline}
 \end{figure}
-\\
-\textbf{What does it do.}
-\begin{itemize}
-    \item automated testing, building, deployment.
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item automated deployment.
-\end{itemize}
 
-
-\section{Testing}
-\text JEST, javascript testing suite. Cypress,Front end testing suite, Mocking, JSDOM. (this may only be applicable for demo site and online IDE.
-\\
-\textbf{What does it do.}
-
-\\
-\textbf{What is impressive about it.}
-
-
+Implementing this branching structure for the CI/CD before the projects had begun ensured that only functional changes were published to NPM, meaning no broken packages were able to make it through the pipeline due to the journey required to reach deployment.
 
 \section{Deployment}
+To ensure the packages and web applications are widely available to any potential developers a proper approach to deployment had to be taken ensuring both reliability and low to no cost.
+
 \subsection{Packages}
-\text How the packages are deployed using azure pipelines ,npm and unpkg to host package. using webpack for building minified and non minified packages (from typescript).
+% UNFINISHED
+The deployment of packages was facilitated through the usage of an azure pipeline. This process when combined with the effective CI/CD described above allowed for a streamlined process.
+\\ \\
+As the packages needed to be served by both NPM and UNPKG both a built version and a minified built version were required to be created to achieve this a Webpack script was produced to allow for the pipeline to build both required configurations; this process would also convert the TypeScript library into JavaScript. We can see the process of the pipeline in figure \ref{fig:deployment}
 
 \begin{figure}[!ht]
     \begin{center}
     \includegraphics[width=14cm]{dissertation/images/Deployment.png}
     \end{center}
-    \caption{Deployment}
+    \caption{Package deployment}
     \label{fig:deployment}
 \end{figure}
-\\
-\textbf{What does it do.}
-\begin{itemize}
-    \item deployed via CI/CD through npm publish, minified script is hosted automatically through UNPKG
-\end{itemize}
-\\
-\textbf{What is impressive about it.}
-\begin{itemize}
-    \item automated versioning through husky.
-    \item automated changelog based on commit messages.
-    \item automated deployment via secondary pipeline for every package which runs on production merge after original pipeline run on development, helped via branch protection.
-\end{itemize}
+
+The process utilises NPM's publish command which utilises the version of the package within the packages configuration files to create a new version of the package in NPM's package database; this is facilitated with the help of husky and standard version to automatically increment the version on changes pushed. A benefit of utilising standard version is the automatic creation of a changelog which is highly beneficial for the package ecosystem. As for UNPKG when an NPM package is published UNPKG will automatically create a link which can be used to gather the package this allows for no requirements to host the package on a CDN reducing costs to nil.
+% \\
+% \textbf{What does it do.}
+% \begin{itemize}
+%     \item deployed via CI/CD through NPM publish, minified script is hosted automatically through UNPKG
+% \end{itemize}
+% \\
+% \textbf{What is impressive about it.}
+% \begin{itemize}
+%     \item automated versioning through husky.
+%     \item automated change-log based on commit messages.
+%     \item automated deployment via secondary pipeline for every package which runs on production merge after original pipeline run on development helped via branch protection.
+% \end{itemize}
 \subsection{Web Apps}
-\text How the web apps are deployed. Vercel, what is vercel and why use it?
-\\
-\textbf{What does it do/what is impressive}
-\begin{itemize}
-    \item runs its own CI/CD ontop of mine
-    \item provides deployments for development versions to test features before full production deployment.
-\end{itemize}
+% UNFINISHED
+A different approach was required to deploy the web applications as the package deployment did not require a standalone server. As React was being used, Vercel was chosen as the optimal approach; Vercel provides its pipeline, which deploys a version of the web application on each branch used, allowing for development site testing before pushing to production. As the React site is built and compressed via gzip, we are left with a static website. Vercel provides a service to freely serve static websites meaning the web applications are hosted at no cost.
+%  ADD A DIAGRAM OF SOME SORT
+
+
+% \text How the web apps are deployed. Vercel, what is Vercel and why use it?
+% \\
+% \textbf{What does it do/what is impressive}
+% \begin{itemize}
+%     \item runs its own CI/CD on top of mine
+%     \item provides deployments for development versions to test features before full production deployment.
+% \end{itemize}
 
 \chapter{Evaluation} 
-How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
 \section{User Feedback}
-\section{Core}
-\subsection{Speed Comparison}
-\section{Peer}
-\subsection{Speed Comparison}
-\section{Transpiler}
+Throughout the full project, a user study was utilised to receive a constant stream of feedback. The developer used within the study had no prior knowledge of node.js and was tasked in building a project which incorporated every aspect of the package ecosystem; the approach taken to receiving this feedback allowed for a direction of package development which was heavily influenced by an expected heavy use-case of the ecosystem.
+\\ \\
+The task at hand had the developer develop a self-driving car which utilised an Espruino Pixl device to control motors. This project required camera input, easy control over the Espruino device as well as instantaneous response time from the input. These tasks resulted in specialised feedback in the following areas:
+
+\subsection{Core}
+With the core package being the main component in device interaction, this package was heavily utilised within the development of the project. This prompted the following additions to the package
+
+\subsubsection{Code upload}\hfill\\
+To allow the developer to quickly and easily incorporate code from a URL device, functionality was added to accommodate this and allow direct running within the device, removing any requirement for the code base to be stored on a device, allowing for easier project sharing.
+\subsubsection{Custom device configuration}\hfill\\
+As a custom device was being developed on the standard devices Puck, Pixl and Bangle, all incorporated functionality which was not available on newly created devices. To combat this, a core device \textbf{DeviceController} was implemented, which encouraged inheritance to allow for newly developed devices to incorporate basic functionality and expand with device-specific functionality.
+\subsection{Peer}
+For the self-driving car to be able to follow a track, it is required means to incorporate effective video input. The requirement for this prompted the addition of the Peer package. Following the initial development of this package, the developer's feedback prompted the following additions to the package:
+
+\subsubsection{Simultaneous video and data transfer}\hfill\\
+% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
+The project required input to be received from both the camera and touch input within the same connection. To allow for a mobile device to both utilise video for tracking as well as touch input to enable control of the system from the car device itself the package was configured to allow for this.
+\subsection{UART}
+% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
+As the project required instantaneous data transfer between the browser and the device, it became apparent quickly into the development of the project that the original UART rework had not taken into consideration a speed improvement over the original. This revelation prompted a rework of the UART package to remove unnecessary waits and time delays whilst incorporating the modern Promise feature of JavaScript.
+
+\subsection{NPX Tool}
+As the developer had not utilised node.js within a project beforehand, the development of the NPX tool had many reiterations to incorporate the following issues raised:
+\subsubsection{Serving static assets}
+% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
+As the tool produced environments utilising webpack to build and local server, the project there quickly became an issue with incorporating basic static site functionality, in this case, including images in the site. To resolve this issue, the repositories were equipped by default with the functionality to include images or other static images into the project to allow transfer into the build folder.
+\subsubsection{Peer package incorporation}
+% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
+For local development, the WebRTC API utilised within the Peer package presented issues for the developer as local development with a mobile device. This issue required the usage of a local IP as well as the integration of false SSL, the feedback from this feature introduced a new method of utilising Webpack to host a local environment for development purposes.
+\subsubsection{Deployment}
+% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
+As the project utilised a local node server for development, the developer was unsure of how this should be deployed as it was a static site; this prompted the addition of Webpack to build the project into a single build folder allowing for deployment on GitHub pages. In addition to this, further feedback incorporated a simple script to the packages to create a new branch which moves the build folder content into the root level, which can then be hosted on GitHub pages.
+\section{Core Package Evaluation}
+
+The core package presents an option built on top of the original Espruino native code syntax to allow users a cleaner and more transparent approach to the same problems whilst bringing in some ease-of-life functionality; for this to be effective, the package needs not to be detrimental to the run time of the code or writing of code to the device.
+\\ \\
+To ensure the additional features did not negatively effect the performance, a test was created that pits the uart.js package with the core package, ensuring the following criteria were met:
+
+\begin{itemize}
+    \item code snippets are the same length (500 characters long).
+    \item both packages were set up in a standard working environment without additional features that could slow things down.
+    \item each test should be run 25 times to ensure stray figures do not skew the data.
+\end{itemize}
+
+The following figure \ref{fig:core_native_speed} shows the results from the 50 total run tests.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/core-native-speed.png}
+    \caption{Core - Native speed comparison}
+    \label{fig:core_native_speed}
+\end{figure}
+
+The results from the tests run found that despite the requirement for a transpiler to be run first before writing the code to the device the main bottleneck of the data transfer to Espruino devices comes from the WebBluetooth API meaning that despite the additional functionality there are no notable differences in transfer speed spanning from the additional overhead.
+
+\section{Peer Package Evaluation}
+
+For the peer package to be a viable method of introducing new device inputs and outputs across multiple previously incompatible platforms the package must incorporate near seem-less communication between the secondary browser and the Espruino BLE device.
+\\ \\
+The Peer package brings in a new potential bottleneck by introducing the WebRTC API into the system by utilising another connection based data transfer this time through internet connection instead of Bluetooth connection. This obstacle means that the data sent from a typical users mobile device has to be sent to another device then from that device to the Espruino device.
+\\ \\ 
+To ensure the peer package was not rendered useless by this chain of connections a test was taken out to check the data transfer speed of both standard data transfer from a compatible browser to an Espruino device as well as the data transfer from a non compatible device through the Peer package to an Espruino device. For this comparison to be an accurate representation the following criteria was used to maintain consistency:
+
+\begin{itemize}
+    \item code snippets of the same length (250 characters long)
+    \item code snippets are both in native Espruino code (avoids transpiling time difference)
+    \item test will be run 1000 times to remove any variance due to outlying data.
+\end{itemize}
+
+Below in figure \ref{fig:peer-native-speed-comparison} we can see the results from this experiment.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=11cm]{dissertation/images/peer-native-comparison.png}
+    \caption{Peer - Native speed comparison}
+    \label{fig:peer-native-speed-comparison}
+\end{figure}
+
+From the results in figure \ref{fig:peer-native-speed-comparison} we can see that the peer and native produce nearly identical results showing that the additional variance due to the Peer package addition creates minimal friction in data transfer meaning the Peer package is a viable option to incorporate unsupported devices into the Espruino ecosystem.
+
+\section{Transpiler Package Evaluation}
+
+The original development of the miniParser module was prompted due to the requirement for full segments of code to be converted from espruino-tools syntax into Espruino native code. As this step was not possible through building an object with methods, this required a small module to be created.
+\\ \\
+The original miniParser was built as a temporary solution to a bigger problem. The miniParser falls short with its ability only to convert single-line statements or un-nested code resulting in the lack of ability to use standard programming conventions such as conditionals, loops or functions within methods that take functions as parameters. 
+\\ \\ 
+The development of the transpiler package was begun due to these shortcomings. The transpiler takes an approach similar to a traditional compiler converting the code into an AST, transforming it and then generating code from the altered AST.
+\\ \\ 
+To compare these two approaches, a small set of tests with the code snippets specified in figures \ref{fig:simple_transpiler_code}, \ref{fig:conditional_transpiler_code} and \ref{fig:nested_transpiler_code}.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{lstlisting}
+        let p = new Puck();
+    
+        p.LED.on("red");
+    \end{lstlisting}
+
+    \caption{Simple}
+    \label{fig:simple_transpiler_code}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{lstlisting}
+      let p = new Puck();
+      let light = p.getLightVal();
+      light > 0.2 ? p.LED.on("red") : p.LED.off("red");
+    \end{lstlisting}
+    \caption{Conditional}
+    \label{fig:conditional_transpiler_code}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{lstlisting}
+    let p = new Puck();
+    for(let i = 0; i<33; i++){
+        if(i % 3 === 0){
+            p.LED.toggle("red");
+        }
+        p.LED.toggle("green");
+    }
+    \end{lstlisting}
+    \caption{Nested}
+    \label{fig:nested_transpiler_code}
+\end{figure}
+
+Each code snippet was run 25 times on both the transpiler and miniParser to test the speed of the code converters with increasingly complicated code snippets to compare the code coverage of the package. The following figure \ref{fig:transpiler-miniparser-speed-comparison} shows that despite more complicated code having a longer conversion time in the transpiler, the miniParser fails on all accounts but the simple code snippet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=11cm]{dissertation/images/transpiler-miniParser-speed-comparison.png}
+    \caption{Transpiler, miniParser speed comparison}
+    \label{fig:transpiler-miniparser-speed-comparison}
+\end{figure}
+
+The figure shown \ref{fig:transpiler-miniparser-speed-comparison} shows that the miniParser ran without failing two of the three times. Despite this on the conversion for the conditional code snippet, the miniParser could not correctly convert the code snippet. As for the nested code snippet, the miniParser threw an error resulting in no code output.
+
+
+\section{Testing}
+Various testing approaches were taken based on the package or web application type to make the most of the pipeline and ensure the code-base was as robust and functional as possible.
+
+\subsection{Unit testing}
+% Extend with coverage / what was tested / methods of testing.
+A unit testing approach was taken for packages, and JEST was used alongside mocking with JSDOM. This approach allowed for a fake DOM and WebBluetooth to test the package independent from the device connection and the browser actively running. JEST is a standard test runner package that allows a developer to create conditions that need to be met for a package to be considered functional; when combined with Test Driven Development (TDD), this provided an architecture for how the packages were meant to function. JSDOM is a package that mocks standard web browser functionality allowing WebAPI's to be tested without requiring a browser to run.
+\\
+The unit testing suite covers the following features:
+\begin{itemize}
+    \item UART device connection.
+    \item writing to the device.
+    \item evaluation of code on Espruino device.
+    \item code conversion to AST.
+    \item code generation from AST.
+    \item directory construction.
+
+\end{itemize}
+\subsection{User interface testing}
+For the web applications, a different approach was required; Cypress was used; cypress is a test runner that uses a web browser instance to gauge what will happen based on programmatically set user input. Using cypress allowed the web applications to have a clean and clear user path and test that functionality works as expected.
+\\
+This means of testing allows for the following features to be tested:
+\begin{itemize}
+    \item QR code generation in modal.
+    \item connection modal user flow (does WebBluetooth window open).
+    \item Online environment testing 
+    \begin{itemize}
+        \item saving code
+        \item uploading code
+        \item device function gathering
+        \item expected terminal output
+    \end{itemize}
+    \item Demo page testing
+    \begin{itemize}
+        \item code editor gathering
+        \item configuration file page generation, (does the page generate as expected from the configuration file)
+    \end{itemize}
+\end{itemize}
+
 
 %==================================================================================================================================
 \chapter{Conclusion}    
-Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
+
 \section{Summary}
+The espruino tools ecosystem built throughout this project allows users from any experience level or technical background to quickly build tangible embedded systems applications with easy integration with web browsers. Furthermore, by expanding upon the existing Espruino project to improve the developer experience, espruino-tools provides developers with a user-friendly syntax alongside a flexible environment promoting user's personal development within career-building skills within the web development space through the usage of modern web technologies whilst providing experienced developers with a platform to develop using their preferred technologies.
+
 \section{Reflection}
+\subsubsection{What has this taught me}\hfill\\
+By pushing JavaScript to its limits through the development of a transpiler as well as through the integration of experimental APIs such as WebBluetooth and WebRTC this project has introduced to me just what can be done in the web space without the need for...
+\begin{itemize}
+    \item working on a large-scale project touching every aspect of web development, design, Front-end, Back-end, package development, and DevOps.
+\end{itemize}
+\subsubsection{What would I do differently}\hfill
+\begin{itemize}
+    \item ...
+\end{itemize}
 \section{Future Work}
-\section{Limitation}
+Due to the projects time constraints many hypothetical features that could be massively beneficial for the package ecosystem's ease of use.
+\subsection{Espruino device package}
+
+The Espruino platform supports native packages within their platform. An example of some of these packages are ble\_hid\_controls and ble\_hid\_keyboard which allow developers to use espruino devices as bluetooth input devices, in this case for keybindings or music controls.
+\\ \\
+By developing an espruino specific package we could allow for developers to code directly on Espruino devices expanding the catalog of tools being usable with the new syntax. By incorporating this developers would be able to use Espruino's own web IDE or develop in the same way as before.
+
+\subsection{User evaluation}
+
+The project heavily utilised user testing throughout its development, allowing for actual bugs and feature ideas to come to fruition. This insight brought to light the importance of building around user input and requirements.
+\\ \\
+By introducing user evaluation from an array of programming backgrounds whilst evaluating the user experience compared to other available products such as Arduino and micropython, the end product could benefit from bringing in the developers' thoughts and what they liked from each platform whilst gauging if the espruino-tools ecosystem provides the best possible experience for the developer and if not how it can be improved to do so.
+
+\subsection{Transpiler CLI}
+
+The Transpiler package was built for the conversion of a single JavaScript file due to the nature of the development being very one-dimensional. This approach removes the ability for developers to incorporate helper functions or any other additional files as modules.
+\\ \\
+The addition of a CLI tool which would run the transpiler across all specified files within a project would be the beginning steps to allowing this approach to development to work. The approach can be seen in other transpilers such as TypeScript and CoffeeScript which have their own respective command line keywords to run the transpiler across a project based on a configuration file specifying the location of files to be transpiled.
+
+
+
+\subsection{Expanding the scope of the project}
+
+Throughout the development of the transpiler package, it became apparent that this approach of converting existing embedded microcontroller languages such as Arduino or MicroPython into something with the same syntax as espruino-tools could be a possibility allowing for a unified, embedded systems language written in a user-friendly and easy to write language. Furthermore, given more time, the idea of this could be approached to expand the scope of the package encompassing more than just Espruino.
+
 
 %==================================================================================================================================
 %
@@ -647,23 +1265,23 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
 
 \label{appendix:MOSCOWAnalysis}
 
-Below are the individual MOSCOW analysis of each project. These will go further into depth about the state of each individual project analysis and provide more detail surrounding the priorities.
+Below is the individual MOSCOW analysis of each project. These will go further into depth about the state of each individual project analysis and provide more detail surrounding the priorities.
 
 %== CORE
 
 \section{Core}
 \subsection{Must Have}
 \begin{itemize}
-    \item Implement all device specific functionality into Device Objects
+    \item Implement all device-specific functionality into Device Objects
     \item Provide a more readable syntax for beginner users without restricting functionality
-    \item Support TypeScript
+    \item Support Typescript
     \item Be open-source
     \item Support any package import method (i.e. NPM, script tag imports)
 \end{itemize}
 \subsection{Should Have}
 \begin{itemize}
     \item The ability to call on device functions that are already on the device.
-    \item Functionality to gather device code in a readable manor, (gather functions on the device with parameters)
+    \item Functionality to gather device code in a readable manner, (gather functions on the device with parameters)
     \item upload code to the device.
 \end{itemize}
 \subsection{Could Have}
@@ -702,6 +1320,7 @@ Below are the individual MOSCOW analysis of each project. These will go further 
 \section{Peer}
 \subsection{Must Have}
 \begin{itemize}
+    \item Support for both iOS and android smart devices.
     \item Support Typescript.
     \item Be open source.
     \item Support any package import method (i.e. NPM, script tag).
@@ -733,6 +1352,7 @@ Below are the individual MOSCOW analysis of each project. These will go further 
     \item Support Typescript
     \item Be open source
     \item Support any package import method (i.e. NPM, script tag)
+    \item Support standard language functionality such as variable declaration and code conversion of code within nested scopes.
 
 \end{itemize}
 \subsection{Should Have}
@@ -752,11 +1372,9 @@ Below are the individual MOSCOW analysis of each project. These will go further 
 %== CLI TOOL
 
 \section{CLI Tool}
-\begin{itemize}
-    \item 
-\end{itemize}
 \subsection{Must Have}
 \begin{itemize}
+    \item utilise NPX to remove need for downloading and running applications, keeps it within the ecosystem of NPM.
     \item Be open source
     \item Create a working directory with the latest versions of the core package.
 
@@ -849,17 +1467,109 @@ Below are the individual MOSCOW analysis of each project. These will go further 
 
 \section{Core}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=8cm]{dissertation/images/light-sensor-demo.png}
-    \caption{\href{https://demos-mu.vercel.app/demo/light-sensor}{Light Sensor Demo}}
-\end{figure}
+\subsection{Puck Light Demo}
+A small program which utilises the pucks light sensor to activate the LED when the light levels are low(room is dark)
 
 
+\href{https://demos-mu.vercel.app/demo/light-sensor}{https://demos-mu.vercel.app/demo/light-sensor}
+
+\subsection{Pixl Game Demo}
+- Shows off upload functionality.
+- utilising functions to run the game.
+- extending functionality of core package.
+
+\subsection{Robot Demo}
+- Custom device
+- Non standard espruino device
 
 \section{Peer}
+
+\subsection{Piano Demo}
+- Sends data over peer package
+- utilises a mobile device not supported by webrtc
+\href{https://demos-mu.vercel.app/demo/piano-demo}{https://demos-mu.vercel.app/demo/piano-demo}
+
+\subsection{Sending Video}
+Hand tracking data sent over to device can control LED on espruino device
+
 \section{Transpiler}
+
+\subsection{Side by side comparison}
+From IDE show how the compiler changes the code
+\href{https://demos-mu.vercel.app/demo/transpiler}{https://demos-mu.vercel.app/demo/transpiler}
+
 \section{create-espruino-app}
+
+\subsection{Directory population}
+\href{https://demos-mu.vercel.app/demo/create-espruino-app}{https://demos-mu.vercel.app/demo/create-espruino-app}
+
+\chapter{Wireframes}
+
+\section{Connection}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/wireframe-connection.png}
+    \caption{Connection modal - Wireframe}
+    \label{fig:connection-wireframe}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/wireframe-connection-style-guide.png}
+    \caption{Connection Style guide modal - Wireframe}
+    \label{fig:connection-style-wireframe}
+\end{figure}
+
+\section{Qr Code}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/wireframe-qr.png}
+    \caption{QR Modal - Wireframe}
+    \label{fig:qr-wireframe}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{dissertation/images/wireframe-qr-icon.png}
+    \caption{QR Modal Icon - Wireframe}
+    \label{fig:qr-icon-wireframe}
+\end{figure}
+
+\chapter{Student University Study}
+
+\text The survey gauges how students think the current state of programming education at the university of Glasgow is.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{dissertation/images/prog-survey-Q1.png}
+    \caption{Programming classes preparation - Survey}
+    \label{fig:survey-q1}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{dissertation/images/prog-survey-Q2.png}
+    \caption{Self learning - Survey}
+    \label{fig:survey-q2}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{dissertation/images/prog-survey-Q3.png}
+    \caption{What does university miss - Survey}
+    \label{fig:survey-q3}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{dissertation/images/prog-survey-Q4.png}
+    \caption{University class wishlist - Survey}
+    \label{fig:survey-q4}
+\end{figure}
+
+\label{appendix:studentunistudy}
 \end{appendices}
 
 %==================================================================================================================================
