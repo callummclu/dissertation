@@ -531,4 +531,69 @@
 - _2 hours_ resolving comments on dissertation
 - _2 hours_ continued writing
 
-## Week 19 `<!-- thisWeek: XX hours, total XXX hours-->`
+## Week 19 `<!-- thisWeek:21hr, total: 431.5hr -->`
+
+### 21 Feb 2023 `<!-- 5 hours -->`
+
+- _1 hour_ found/created images to fill in spaces in dissertation.
+- _2 hours_ filled in missing aspects of tools/technologies section.
+- _2 hours_ expanded on the analysis section.
+
+### 22 Feb 2023 `<!-- 3 hours -->`
+
+- _0.5 hour_ met with supervisor
+- _2.5 hours_ used supervisor feedback to improve sections.
+
+### 24 Feb 2023 `<!-- 4 hours -->`
+
+- _4 hours_ wrote the design section of dissertation
+
+### 25 Feb 2023 `<!-- 4 hours -->`
+
+- _4 hours_ began writing the implementation section of dissertation.
+
+### 26 Feb 2023 `<!-- 5 hours-->`
+
+- _3 hours_ finished first draft of implementation section of dissertation
+- _2 hours_ began work on the evaluation section.
+
+## Week 20 `<!-- thisWeek: 11hr, total: 442.5hr -->`
+
+### 27 Feb 2023 `<!-- 1 hours -->`
+
+- _1 hour_ further work on the evaluation section.
+
+### 28 Feb 2023 `<!-- 2 hours -->`
+
+- _1 hour_ began planning evaluation section further.
+- _1 hour_ made plan for conclusion.
+- _0.5 hours_ made powerpoint ahead of supervisor meeting.
+
+### 1 Mar 2023 `<!-- 3 hours -->`
+
+- _1 hour_ met with supervisor
+- _2 hours_ began work on conclusion
+
+### 3 Mar 2023 `<!-- 3 hours -->`
+
+- _3 hours_ worked on evaluation section
+
+### 4 Mar 2023 `<!-- 2 hours -->`
+
+- _2 hours_ finalised first draft of evaluation section.
+
+## Week21 `<!-- thisWeek: XXhr, total: XXhr -->`
+
+### 7 Mar 2023 `<!-- 2 hours -->`
+
+- _0.5 hours_ made powerpoint ahead of supervisor meeting.
+- _1.5 hours_ work on conclusion section.
+
+### 8 Mar 2023 `<!-- 1 hours -->`
+
+- _1 hour_ met with supervisor.
+
+### 9 Mar 2023 `<!-- 4 hours -->`
+
+- _2 hours_ filled out appenix
+- _2 hours_ work on conclusion section.
