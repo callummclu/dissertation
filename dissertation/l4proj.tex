@@ -40,7 +40,7 @@ morestring=[b]`
 
 %==============================================================================
 %% METADATA
-\title{Espruino Tools - An asynchronous JavaScript library to control remote embedded devices [JavaScript, Promise, Arduino]}
+\title{Espruino Tools - A JavaScript package ecosystem to promote programming education through remote embedded systems.}
 \author{Callum McLuskey}
 \date{24 March, 2023}
 
@@ -1212,13 +1212,13 @@ This means of testing allows for the following features to be tested:
 
 %==================================================================================================================================
 \chapter{Conclusion}    
-Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
+
 \section{Summary}
-The espruino tools ecosystem provides users from any experience level or technical background the ability to quickly build tangible embedded systems applications with easy integration with web browsers. By Expanding upon the current Espruino ecosystem by providing a more user-friendly syntax alongside a flexible environment which promotes users' personal usage and development within modern web technologies bringing newer users into the world of web development whilst providing experienced users with a platform to develop using their preferred technologies.
+The espruino tools ecosystem built throughout this project allows users from any experience level or technical background to quickly build tangible embedded systems applications with easy integration with web browsers. Furthermore, by expanding upon the existing Espruino project to improve the developer experience, espruino-tools provides developers with a user-friendly syntax alongside a flexible environment promoting user's personal development within career-building skills within the web development space through the usage of modern web technologies whilst providing experienced developers with a platform to develop using their preferred technologies.
 
 \section{Reflection}
 \subsubsection{What has this taught me}\hfill\\
-By pushing JavaScript to its limits through the development of a transpiler as well as through the integration of experimental API's such as WebBluetooth and WebRTC this project has introduced to me just what can be done in the web space without the need for...
+By pushing JavaScript to its limits through the development of a transpiler as well as through the integration of experimental APIs such as WebBluetooth and WebRTC this project has introduced to me just what can be done in the web space without the need for...
 \begin{itemize}
     \item working on a large-scale project touching every aspect of web development, design, Front-end, Back-end, package development, and DevOps.
 \end{itemize}
@@ -1227,27 +1227,31 @@ By pushing JavaScript to its limits through the development of a transpiler as w
     \item ...
 \end{itemize}
 \section{Future Work}
+Due to the projects time constraints many hypothetical features that could be massively beneficial for the package ecosystem's ease of use.
 \subsection{Espruino device package}
-\begin{itemize}
-    \item run espruino tools code directly on the device.
-    \item usage of a wide variety of non-espruino tools ecosystem.
-\end{itemize}
 
-\subsection{Expanding the scope of the project}
-\begin{itemize}
-    \item Transpiler allows for conversion to another language; this could be used to bring a standard language to hobbyist systems programming by transpiling into microPython or even Arduino C++.
-\end{itemize}
-
-\subsection{Transpiler CLI}
-\begin{itemize}
-    \item Tool to convert the whole project of espruino tools code to native espruino code.
-\end{itemize}
+The Espruino platform supports native packages within their platform. An example of some of these packages are ble\_hid\_controls and ble\_hid\_keyboard which allow developers to use espruino devices as bluetooth input devices, in this case for keybindings or music controls.
+\\ \\
+By developing an espruino specific package we could allow for developers to code directly on Espruino devices expanding the catalog of tools being usable with the new syntax. By incorporating this developers would be able to use Espruino's own web IDE or develop in the same way as before.
 
 \subsection{User evaluation}
-\begin{itemize}
-    \item tests with users for standard espruino and espruino-tools to gauge how much better this package is or isnt.
-    
-\end{itemize}
+
+The project heavily utilised user testing throughout its development, allowing for actual bugs and feature ideas to come to fruition. This insight brought to light the importance of building around user input and requirements.
+\\ \\
+By introducing user evaluation from an array of programming backgrounds whilst evaluating the user experience compared to other available products such as Arduino and micropython, the end product could benefit from bringing in the developers' thoughts and what they liked from each platform whilst gauging if the espruino-tools ecosystem provides the best possible experience for the developer and if not how it can be improved to do so.
+
+\subsection{Transpiler CLI}
+
+The Transpiler package was built for the conversion of a single JavaScript file due to the nature of the development being very one-dimensional. This approach removes the ability for developers to incorporate helper functions or any other additional files as modules.
+\\ \\
+The addition of a CLI tool which would run the transpiler across all specified files within a project would be the beginning steps to allowing this approach to development to work. The approach can be seen in other transpilers such as TypeScript and CoffeeScript which have their own respective command line keywords to run the transpiler across a project based on a configuration file specifying the location of files to be transpiled.
+
+
+
+\subsection{Expanding the scope of the project}
+
+Throughout the development of the transpiler package, it became apparent that this approach of converting existing embedded microcontroller languages such as Arduino or MicroPython into something with the same syntax as espruino-tools could be a possibility allowing for a unified, embedded systems language written in a user-friendly and easy to write language. Furthermore, given more time, the idea of this could be approached to expand the scope of the package encompassing more than just Espruino.
+
 
 %==================================================================================================================================
 %
@@ -1499,11 +1503,71 @@ From IDE show how the compiler changes the code
 \subsection{Directory population}
 \href{https://demos-mu.vercel.app/demo/create-espruino-app}{https://demos-mu.vercel.app/demo/create-espruino-app}
 
-\chapter{User Study Data}
+\chapter{Wireframes}
 
-\label{appendix:userstudydata}
+\section{Connection}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/wireframe-connection.png}
+    \caption{Connection modal - Wireframe}
+    \label{fig:connection-wireframe}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/wireframe-connection-style-guide.png}
+    \caption{Connection Style guide modal - Wireframe}
+    \label{fig:connection-style-wireframe}
+\end{figure}
+
+\section{Qr Code}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/wireframe-qr.png}
+    \caption{QR Modal - Wireframe}
+    \label{fig:qr-wireframe}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{dissertation/images/wireframe-qr-icon.png}
+    \caption{QR Modal Icon - Wireframe}
+    \label{fig:qr-icon-wireframe}
+\end{figure}
 
 \chapter{Student University Study}
+
+\text The survey gauges how students think the current state of programming education at the university of Glasgow is.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{dissertation/images/prog-survey-Q1.png}
+    \caption{Programming classes preparation - Survey}
+    \label{fig:survey-q1}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=14cm]{dissertation/images/prog-survey-Q2.png}
+    \caption{Self learning - Survey}
+    \label{fig:survey-q2}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{dissertation/images/prog-survey-Q3.png}
+    \caption{What does university miss - Survey}
+    \label{fig:survey-q3}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{dissertation/images/prog-survey-Q4.png}
+    \caption{University class wishlist - Survey}
+    \label{fig:survey-q4}
+\end{figure}
 
 \label{appendix:studentunistudy}
 \end{appendices}
