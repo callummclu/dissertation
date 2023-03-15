@@ -40,7 +40,7 @@ morestring=[b]`
 
 %==============================================================================
 %% METADATA
-\title{Espruino Tools - A JavaScript package ecosystem to promote programming education through remote embedded systems.}
+\title{An exploration of remote embedded systems programming through modern web technologies.}
 \author{Callum McLuskey}
 \date{24 March, 2023}
 
@@ -63,36 +63,8 @@ morestring=[b]`
 \tableofcontents
 \listoffigures
 
-%==============================================================================
-%% Notes on formatting
-%==============================================================================
-% The first page, abstract and table of contents are numbered using Roman numerals and are not
-% included in the page count. 
-%
-% From now on pages are numbered
-% using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call
-% \pagenumbering{arabic} and this should be called once only in the document. 
-%
-% Do not alter the bibliography style.
-%
-% The first Chapter should then be on page 1. You are allowed 40 pages for a 40 credit project and 30 pages for a 
-% 20 credit report. This includes everything numbered in Arabic numerals (excluding front matter) up
-% to but excluding the appendices and bibliography.
-%
-% You must not alter text size (it is currently 10pt) or alter margins or spacing.
-%
-%
-%==================================================================================================================================
-%
-% IMPORTANT
-% The chapter headings here are **suggestions**. You don't have to follow this model if
-% it doesn't fit your project. Every project should have an introduction and conclusion,
-% however. 
-%
-%==================================================================================================================================
 \chapter{Introduction}
 
-% reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
 
 
@@ -139,24 +111,41 @@ This project aims to help prepare future programmers and software engineers for 
 
 \section{The Current state of learning programming}
 
-Learning how to program is an increasingly popular avenue for young professionals in recent years due to the market demand for software engineers and the appeal of working in a creative, challenging, and constantly evolving field; because of this increase in desire to learn how to code, many people are funneled into the following avenues each with their advantages and drawbacks.
+Learning how to program is an increasingly popular avenue for young professionals in recent years due to the market demand for software engineers and the appeal of working in a creative, challenging, and constantly evolving field; because of this increase in desire to learn how to code, many people are funnelled into the following avenues each with their advantages and drawbacks.
 
 \subsection{Formal Teaching of programming}
-Many students learn how to program for the first time during a degree at university. Within the University of Glasgow,, the current teaching method provides students with an intricate understanding of programming without a proper understanding of how programming results in an end software product. This programming approach is aimed at providing students with enough knowledge to understand the upcoming courses content, such as algorithms and data structures.
-\begin{itemize}
-    \item Maybe a quick survey surrounding if students know how to turn their programming language knowledge into working products or how learning, for example, python relates to something like a web application.
-\end{itemize}
+Many students learn how to program for the first time during a degree at university. Within the University of Glasgow, the current teaching method provides students with an intricate understanding of programming without a proper understanding of how programming results in an end software product. This programming approach aims to provide students with enough knowledge to understand the upcoming course content, such as algorithms and data structures.
+\\ \\
+Through the use of a survey on programming education aimed at students in their final year at the University of Glasgow (figured in \ref{fig:survey-q1}, \ref{fig:survey-q2}, \ref{fig:survey-q3} and \ref{fig:survey-q4}), we discovered the following:
 
+\begin{itemize}
+    \item \textbf{40\%} of students believe the university does not prepare them for building production software systems, with an additional 10\% mentioning that only the 3rd year team project helped on this front.
+    \item \textbf{90\%} of students had to incorporate self-learning to grow their understanding of standard production systems such as web applications, mobile applications or command line tools.
+    \item Students, when asked, "What does the university miss when preparing students for work life after graduation." followed a trend of the following responses.
+    \begin{itemize}
+        \item Courses are too theoretical
+        \item Courses do not prepare you for getting jobs after university.
+        \item No preparation is made for working on large-scale software projects.
+    \end{itemize}
+    \item Finally, when asked, "If you could add any classes or courses to the curriculum, what would you add" students conformed to the following responses:
+    \begin{itemize}
+        \item A larger range of taught languages/technologies, or a class on quickly picking new ones up (this ranged from web development technologies such as React to Cloud technologies or just modern languages).
+        \item Taught classes on industry standards by professionals in the industry.
+    \end{itemize}
+\end{itemize}
+\text
+\\ \\
+The trends in this survey show that whilst the standard route of learning at university formally teaches you programming basics whilst heavily focusing on the theory, it heavily misses the mark on preparation for work after university.
 
 \subsection{Code boot camps / online courses}
-On the other side of the spectrum, many aspiring software engineers take the route of code "boot camps" such as \href{https://www.freecodecamp.org/}{freeCodeCamp} or \href{https://www.schoolofcode.co.uk/}{School of Code}. These intensive courses have the goal of producing work-ready skills whilst avoiding theoretical skills that help programmers gather a better understanding of how the underlying programs work. These courses are usually highly specialized and web focused meaning developers can potentially finish with a lack of transferable skills harming the ability for developers to transfer to new technologies and grow as a developer. An issue that comes with code boot camps is programmers who have followed tutorials word for word without absorbing the content itself, resulting in people who believe they know how to develop systems without any real idea.
+On the other side of the spectrum, many aspiring software engineers take the route of code "boot camps" such as \href{https://www.freecodecamp.org/}{freeCodeCamp} or \href{https://www.schoolofcode.co.uk/}{School of Code}. These intensive courses aim to produce work-ready skills whilst avoiding theoretical skills that help programmers better understand how the underlying programs work. These courses are usually highly specialized and web-focused, meaning developers can potentially finish with a lack of transferable skills harming the ability of developers to transfer to new technologies and grow as a developer. An issue that comes with code boot camps is programmers who have followed tutorials word for word without absorbing the content itself, resulting in people who believe they know how to develop systems without any real idea.
 
 \subsection{The job market}
-The job market for software engineers is ever-evolving that rewards a developer's skill to learn on the job constantly. Despite this, languages such as JavaScript remain the most used area within the \href{https://survey.stackoverflow.co/2022/#technology-most-popular-technologies}{Stack Overflow Developer Survey} we can see current trends. With an ever evolving job market anybody learning to program must be able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
+The job market for software engineers is ever-evolving, which rewards a developer's skill to learn on the job constantly. Despite this, languages such as JavaScript remain the most used area within the \href{https://survey.stackoverflow.co/2022/#technology-most-popular-technologies}{Stack Overflow Developer Survey} we can see current trends. With an ever-evolving job market, anybody learning to program must be able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
 
 \section{Espruino Devices}
 \text 
-The \href{https://www.espruino.com/}{Espruino micro-controller} provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These micro-controllers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
+The \href{https://www.espruino.com/}{Espruino micro-controller} provides an innovative solution for individuals seeking to materialise their electronics project aspirations. With a JavaScript interpreter and in-built amenities such as WiFi and Bluetooth, this device makes it effortless for individuals of diverse programming proficiency to dive in. The Espruino ecosystem caters to hobbyists and students eager to learn about electronics and programming. These microcontrollers can be blended seamlessly with other hardware and software systems, opening up a world of possibilities for electronics projects.
 
 \begin{figure}[!ht]
     \centering
@@ -186,17 +175,21 @@ WebBluetooth represents a milestone in integrating BLE devices into the web. It 
 Software packages are methods of extending the functionality of a given language through externally written code. With the wide adoption of node.js in web development, many package developers have adopted the UNIX philosophy of building clean, modular, transparent, and robust code, \cite{TheArtOfUNIXProgramming}. This is achieved in modern web development through the Node Package Manager(NPM).
 
 \subsection{NPM}
-\href{https://www.npmjs.com/}{NPM} \text is a tool utilized in JavaScript programming to manage software packages. It is a centralized hub for individuals to quickly find, install, and handle an extensive collection of libraries and packages for their projects. NPM empowers developers to share their packages and work together on open-source initiatives. Due to its large repository of packages, NPM has become a must-have tool for contemporary JavaScript development.
+\href{https://www.npmjs.com/}{NPM} is a package manager for node.js. NPM is highly used within JavaScript programming to manage software packages. NPM provides an online hub for developers to search for relevant packages to aid their development process quickly. In addition, NPM encourages developers to share their packages and contribute to open-source initiatives. This tool is necessary for node development due to its extensive catalogue of packages and is required for contemporary JavaScript development.
 
+% 
+%  MAYBE NEEDS TO BE RE WRITTEN
+% 
 \subsection{NPX}
-\href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} \text is a tool for executing Node.js packages, including those installed through NPM (Node Package Manager). It allows users to run a package's binary without installing it globally on their system. This is useful for testing packages or trying out new features without affecting other parts of the system. NPX also enables developers to run packages with specific versions rather than relying on the globally installed version. It provides a convenient and efficient way to run packages, making it a popular tool in the Node.js ecosystem.
+
+\href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} (Node Package eXecute) is a package runner for the node.js environment, which allows for the execution of packages hosted on NPM's package repository. It allows developers to run packages without the requirement of installing a program globally on their systems. The package runner is highly utilised within environment-building systems such as React's \href{https://reactjs.org/docs/create-a-new-react-app.html}{create-react-app} due to its ability to provide a convenient method of running packages without having it install any other OS-specific package managers such as \href{https://brew.sh/}{Homebrew}.
+
 
 \section{Device to device communication}
-
-Within web development, the challenge of real-time communication between devices is a tricky subject. Examples of well-implemented real-time communication systems are instant messaging services such as WhatsApp and Facebook Messenger or \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} services such as Zoom. These services all have a theme of utilising either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
+The challenge of real-time communication between devices in web development is a difficult subject. Despite this real-time communication is widely used web applications and mobile apps such as WhatsApp and Facebook Messenger for sending text data between two devices. Another aspect to real-time communication is sending voice data, the popular \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} is widely used by services such as Skype or Zoom. All of these products have an overarching theme of using either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
 
 \subsection{WebRTC}
-\href{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API}{WebRTC (Web Real-Time Communication)} \text is a freely available resource that enables web browsers and devices to communicate voice, video, and data in real-time without the need for additional software. This technology has been engineered to operate on various networks and platforms, resulting in low lag and excellent audio and video streaming quality for web-based communication. Popular uses for WebRTC include video conferencing, live streaming, online gaming, and file sharing. WebRTC stands out from the crowd by allowing users to connect through a standardized Peer to Peer connection; this skips the requirement of sending messages from a user to a server and then back to a different user and instead uses an external server for signalling a service that helps locate and connect the users. This method reduces server cost due to lowered requests as they are being sent directly from browser to browser.
+\href{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API}{WebRTC (Web Real-Time Communication)} \text is an open-source project which extends the base functionality of JavaScript by supporting peer-to-peer data transfer between two web browsers without the need for external software. WebRTC uses signalling servers to initialise a connection between two browsers allowing for direct data transfer without additional server cost. This technology is highly effective in transferring data in the form of text, JSON, audio or video making it an ideal choice for video meetings or video game servers. Below in Figure \ref{fig:webRTC}, we can see the data flow between browsers and the signalling server.
 
 \begin{figure}[!ht]
     \centering
@@ -206,7 +199,8 @@ Within web development, the challenge of real-time communication between devices
 \end{figure}
 
 \section{Open Source}
-\text Open source pertains to a licensing model for software that enables the public to view and modify the source code. It is developed and maintained by a community of contributors rather than a single entity. Open source aims to promote collaboration, transparency, and innovation in software development and give users more control and choice over their software. Notable open-source projects include the Linux operating system and the Python programming language.
+
+The Open source definition \cite{perens1999open} describes open source software as products where the consumers can freely; make and distribute copies of the software, make changes to the software’s source code and improve the software. Communities of contributors without any financial encouragement often maintain open-source projects. Many popular programming languages such as Python, JavaScript and Java are open-source projects with massive contributor pools allowing for the languages to improve to incorporate improvements from their user bases.
 
 \section{Existing Projects}
 \text The Espruino project is an ambitious attempt at bringing embedded systems programming to the masses through an easy-to-get-started ecosystem which takes advantage of many in-house tools to provide the best experience possible for the developers. These tools aim not to change the way we develop but extend upon it through the usage of the below tools we can see this approach.
@@ -217,13 +211,12 @@ The \href{https://www.espruino.com/Reference#top}{Espruino native language} is a
 \subsection{Espruino IDE}
 The \href{https://www.espruino.com/ide/}{Espruino IDE} provides an online platform for developers to get started working with their Espruino devices without the need to set up any local environments. This web application provides many features, such as device console logs and programming directly onto the device all around providing a perfect learning environment for new programmers and acting as an ideal debugging environment for more experienced developers.
 
-% THIS MAY BE ADDED BACK IN BUT HAS BEEN REMOVED FOR SPACE
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=10cm]{dissertation/images/espruino-ide.png}
-%     \caption{Espruino IDE}
-%     \label{fig:espruino-ide}
-% \end{figure}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{dissertation/images/espruino-ide.png}
+    \caption{Espruino IDE}
+    \label{fig:espruino-ide}
+\end{figure}
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
@@ -544,7 +537,7 @@ Previous implementations of device connection through packages such as \href{htt
 \end{minipage}
 \end{figure}
 
-This design process incorporated the previously mentioned feedback-driven approach going through many iterations to reach a final product with feedback from my supervisor who had previously mentioned issues with the prior connection modal.
+This design process incorporated the previously mentioned feedback-driven approach going through many iterations to reach a final product with feedback from my supervisor who had previously mentioned issues with the prior connection modal. Further wireframes can be found in appendix \ref{appendix:wireframes}
 
 
 %==================================================================================================================================
@@ -672,18 +665,10 @@ Documentation & \href{https://github.com/espruino-tools/documentation}{espruino-
 
 Each of the packages has a unique dependency on each other, this choice of structure allows users to get involved at any step and even develop their own solutions to improve their own custom workflow, the dependency graph is shown in figure \ref{fig:package_dep_graph}
 
-%========================
-%=
-%= 
-%= IMAGE LUCID SPARK FOR REWORK
-%= https://lucid.app/lucidchart/3338b1b0-2b62-481b-abb9-bbf9ce7b7a7d/edit?rtempr=1&invitationId=inv_25f074ac-b765-41ec-999b-6795aa3640dc&page=0_0#
-%= 
-%= 
-%========================
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=10cm]{dissertation/images/Package_dependency_graph.jpeg}
+    \includegraphics[width=8cm]{dissertation/images/Package_dependency_graph.jpeg}
     \caption{Dependency Graph}
     \label{fig:package_dep_graph}
 \end{figure}
@@ -766,7 +751,7 @@ let temperature = await p.getTemperature();
 \textit{We can see in the figure }\ref{fig:async-await-core} \textit{a top-level await is utilised, due to the usage of modern JavaScript throughout the package ecosystem, this option is available.}
 
 \subsection{Peer}
-\text Involving peer-to-peer connection within the package ecosystem required the addition of a WebRTC compatible package. To solve this problem the Peer package was built as an extension to the peer.js platform. peer.js is an open-source package that provides functionality to facilitate the peer-to-peer connection between two browsers. 
+\text Involving peer-to-peer connection within the package ecosystem required the addition of a WebRTC-compatible package. To solve this problem the Peer package was built as an extension to the peer.js platform. peer.js is an open-source package that provides functionality to facilitate the peer-to-peer connection between two browsers. 
 \\ \\
 The Peer package extends upon the functionality of peer.js by adding some ease of life functionality such as simplified connection via a modal that combines a scannable QR code alongside a link which redirects to a page via query string this can be seen in figure \ref{fig:qr-scan}. 
 \\ \\
@@ -969,7 +954,7 @@ To allow users to add their own contributions without building and hosting a ded
 Due to the package ecosystem incorporating many different concepts and packages, a documentation site was required to help provide a place for all documentation in one well-organised place. The implementation of the documentation produced a platform where users can search for concepts within any package available whilst being presented with tutorials on using the technologies and videos showcasing the products produced. The development of the documentation heavily utilised components for consistent styling, meaning that pages are based on a preset custom template which provides options for code editors, sandboxed environments as well as video implementation with little to no boilerplate code meaning new features can be added to the documentation with little to no effort ensuring an up to date and accurate documentation site can be easily maintained.
 
 \section{CI/CD}
-The CI/CD pipeline built provides a platform that streamlines the development process of the packages; this process provides the structure for how the packages are tested and prepared before deployment alongside how they are deployed, leaving the focus on the programming and less on the semantics of deploying an application. This is shown below in Figure \ref{fig:CICDPipeline}
+The CI/CD pipeline built provides a platform that streamlines the development process of the packages; this process provides the structure for how the packages are tested and prepared before deployment alongside how they are deployed, leaving the focus on the programming and less on the semantics of deploying an application \cite{CICD}. To allow the CI/CD pipeline to effectively have stages for each process to be run an effective branching structure was required to be built, through the branching structure shown in \cite{FeatureBranching} this was able to be achieved through effectively named and protected branches. This is shown below in Figure \ref{fig:CICDPipeline}  
 
 \begin{figure}[!ht]
     \begin{center}
@@ -1001,31 +986,12 @@ As the packages needed to be served by both NPM and UNPKG both a built version a
 \end{figure}
 
 The process utilises NPM's publish command which utilises the version of the package within the packages configuration files to create a new version of the package in NPM's package database; this is facilitated with the help of husky and standard version to automatically increment the version on changes pushed. A benefit of utilising standard version is the automatic creation of a changelog which is highly beneficial for the package ecosystem. As for UNPKG when an NPM package is published UNPKG will automatically create a link which can be used to gather the package this allows for no requirements to host the package on a CDN reducing costs to nil.
-% \\
-% \textbf{What does it do.}
-% \begin{itemize}
-%     \item deployed via CI/CD through NPM publish, minified script is hosted automatically through UNPKG
-% \end{itemize}
-% \\
-% \textbf{What is impressive about it.}
-% \begin{itemize}
-%     \item automated versioning through husky.
-%     \item automated change-log based on commit messages.
-%     \item automated deployment via secondary pipeline for every package which runs on production merge after original pipeline run on development helped via branch protection.
-% \end{itemize}
+
 \subsection{Web Apps}
 % UNFINISHED
 A different approach was required to deploy the web applications as the package deployment did not require a standalone server. As React was being used, Vercel was chosen as the optimal approach; Vercel provides its pipeline, which deploys a version of the web application on each branch used, allowing for development site testing before pushing to production. As the React site is built and compressed via gzip, we are left with a static website. Vercel provides a service to freely serve static websites meaning the web applications are hosted at no cost.
 %  ADD A DIAGRAM OF SOME SORT
 
-
-% \text How the web apps are deployed. Vercel, what is Vercel and why use it?
-% \\
-% \textbf{What does it do/what is impressive}
-% \begin{itemize}
-%     \item runs its own CI/CD on top of mine
-%     \item provides deployments for development versions to test features before full production deployment.
-% \end{itemize}
 
 \chapter{Evaluation} 
 
@@ -1045,28 +1011,23 @@ As a custom device was being developed on the standard devices Puck, Pixl and Ba
 For the self-driving car to be able to follow a track, it is required means to incorporate effective video input. The requirement for this prompted the addition of the Peer package. Following the initial development of this package, the developer's feedback prompted the following additions to the package:
 
 \subsubsection{Simultaneous video and data transfer}\hfill\\
-% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
-The project required input to be received from both the camera and touch input within the same connection. To allow for a mobile device to both utilise video for tracking as well as touch input to enable control of the system from the car device itself the package was configured to allow for this.
+The project required input to be received from both the camera and touch input within the same connection. To allow for a mobile device to both utilise video for tracking as well as touch input to enable control of the system from the car device itself, the package was configured to allow for this multiple inputs to be transferred at the same time.
 \subsection{UART}
-% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
 As the project required instantaneous data transfer between the browser and the device, it became apparent quickly into the development of the project that the original UART rework had not taken into consideration a speed improvement over the original. This revelation prompted a rework of the UART package to remove unnecessary waits and time delays whilst incorporating the modern Promise feature of JavaScript.
 
 \subsection{NPX Tool}
 As the developer had not utilised node.js within a project beforehand, the development of the NPX tool had many reiterations to incorporate the following issues raised:
 \subsubsection{Serving static assets}
-% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
-As the tool produced environments utilising webpack to build and local server, the project there quickly became an issue with incorporating basic static site functionality, in this case, including images in the site. To resolve this issue, the repositories were equipped by default with the functionality to include images or other static images into the project to allow transfer into the build folder.
+As the tool produced environments utilising Webpack to build and provide a local development server server, there quickly became an issue with incorporating basic static site functionality to developed sites, in this case, including images in the site. To resolve this issue, the repositories were equipped by default with the functionality to include images or other static images into the project to allow transfer into the build folder.
 \subsubsection{Peer package incorporation}
-% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
-For local development, the WebRTC API utilised within the Peer package presented issues for the developer as local development with a mobile device. This issue required the usage of a local IP as well as the integration of false SSL, the feedback from this feature introduced a new method of utilising Webpack to host a local environment for development purposes.
+For local development, the WebRTC API utilised within the Peer package presented issues for the developer within local development using a mobile device. This issue required the usage of a local IP as well as the integration of false SSL, the feedback from this feature introduced a new method of utilising Webpack to host a local environment for development purposes.
 \subsubsection{Deployment}
-% THIS IS UNFINISHED AND JUST A PLACEHOLDER FOR SPACE
-As the project utilised a local node server for development, the developer was unsure of how this should be deployed as it was a static site; this prompted the addition of Webpack to build the project into a single build folder allowing for deployment on GitHub pages. In addition to this, further feedback incorporated a simple script to the packages to create a new branch which moves the build folder content into the root level, which can then be hosted on GitHub pages.
+As the project utilised a local node server for development, the developer was unsure of how this should be deployed as it was a static site; this prompted the addition of Webpack to build the project into a single build folder allowing for deployment on GitHub pages. In addition, further feedback incorporated a simple script to the packages to create a new branch that moves the build folder content into the root level, which can then be hosted on GitHub pages.
 \section{Core Package Evaluation}
 
 The core package presents an option built on top of the original Espruino native code syntax to allow users a cleaner and more transparent approach to the same problems whilst bringing in some ease-of-life functionality; for this to be effective, the package needs not to be detrimental to the run time of the code or writing of code to the device.
 \\ \\
-To ensure the additional features did not negatively effect the performance, a test was created that pits the uart.js package with the core package, ensuring the following criteria were met:
+To ensure the additional features did not negatively affect the performance, a test was created that pits the uart.js package with the core package, ensuring the following criteria were met:
 
 \begin{itemize}
     \item code snippets are the same length (500 characters long).
@@ -1214,20 +1175,23 @@ This means of testing allows for the following features to be tested:
 \chapter{Conclusion}    
 
 \section{Summary}
-The espruino tools ecosystem built throughout this project allows users from any experience level or technical background to quickly build tangible embedded systems applications with easy integration with web browsers. Furthermore, by expanding upon the existing Espruino project to improve the developer experience, espruino-tools provides developers with a user-friendly syntax alongside a flexible environment promoting user's personal development within career-building skills within the web development space through the usage of modern web technologies whilst providing experienced developers with a platform to develop using their preferred technologies.
+The espruino tools ecosystem built throughout this project allows users from any experience level or technical background to quickly build tangible embedded systems applications with easy integration with web browsers. Expanding upon the existing Espruino project to improve the developer experience, espruino-tools provides developers with a user-friendly syntax and a flexible environment. Introducing these benefits promotes users' personal development within career-building skills within the web development space through modern web technologies whilst providing experienced developers with a platform to develop with their preferred technologies. 
+\\ \\
+The ever-evolving specification of the package ecosystem through user study prompted the advancement of the ecosystem through additional packages and web applications. These additional package and web applications consist of the following: 
+
+\subsubsection{CLI tool} The CLI tool allows developers to utilise a single terminal command to construct an espruino-tools enabled environment with customisation through flags. These flags enable the ability to work with web technologies like React or Vue and/or just set up an environment ready for using the Peer package.
+\subsubsection{Peer} The Peer package enables simplified device to device peer-to-peer connection via a scannable QR code. This package extends the developers tool box by allowing additional input devices from any connected device. In addition to this the package allows any device with a web browser (such as iOS devices or non chromium based browsers) to be utilised something not previously an option with Espruino due to the WebBluetooth API limitation.
+\subsubsection{Transpiler} The transpiler package establishes espruino-tools as its own stand-alone language enabling the conversion of espruino-tools code into standard Espruino code. This conversion enables developers to take advantage of previously built Espruino tools such as their IDE. Additionally this package expands the ability for developers to write nested code in espruino-tools syntax due to the usage of AST conversion, transforming and generation.
+\subsubsection{Online Environment} The Online environment web application provides a space for developers to test their code on Espruino devices without the requirement to setup a local environment. Alongside this the web app allows developers access to information such as what their transpiled code looks like alongside what code is stored on their devices for easy debugging.
 
 \section{Reflection}
-\subsubsection{What has this taught me}\hfill\\
-By pushing JavaScript to its limits through the development of a transpiler as well as through the integration of experimental APIs such as WebBluetooth and WebRTC this project has introduced to me just what can be done in the web space without the need for...
-\begin{itemize}
-    \item working on a large-scale project touching every aspect of web development, design, Front-end, Back-end, package development, and DevOps.
-\end{itemize}
-\subsubsection{What would I do differently}\hfill
-\begin{itemize}
-    \item ...
-\end{itemize}
+
+Overall, this project has given me invaluable insight into architecting and developing on a large-scale codebase whilst working with many aspect of web development such as design, front-end, back-end, DevOps, CLI tool and package development as well as how testing should be effectively performed on each aspect. Furthermore this project has taught me the importance of having a developer-customer relationship through the usage of user studies/testing enabling a constructive environment which results in packages built for purpose.
+\\ \\
+On reflection, the development approach of this package ecosystem meant that every new package presented the ability to learn from the mistakes of the previous one. The resulting approach meant that for each new package built there was a new approach or technology that seemed like a better idea than the previous requiring a full ecosystem refactor. This approach resulted in a lot of time wasted on work that did not affect the end software project. A better approach to this problem would have been to have a set structure from the start that was stuck to throughout the projects development.
+
 \section{Future Work}
-Due to the projects time constraints many hypothetical features that could be massively beneficial for the package ecosystem's ease of use.
+Due to the project's time constraints, many hypothetical features that could be massively beneficial for the package ecosystem's ease of use were omitted. The subsequent future work continues to encapsulate the main goals of this project without negatively affecting the developer experience.
 \subsection{Espruino device package}
 
 The Espruino platform supports native packages within their platform. An example of some of these packages are ble\_hid\_controls and ble\_hid\_keyboard which allow developers to use espruino devices as bluetooth input devices, in this case for keybindings or music controls.
@@ -1244,7 +1208,7 @@ By introducing user evaluation from an array of programming backgrounds whilst e
 
 The Transpiler package was built for the conversion of a single JavaScript file due to the nature of the development being very one-dimensional. This approach removes the ability for developers to incorporate helper functions or any other additional files as modules.
 \\ \\
-The addition of a CLI tool which would run the transpiler across all specified files within a project would be the beginning steps to allowing this approach to development to work. The approach can be seen in other transpilers such as TypeScript and CoffeeScript which have their own respective command line keywords to run the transpiler across a project based on a configuration file specifying the location of files to be transpiled.
+The addition of a CLI tool which would run the transpiler across all specified files within a project would be the beginning steps to allowing this approach to development to work. The system can be seen in other transpilers such as TypeScript and CoffeeScript which have their own respective command line keywords to run the transpiler across a project based on a configuration file specifying the location of files to be transpiled.
 
 
 
@@ -1504,6 +1468,7 @@ From IDE show how the compiler changes the code
 \href{https://demos-mu.vercel.app/demo/create-espruino-app}{https://demos-mu.vercel.app/demo/create-espruino-app}
 
 \chapter{Wireframes}
+\label{appendix:wireframes}
 
 \section{Connection}
 
