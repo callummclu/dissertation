@@ -5,6 +5,8 @@
 - 2469682M
 - Jonathan Grizou
 
+# Semester 1
+
 ## Week 2 `<!-- thisWeek: 16.5hr, total:16.5hr -->`
 
 ### 30 Sep 2022 `<!-- 3.5 hours -->`
@@ -387,6 +389,8 @@
 - _0.5 hour_ fixed core package test issue.
 - _2 hours_ fixed uart pipeline and added pipelines for transpiler and online IDE to save time next semester.
 
+# Semester 2
+
 ## Week 14 `<!-- thisWeek:35.5hr, total: 330hr -->`
 
 ### 11 Jan 2023 `<!-- 9 hours -->`
@@ -582,7 +586,7 @@
 
 - _2 hours_ finalised first draft of evaluation section.
 
-## Week21 `<!-- thisWeek: XXhr, total: XXhr -->`
+## Week21 `<!-- thisWeek: 11hr, total: 453.5hr -->`
 
 ### 7 Mar 2023 `<!-- 2 hours -->`
 
@@ -597,3 +601,26 @@
 
 - _2 hours_ filled out appenix
 - _2 hours_ work on conclusion section.
+
+### 10 Mar 2023 `<!-- 2 hours -->`
+
+- _2 hours_ worked on summary and future work
+
+### 12 Mar 2023 `<!-- 2 hours -->`
+
+- _2 hours_ finalised first draft of summary.
+
+## Week 22 `<!-- thisWeek: XXhr, total: XXhr-->`
+
+### 14 Mar 2023 `<!-- 3 hours -->`
+
+- _2 hours_ finalised first draft of reflection.
+- _1 hour_ made plan for what is left.
+
+### 15 Mar 2023 `<!-- 5 hours -->`
+
+- _2 hours_ re ran speed comparisons and developed new diagrams
+- _0.5 hours_ redone dependency graph.
+- _1 hour_ reworded background section to improve flow.
+- _0.5 hours_ began plan for presentation.
+- _1 hour_ met with supervisor
