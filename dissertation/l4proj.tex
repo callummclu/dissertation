@@ -978,8 +978,14 @@ The process utilises NPM's publish command which utilises the version of the pac
 
 \subsection{Web Apps}
 % UNFINISHED
-A different approach was required to deploy the web applications as the package deployment did not require a standalone server. As React was being used, Vercel was chosen as the optimal approach; Vercel provides its pipeline, which deploys a version of the web application on each branch used, allowing for development site testing before pushing to production. As the React site is built and compressed via gzip, we are left with a static website. Vercel provides a service to freely serve static websites meaning the web applications are hosted at no cost. 
+A different approach was required to deploy the web applications as the package deployment did not require a standalone server. As React was being used, Vercel was chosen as the optimal approach; Vercel provides its pipeline, which deploys a version of the web application on each branch used, allowing for development site testing before pushing to production. As the React site is built and compressed via gzip, we are left with a static website. Vercel provides a service to freely serve static websites meaning the web applications are hosted at no cost. This process can be seen in figure \ref{fig:web-app-deploy}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{dissertation/images/web-app-deploy.png}
+    \caption{Web application CI/CD flow utilising both azure DevOps and vercels CI/CD pipelines. Vercel provides the ability for preview deployments and production deployments to be built at every stage of the process allowing for better feedback on changes in a production-style environment}
+    \label{fig:web-app-deploy}
+\end{figure}
 
 \chapter{Evaluation} 
 
