@@ -624,3 +624,23 @@
 - _1 hour_ reworded background section to improve flow.
 - _0.5 hours_ began plan for presentation.
 - _1 hour_ met with supervisor
+
+### 16 Mar 2023 `<!-- 2 hours -->`
+
+- _2 hours_ fixed all figures to fit a better style.
+
+### 17 Mar 2023 `<!-- 4 hours -->`
+
+- _3 hours_ added required manual.md and README.md files to the repositories.
+- _1 hour_ made dinosaur demo
+
+### 18 Mar 2023 `<!-- 4 hours -->`
+
+- _2 hours_ found and added references to the dissertation.
+- _1 hour_ fixed diagrams
+- _1 hour_ made cli comparison demo for the presentation.
+- _1 hour_ read over dissertation and fixed grammatical errors at first glance.
+
+### 19 Mar 2023 `<!-- X hours -->`
+
+## Week 23 `<!-- thisWeek: XXhr, total:XXhr-->`
