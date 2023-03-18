@@ -150,7 +150,7 @@ The \href{https://www.espruino.com/}{Espruino micro-controller} provides an inno
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=10cm]{dissertation/images/espruino_devices.jpg}
-    \caption{Espruino devices}
+    \caption{Espruino devices, Left to right Pixl, Breakout, Pico, Puck (in multiple colours), Pico(pinned and unpinned) and Original}
     \label{fig:espruinodevices}
 \end{figure}
     
@@ -161,7 +161,7 @@ The \href{https://www.espruino.com/}{Espruino micro-controller} provides an inno
 \begin{center}
     \includegraphics[width=10cm]{dissertation/images/UART_diagram.png}
 \end{center}
-\caption{UART}
+\caption{UART diagram showing data flow between devices 1 and 2 via the UART controllers transmission and reception control lines}
     \label{fig:UART}
 \end{figure}
 
@@ -177,11 +177,7 @@ Software packages are methods of extending the functionality of a given language
 \subsection{NPM}
 \href{https://www.npmjs.com/}{NPM} is a package manager for node.js. NPM is highly used within JavaScript programming to manage software packages. NPM provides an online hub for developers to search for relevant packages to aid their development process quickly. In addition, NPM encourages developers to share their packages and contribute to open-source initiatives. This tool is necessary for node development due to its extensive catalogue of packages and is required for contemporary JavaScript development.
 
-% 
-%  MAYBE NEEDS TO BE RE WRITTEN
-% 
 \subsection{NPX}
-
 \href{https://docs.npmjs.com/cli/v7/commands/npx}{NPX} (Node Package eXecute) is a package runner for the node.js environment, which allows for the execution of packages hosted on NPM's package repository. It allows developers to run packages without the requirement of installing a program globally on their systems. The package runner is highly utilised within environment-building systems such as React's \href{https://reactjs.org/docs/create-a-new-react-app.html}{create-react-app} due to its ability to provide a convenient method of running packages without having it install any other OS-specific package managers such as \href{https://brew.sh/}{Homebrew}.
 
 
@@ -194,7 +190,7 @@ The challenge of real-time communication between devices in web development is a
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=5cm]{dissertation/images/web-rtc-diagram.png}
-    \caption{WebRTC}
+    \caption{WebRTC diagram showing the connection initialisation through the signalling server alongside the data transfer between two browsers}
     \label{fig:webRTC}
 \end{figure}
 
@@ -214,7 +210,7 @@ The \href{https://www.espruino.com/ide/}{Espruino IDE} provides an online platfo
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=12cm]{dissertation/images/espruino-ide.png}
-    \caption{Espruino IDE}
+    \caption{Espruino IDE homepage displaying the standard terminal and code editor side by side}
     \label{fig:espruino-ide}
 \end{figure}
 
@@ -247,7 +243,7 @@ The Espruino platform provides an unopinionated approach to how users should use
             UART.write(`${code};\n`);
             
         \end{lstlisting}
-        \caption{UART.js device communication}
+        \caption{A code snippet that shows how device writing/communication is handled by UART.js}
         \label{fig:OLD_UART_DEVICE_WRITING_CODE}
     \end{figure}
 
@@ -268,7 +264,7 @@ The Espruino platform provides an unopinionated approach to how users should use
                 })`;
             
         \end{lstlisting}
-        \caption{Proposed new device communication}
+        \caption{Proposed code snippet for how writing/communication should be handled without writing code as a string.}
         \label{fig:NEW_DEVICE_WRITING_CODE}
     \end{figure}
 \end{itemize}
@@ -315,7 +311,7 @@ The problem specification provided a platform allowing for an open-ended approac
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=12cm]{dissertation/images/caniuse_webbluetooth.png}
-    \caption{caniuse WebBluetooth adoption}
+    \caption{Browser support comparison for the WebBluetooth API use by Espruino for UART connection to the browser from caniuse}
     \label{fig:caniuse_webblue}
 \end{figure}
 
@@ -336,7 +332,7 @@ To bypass this issue and allow unsupported control over these devices, a solutio
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=7cm]{dissertation/images/mobile-computer-connection.png}
-    \caption{Mobile - Computer connection}
+    \caption{The usage of a mobile device to control a web browser through the WebRTC connection via the camera}
     \label{fig:mobile-computer-connection}
 \end{figure}
 
@@ -368,16 +364,16 @@ As the main project began to incorporate more complex behaviour like nested stat
     })
 \end{lstlisting}
 
-To solve this problem, an approach which took inspiration from transpiled languages such as TypeScript made the most sense. A Transpiler, in this case, allowed a new language to be built extending JavaScript's syntax this could then be compiled into plain JavaScript, which could be interpreted by Espruino's compiler. For the transpiler to be effective, it had to ensure to incorporate the following criteria.
+To solve this problem, an approach which took inspiration from transpiled languages such as TypeScript made the most sense. A Transpiler, in this case, allowed a new language to be built extending JavaScript's syntax; this could then be compiled into plain JavaScript, which Espruino's compiler could interpret. For the transpiler to be effective, it had to ensure to incorporate the following criteria.
 \\
 \begin{itemize}
-    \item successfully converts all standard JavaScript allowing for variable declaration, nested scoped code as well as imports/exports.
-    \item Allow for code written in either standard Espruino language or the new Espruino tools syntax for niche unsupported methods to not be restricted.
-    \item Support modern JavaScript programming including modules, classes and syntax such as arrow functions or async/await.
+    \item successfully converts all standard JavaScript allowing for variable declaration, nested scoped code, and imports/exports.
+    \item Allow for code written in either standard Espruino language or the new Espruino tools syntax for niche unsupported methods not to be restricted.
+    \item Support modern JavaScript programming including modules, classes and syntax such as arrow functions or async/await in-line with \cite{kolce2018javascript}.
 \end{itemize}
 
 \subsection{NPX Tool}
-\text By expanding the espruino platform to the NPM platform it became apparent that the setup of the package directory may become cumbersome for more experienced developers or downright difficult for beginner programmers with no previous node.js knowledge. By taking inspiration from React's \href{https://reactjs.org/docs/create-a-new-react-app.html}{create-react-app} tool it made the most sense to approach the problem in the same way by allowing users a simple command line prompt with avid customisation to allow a default project which fits the needs of most developers leaving heavily customised projects to the audience of people that needed it. To incorporate this, it would need to have the following specifications:
+\text By expanding the espruino platform to the NPM platform, it became apparent that the setup of the package directory may become cumbersome for more experienced developers or downright difficult for beginner programmers with no previous node.js knowledge. By taking inspiration from React's \href{https://reactjs.org/docs/create-a-new-react-app.html}{create-react-app} tool, it made the most sense to approach the problem in the same way by allowing users a simple command line prompt with avid customisation to allow a default project which fits the needs of most developers leaving heavily customised projects to the audience of people that needed it. To incorporate this, it would need to have the following specifications:
 \\
 \begin{itemize}
     \item Create a working directory to allow users to get started directly after the command is run with no additional setup.
@@ -386,12 +382,12 @@ To solve this problem, an approach which took inspiration from transpiled langua
 \end{itemize}
 
 \subsection{Online Environment}
-\text The original Espruino project includes an online environment which allows users to develop straight onto their Espruino devices removing the need to set up a local environment to test smaller features. As this project utilises a new syntax whilst bringing many useful development tools such as gathering device code effectively, it made sense to take inspiration from the Espruino IDE and create an environment which supports this new style of programming on Espruino devices whilst incorporating functionality aimed at improving the experience for developers. For this aspect of the project to be effective it had to meet the following criteria:
+\text The original Espruino project includes an online environment which allows users to develop straight onto their Espruino devices, removing the need to set up a local environment to test smaller features. As this project utilises a new syntax whilst bringing many useful development tools such as gathering device code effectively, it made sense to take inspiration from the Espruino IDE and create an environment which supports this new style of programming on Espruino devices whilst incorporating functionality aimed at improving the experience for developers. For this aspect of the project to be effective, it had to meet the following criteria:
 \\
 \begin{itemize}
     \item It must support live development with the ability to run code and see device output to allow developers to catch any bugs that may be missed in standard development.
-    \item Bring the ability for users to upload and download their code to allow easy integration into a larger project be that through debugging or just testing features first before bringing them into the project.
-    \item Allow users to directly see device code in a read-only code editor, allowing an improved debugging experience for developers.
+    \item Bring the ability for users to upload and download their code to allow easy integration into a larger project, be that through debugging or just testing features first before bringing them into the project.
+    \item Allow users to directly see device code in a read-only code editor, improving developers' debugging experience.
 \end{itemize}
 
 % Allow users to have an environment in which they can test new features without setting up a whole development environment. This can be used to test functionality or even develop whole projects.
@@ -403,7 +399,7 @@ To solve this problem, an approach which took inspiration from transpiled langua
 Throughout the development of this project, multiple development approaches have been taken based on the project style. By utilising both a feedback-driven model alongside a test-driven approach, each aspect of the project has been allocated an appropriate development style to ensure robustness, cleanness and adequate feature sets. These approaches were enforced using agile methodologies by dividing specification points into work items and allocating them during week-long sprints furthering the quick approach to iterating the product.
 
 \subsection{Feedback Driven Development}
-By utilising a feedback-driven approach the project was able to constantly evolve into a product more suited to the people actually using it. To take full advantage of the Espruino community and ensure the project provided useful features three methods of gathering feedback were used.
+By utilising a feedback-driven approach, the project was able to constantly evolve into a product more suited to the people actually using it. To take full advantage of the Espruino community and ensure the project provided useful features three methods of gathering feedback were used.
 
 \text \\
 
@@ -413,7 +409,7 @@ The Espruino Forum pictured in figure \ref{fig:espruino-forum} is a platform use
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=12cm]{dissertation/images/espruino-forum.png}
-    \caption{Espruino Forum}
+    \caption{Espruino Forum, a community to ask questions or share your project}
     \label{fig:espruino-forum}
 \end{figure}
 
@@ -446,7 +442,7 @@ The GitHub platform is widely used within the open-source community, a feature p
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=10cm]{dissertation/images/github-organisation.png}
-    \caption{\href{https://github.com/espruino-tools}{Github organisation}}
+    \caption{\href{https://github.com/espruino-tools}{Espruino Tools}' Github organisation splash page with the most popular packages displayed}
     \label{fig:ghorg}
 \end{figure}
 
@@ -457,7 +453,7 @@ NPM provides a solution similar to GitHub organisations through scoped packages.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=10cm]{dissertation/images/npm-scoped-packages.png}
-    \caption{NPM scoped package Organisation}
+    \caption{Espruino Tools NPM package Organisation showcasing the UART, Peer, Core and transpiler as scoped packages alongside the depreciated device-controller package previous used as the core package}
     \label{fig:npmorg}
 \end{figure}
 
@@ -490,7 +486,7 @@ Major change & Breaking changes such as changes in syntax, anything that is not 
  \hline
 \end{tabular}
 \end{center} 
-    \caption{NPM Package Versioning}
+    \caption{Criteria used to consistently version NPM packages based on the severity of the change split into bug (for small fixes such as bug or security patches), minor (for non-breaking feature additions), and major (for breaking changes that are not backwards compatible with prior versions)}
     \label{fig:NPM-versioning}
 \end{figure}
 
@@ -508,33 +504,26 @@ Within CLI tool development CLI flags are used to provide user input and customi
 \subsubsection{template}\hfill\\
 The template tag allows developers to get started with a template built with one of 4 options: Plain Javascript, TypeScript, React or Vue. These options were chosen due to consideration from figure \ref{fig:js_framework_lib_comp} whilst maintaining the need for plain javascript/typescript templates to allow for flexibility when not working with a framework. The template tag allows for package-specific formatting to be set up by default this could be routing or general file structure.
 
-\text \\
+
 
 \subsubsection{peer}\hfill\\
 The peer tag allows users to get started with the peer package without having to worry about the restrictions of the WebRTC API such as SSL requirements or separate pages needing to be hosted for it to function properly.
 
-\text \\
+
 
 \subsubsection{clean-install}\hfill\\
 clean-install is a flag which is aimed at not restricting the usage of the tool to just beginners by allowing a directory to be populated just by the required packages removing any example splash pages presented by the standard package. The goal of this flag was to not alienate more advanced programmers whilst still giving them the benefits of the tool.
 
 \section{UI/UX Improvements}
-Previous implementations of device connection through packages such as \href{https://www.espruino.com/UART.js}{uart.js} all fall short when it comes to user experience presenting users with a badly designed modal with little to no control for leaving the modal without processing a request first. To tackle this problem with inspiration from the react component library \href{https://mantine.dev/}{Mantine} a Figma prototype was prepared to improve the user interface and experience of the mandatory modal. In figure \ref{fig:old-connection-modal} we can see the old design with layout issues and a general lack of responsive design. In figure \ref{fig:new-connection-modal} we can see the newly thought-out design prototype incorporating an option to close the modal with a clearer design. 
+Previous implementations of device connection through packages such as \href{https://www.espruino.com/UART.js}{uart.js} all fall short when it comes to user experience presenting users with a badly designed modal with little to no control for leaving the modal without processing a request first. To tackle this problem with inspiration from the react component library \href{https://mantine.dev/}{Mantine} a Figma prototype was prepared to improve the user interface and experience of the mandatory modal. In figure \ref{fig:connection-modal} on the left we can see the old design with layout issues and a general lack of responsive design. In figure \ref{fig:connection-modal} we can also see the newly thought-out design prototype on the right incorporating an option to close the modal with a clearer design. 
 
 \begin{figure}[!ht]
-\centering
-\begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=6cm]{dissertation/images/old-modal-design.png}
-  \captionof{figure}{Old Connection Modal}
-  \label{fig:old-connection-modal}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
   \includegraphics[width=6cm]{dissertation/images/new-modal-design.png}
-  \captionof{figure}{New Connection Modal}
-  \label{fig:new-connection-modal}
-\end{minipage}
+  \captionof{figure}{Connection Modal comparison with the old connection modal(left) with stylistic errors and the new proposed connection modal(right) with modern styled based on Mantine component library}
+  \label{fig:connection-modal}
+
 \end{figure}
 
 This design process incorporated the previously mentioned feedback-driven approach going through many iterations to reach a final product with feedback from my supervisor who had previously mentioned issues with the prior connection modal. Further wireframes can be found in appendix \ref{appendix:wireframes}
@@ -572,7 +561,7 @@ The packages discussed below are used throughout the full ecosystem and help pro
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=13cm]{dissertation/images/framework_popularity_comparison.png}
-    \caption{stateofjs JavaScript framework/library usage comparison}
+    \caption{JavaScript framework/library usage comparison statistics between React, Vue and Angular from 2016 to 2022 from stateofjs}
     \label{fig:js_framework_lib_comp}
 \end{figure}
 
@@ -641,7 +630,7 @@ CLI Tool &  \href{https://github.com/espruino-tools/create-espruino-app}{espruin
  \hline
 \end{tabular}
 \end{center} 
-    \caption{Packages}
+    \caption{Table showcasing each package within the ecosystem alongside their respective GitHub repositories and Documentation pages.}
     \label{fig:packages}
 \end{figure}
 
@@ -659,17 +648,17 @@ Documentation & \href{https://github.com/espruino-tools/documentation}{espruino-
  \hline
 \end{tabular}
 \end{center}
-\caption{Web Apps}
+\caption{Table showcasing each Web App alongside their respective GitHub repositories and hosted site URLs.}
 \label{fig:webapps}
 \end{figure}
 
-Each of the packages has a unique dependency on each other, this choice of structure allows users to get involved at any step and even develop their own solutions to improve their own custom workflow, the dependency graph is shown in figure \ref{fig:package_dep_graph}
+Each of the packages has a unique dependency on each other; this choice of structure allows users to get involved at any step and even develop their own solutions to improve their own custom workflow; the dependency graph is shown in figure \ref{fig:package_dep_graph}
 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=8cm]{dissertation/images/Package_dependency_graph.jpeg}
-    \caption{Dependency Graph}
+    \includegraphics[width=12cm]{dissertation/images/Package_dependency_graph.jpeg}
+    \caption{Dependency Graph of the package ecosystem showcasing package dependencies from left to right; Core is dependent on UART and Transpiler, create-espruino-app is dependent on Core and partially Peer if the --peer flag is utilised, Online environment is dependent on the Transpiler package. All other packages have no other dependencies within the package ecosystem.}
     \label{fig:package_dep_graph}
 \end{figure}
 
@@ -698,7 +687,7 @@ By utilising a proper design process, a new non-intrusive modal was developed to
 
 \subsection{core}
 
-The core package is the ecosystem's main package, which expands upon the UART package by providing users with an experience more akin to standard programming. It does this by bypassing issues that occur with sending data to the device; the UART package makes it so that sending code to a device requires the code to be in sting format, leaving the developer in a position where they receive no support from their IDE such as auto-complete suggestions or syntax error detection. The core package provides an importable object for each of the primary Espruino devices as well as an extendable standard import in which users can build their own devices with basic functionality such as connection writing and shared functionality already incorporated. Furthermore, the package provides a more descriptive syntax for the developer, clearing up any confusion or barely documented code. This new syntax can be seen in figures \ref{fig:old-code-approach} and \ref{fig:new-code-approach}.
+The core package is the ecosystem's main package, which expands upon the UART package by providing users with an experience more akin to standard programming. It does this by bypassing issues that occur with sending data to the device; the UART package makes it so that sending code to a device requires the code to be in sting format, leaving the developer in a position where they receive no support from their IDE such as auto-complete suggestions or syntax error detection. The core package provides an importable object for each of the primary Espruino devices as well as an extendable standard import in which users can build their own devices with basic functionality such as connection writing and shared functionality already incorporated. Furthermore, the package provides a more descriptive syntax for the developer, clearing up any confusion or barely documented code. This new syntax compared with the old can be seen in \ref{fig:code_approach}
 
 \begin{figure}[!ht]
 \centering
@@ -715,9 +704,6 @@ The core package is the ecosystem's main package, which expands upon the UART pa
 
     UART.write(code);
   \end{lstlisting}
-  
-  \captionof{figure}{UART code approach}
-  \label{fig:old-code-approach}
 \end{minipage}
 \hspace{1cm}
 \begin{minipage}{6cm}
@@ -730,9 +716,9 @@ p.onPress(function(){
     p.LED.toggle('red')
 })
   \end{lstlisting}
-  \captionof{figure}{Core code approach}
-  \label{fig:new-code-approach}
 \end{minipage}
+  \caption{Code approach to adding an on button press event turning on a red LED. This is shown through the current UART.js approach on the Left and through the proposed new "Core" package approach on the right; showing the simplified syntax and removed requirement to write code inside a string.}
+  \label{fig:code_approach}
 \end{figure}
 
 On top of this, the core package takes a fully asynchronous approach to development, taking advantage of JavaScript's \textbf{Promise} functionality utilising \textbf{async/await}. This allows the developer to not worry about using timeouts throughout their program but instead opt for a cleaner solution that presents data when it's ready instead of when a hard-coded timer has passed. This is baked-in functionality meaning the \textbf{async/await} keywords can be utilised to gather data from the device, as shown below in figure \ref{fig:async-await-core}.
@@ -744,7 +730,7 @@ let p = new Puck();
 
 let temperature = await p.getTemperature();
     \end{lstlisting}
-    \caption{Async/Await in core package}
+    \caption{Proposed solution to removing the requirement for set length timeouts through the utilisation of JavaScript's Promise feature specifically the async/await functionality}
     \label{fig:async-await-core}
 \end{figure}
 
@@ -758,11 +744,11 @@ The Peer package extends upon the functionality of peer.js by adding some ease o
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=6cm]{dissertation/images/QR-p2p-modal.png}
-    \caption{Peer QR Modal}
+    \caption{Design snippet for the Peer packages connection modal utilising a QR code for easy mobile connection through camera scanning.}
     \label{fig:qr-scan}
 \end{figure}
 
-\text In addition to this the Peer package implements a simplified syntax for setting up data and video transmission between two browsers, this syntax can be seen below in figures \ref{fig:old-peer-syntax} and \ref{fig:new-peer-syntax} showing basic data connection.
+\text In addition to this the Peer package implements a simplified syntax for setting up data and video transmission between two browsers, this syntax can be seen below in figure \ref{fig:peer-syntax} showing basic data connection.
 
 \begin{figure}[!ht]
 \centering
@@ -784,9 +770,6 @@ conn.on('open', () => {
   conn.send('my message');
 });
   \end{lstlisting}
-  
-  \captionof{figure}{peer.js package approach}
-  \label{fig:old-peer-syntax}
 \end{minipage}
 \hspace{1cm}
 \begin{minipage}{5.5cm}
@@ -807,9 +790,10 @@ p_connector.conn
     .send("my message");
 
   \end{lstlisting}
-  \captionof{figure}{Peer package approach}
-  \label{fig:new-peer-syntax}
+
 \end{minipage}
+  \caption{Code approach to initialising a simple peer-to-peer connection through a hosting page and connecting page approach with peer.js (Left) and the new Peer package (Right) showing the simplified and more readable syntax used in the Peer package approach (Left)}
+  \label{fig:peer-syntax}
 \end{figure}
 
 The examples above glosses over how the hosting site passes the id across, within the peer.js package a bespoke approach to this would be required whereas the Peer package will do this by default further removing another step of boilerplate configuration from the developer
@@ -833,7 +817,7 @@ To ensure users can get started with Espruino-tools as soon as possible and with
  clean-install & This allows users to get started with an environment from the template tag with no additional setup, this will just provide an empty page and the correct packages installed to allow full control over what the project does without guidance from the tool.\\
  \hline
     \end{tabular}
-    \caption{Flags details}
+    \caption{A table showcasing the array of flags supported by the CLI tool allowing features such as; flexible environments through the --template tag supporting React, Vue, Typescript and standard Javascript, easy peer package setup through the --peer syntax as well as a simplified work environment for more experienced developers through the --clean-install flag.}
     \label{fig:flag-comp}
 \end{figure}
 
@@ -844,7 +828,7 @@ This tool works through NPX meaning that users are not required to install anyth
     \begin{lstlisting}[language=bash]
         $ npx create-espruino-app my-esp-app --template react --peer
     \end{lstlisting}
-    \caption{NPX command for React, Peer project}
+    \caption{Example command line input for an espruino-tools project with a react environment that supports the Peer package out of the box. This utilises the --template and --peer tags to achieve this.}
     \label{fig:npx-command}
 \end{figure}
 
@@ -853,7 +837,7 @@ As the development of the core package progressed, it became apparent that the p
 \\ \\
 Due to the approach of constructing, transforming and building ASTs the Transpiler package creates a tool which only converts code recognised to be espruino-tools code leaving the rest to remain as standard JavaScript; this approach further allows users to incorporate native Espruino code into their projects meaning new features within the standard ecosystem are not restricted when using the espruino-tools ecosystem of packages.
 \\ \\ 
-An example of the input and output of the Transpiler package can be seen below in figures \ref{fig:transpiler-before} and \ref{fig:transpiler-after}.
+An example of the input and output of the Transpiler package can be seen below in figure \ref{fig:transpiler-input-output}.
 
 \begin{figure}[!ht]
 \centering
@@ -870,11 +854,8 @@ p.mag.onMag((val)=>{
 })
 
   \end{lstlisting}
-  
-  \captionof{figure}{Code before being transpiled}
-  \label{fig:transpiler-before}
 \end{minipage}
-\hspace{1cm}
+\hspace{0.5cm}
 \begin{minipage}{6cm}
   \centering
   
@@ -887,9 +868,12 @@ Puck.on('mag', function (val) {
     }
 });
   \end{lstlisting}
-  \captionof{figure}{Code after being transpiled}
-  \label{fig:transpiler-after}
 \end{minipage}
+
+
+  \caption{Process of the transpiler package showing the input on the Left and the output on the right. This shows the simplified and more readable syntax from the espruino-tools syntax (Left) generated into the standard Espruino output required to run on the Espruino devices (Right)}
+  \label{fig:transpiler-input-output}
+
 \end{figure}
 
 \section{Web Apps}
@@ -902,8 +886,8 @@ The online environment provides users with the functionality to quickly perform 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=10cm]{dissertation/images/online-env-device-code.png}
-    \caption{Online environment code on device}
+    \includegraphics[width=11cm]{dissertation/images/online-env-device-code.png}
+    \caption{The developed Online environment showcasing the terminal output (on the left) side by side with the code stored on the device (on the right). This added feature improved the debugging ability of developers and presents an improvement over the original Espruino IDE.}
     \label{fig:online-env-device-code}
 \end{figure}
 
@@ -916,16 +900,19 @@ To provide a platform for users to view what can be built with espruino-tools th
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=10cm]{dissertation/images/demo-page.png}
-    \caption{Demo page}
+    \includegraphics[width=11cm]{dissertation/images/demo-page.png}
+    \caption{project page on the demo site showcasing the ability to embed details such as short descriptions and a title alongside a youtube video with again a title and description. Finally allowing for users to enter sidebar links in this case showing the GitHub repository of the project}
     \label{fig:demo-page}
 \end{figure}
 
 The page is customised by the developer by utilising the custom espruino demo configuration file, this JSON file allows developers to add videos via youtube's embedded link sharing, descriptions and custom links to fully cover what their page does an example of this JSON configuration file can be seen in the figure \ref{fig:demo-config}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \begin{lstlisting}
+    \begin{minipage}{10cm}
+    \begin{lstlisting}[
+    basicstyle=\footnotesize
+]
 {
     "projectHeader":{
         "title":"Demo title",
@@ -944,9 +931,11 @@ The page is customised by the developer by utilising the custom espruino demo co
     }
 }
     \end{lstlisting}
-    \caption{Demo configuration file}
+    \end{minipage}
+    \caption{Code overview of an example demo configuration file that specifies project details with a youtube video and two sidebar links.}
     \label{fig:demo-config}
 \end{figure}
+
 
 To allow users to add their own contributions without building and hosting a dedicated backend system due to time constraints, the demos hub is populated through the GitHub repositories \textit{demos} folder. This approach means that developers have to create a pull request within the demos repository adding their project, with clear instructions on the demo's hub site; this approach provides the benefits of a backend system not requiring the site to be rebuilt on an added change whilst bringing the benefits of a statically generated site not requiring any cost to host online.
 
@@ -962,7 +951,7 @@ The CI/CD pipeline built provides a platform that streamlines the development pr
     
     \includegraphics[width=14cm]{dissertation/images/CICD-structure.png}
     \end{center}
-    \caption{CI/CD Pipeline}
+    \caption{CI/CD Pipeline flow from code to deployment including the branching structure and build and test process throughout.}
     \label{fig:CICDPipeline}
 \end{figure}
 
@@ -977,11 +966,11 @@ The deployment of packages was facilitated through the usage of an azure pipelin
 \\ \\
 As the packages needed to be served by both NPM and UNPKG both a built version and a minified built version were required to be created to achieve this a Webpack script was produced to allow for the pipeline to build both required configurations; this process would also convert the TypeScript library into JavaScript. We can see the process of the pipeline in figure \ref{fig:deployment}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \begin{center}
     \includegraphics[width=14cm]{dissertation/images/Deployment.png}
     \end{center}
-    \caption{Package deployment}
+    \caption{Package deployment flow graph from code to deployment including package versioning through Husky and multiple build outputs through Webpack.}
     \label{fig:deployment}
 \end{figure}
 
@@ -989,9 +978,14 @@ The process utilises NPM's publish command which utilises the version of the pac
 
 \subsection{Web Apps}
 % UNFINISHED
-A different approach was required to deploy the web applications as the package deployment did not require a standalone server. As React was being used, Vercel was chosen as the optimal approach; Vercel provides its pipeline, which deploys a version of the web application on each branch used, allowing for development site testing before pushing to production. As the React site is built and compressed via gzip, we are left with a static website. Vercel provides a service to freely serve static websites meaning the web applications are hosted at no cost.
-%  ADD A DIAGRAM OF SOME SORT
+A different approach was required to deploy the web applications as the package deployment did not require a standalone server. As React was being used, Vercel was chosen as the optimal approach; Vercel provides its pipeline, which deploys a version of the web application on each branch used, allowing for development site testing before pushing to production. As the React site is built and compressed via gzip, we are left with a static website. Vercel provides a service to freely serve static websites meaning the web applications are hosted at no cost. This process can be seen in figure \ref{fig:web-app-deploy}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{dissertation/images/web-app-deploy.png}
+    \caption{Web application CI/CD flow utilising both azure DevOps and vercels CI/CD pipelines. Vercel provides the ability for preview deployments and production deployments to be built at every stage of the process allowing for better feedback on changes in a production-style environment}
+    \label{fig:web-app-deploy}
+\end{figure}
 
 \chapter{Evaluation} 
 
@@ -1040,7 +1034,7 @@ The following figure \ref{fig:core_native_speed} shows the results from the 50 t
 \begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{dissertation/images/core-native-speed.png}
-    \caption{Core - Native speed comparison}
+    \caption{Graphed speed comparison between writing code to an Espruino device through the core package and through the native uart.js package. The results from this showcase that the main bottleneck is with the WebBluetooth API meaning there is not a noticeable performance difference between these packages despite the requirement for the transpiler to be run on the core package}
     \label{fig:core_native_speed}
 \end{figure}
 
@@ -1066,7 +1060,7 @@ Below in figure \ref{fig:peer-native-speed-comparison} we can see the results fr
 \begin{figure}[H]
     \centering
     \includegraphics[width=11cm]{dissertation/images/peer-native-comparison.png}
-    \caption{Peer - Native speed comparison}
+    \caption{Graphed speed comparison between using the Peer package and natively transferring data to the device(without a peer-to-peer connection). This graph showcases how there is not a noticeable average run time between the two options again due to the data transfer through the WebBluetooth API, again making it the bottleneck here.}
     \label{fig:peer-native-speed-comparison}
 \end{figure}
 
@@ -1080,34 +1074,35 @@ The original miniParser was built as a temporary solution to a bigger problem. T
 \\ \\ 
 The development of the transpiler package was begun due to these shortcomings. The transpiler takes an approach similar to a traditional compiler converting the code into an AST, transforming it and then generating code from the altered AST.
 \\ \\ 
-To compare these two approaches, a small set of tests with the code snippets specified in figures \ref{fig:simple_transpiler_code}, \ref{fig:conditional_transpiler_code} and \ref{fig:nested_transpiler_code}.
+To compare these two approaches, a small set of tests with the code snippets specified in figure \ref{fig:transpiler_code_snippets}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \begin{lstlisting}
-        let p = new Puck();
-    
-        p.LED.on("red");
-    \end{lstlisting}
-
-    \caption{Simple}
-    \label{fig:simple_transpiler_code}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
+    \begin{minipage}{3.5cm}
+        \centering
+        \begin{lstlisting}
+            let p = new Puck();
+        
+            p.LED.on("red");
+        \end{lstlisting}
+        Simple
+    \end{minipage}
+    \hspace{0.5cm}
+    \begin{minipage}{3.5cm}
+        \centering
     \begin{lstlisting}
       let p = new Puck();
       let light = p.getLightVal();
-      light > 0.2 ? p.LED.on("red") : p.LED.off("red");
+      light > 0.2 
+        ? p.LED.on("red") 
+        : p.LED.off("red");
     \end{lstlisting}
-    \caption{Conditional}
-    \label{fig:conditional_transpiler_code}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \begin{lstlisting}
+    Conditional
+    \end{minipage}
+    \hspace{0.5cm}
+    \begin{minipage}{4.5cm}
+        \centering
+        \begin{lstlisting}
     let p = new Puck();
     for(let i = 0; i<33; i++){
         if(i % 3 === 0){
@@ -1116,16 +1111,31 @@ To compare these two approaches, a small set of tests with the code snippets spe
         p.LED.toggle("green");
     }
     \end{lstlisting}
-    \caption{Nested}
-    \label{fig:nested_transpiler_code}
+    Nested
+    \end{minipage}
+    \caption{Code snippets used within the transpiler comparison chosen to cover different aspects of programming from; device initialisation in Simple, Conditional LED setting through lambda statements in Conditional to Simple nested code using a conditional if statement inside of a for loop in Nested.}
+    \label{fig:transpiler_code_snippets}
 \end{figure}
+
+% \begin{figure}[!ht]
+    
+%     \caption{Conditional}
+%     \label{fig:conditional_transpiler_code}
+% \end{figure}
+
+% \begin{figure}[!ht]
+%     \centering
+    
+%     \caption{Nested}
+%     \label{fig:nested_transpiler_code}
+% \end{figure}
 
 Each code snippet was run 25 times on both the transpiler and miniParser to test the speed of the code converters with increasingly complicated code snippets to compare the code coverage of the package. The following figure \ref{fig:transpiler-miniparser-speed-comparison} shows that despite more complicated code having a longer conversion time in the transpiler, the miniParser fails on all accounts but the simple code snippet.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=11cm]{dissertation/images/transpiler-miniParser-speed-comparison.png}
-    \caption{Transpiler, miniParser speed comparison}
+    \caption{Graphed results from the Transpiler test showcasing the miniParser having a near consistent run-time whilst the transpiler time increased as the code complexity increased. Despite the shorter run time, the miniParser does not correctly run for the conditional sample and just throws an error when running on the nested code sample }
     \label{fig:transpiler-miniparser-speed-comparison}
 \end{figure}
 
@@ -1177,12 +1187,12 @@ This means of testing allows for the following features to be tested:
 \section{Summary}
 The espruino tools ecosystem built throughout this project allows users from any experience level or technical background to quickly build tangible embedded systems applications with easy integration with web browsers. Expanding upon the existing Espruino project to improve the developer experience, espruino-tools provides developers with a user-friendly syntax and a flexible environment. Introducing these benefits promotes users' personal development within career-building skills within the web development space through modern web technologies whilst providing experienced developers with a platform to develop with their preferred technologies. 
 \\ \\
-The ever-evolving specification of the package ecosystem through user study prompted the advancement of the ecosystem through additional packages and web applications. These additional package and web applications consist of the following: 
+The ever-evolving specification of the package ecosystem through user study prompted the advancement of the ecosystem through additional packages and web applications. These additional packages and web applications consist of the following: 
 
-\subsubsection{CLI tool} The CLI tool allows developers to utilise a single terminal command to construct an espruino-tools enabled environment with customisation through flags. These flags enable the ability to work with web technologies like React or Vue and/or just set up an environment ready for using the Peer package.
-\subsubsection{Peer} The Peer package enables simplified device to device peer-to-peer connection via a scannable QR code. This package extends the developers tool box by allowing additional input devices from any connected device. In addition to this the package allows any device with a web browser (such as iOS devices or non chromium based browsers) to be utilised something not previously an option with Espruino due to the WebBluetooth API limitation.
-\subsubsection{Transpiler} The transpiler package establishes espruino-tools as its own stand-alone language enabling the conversion of espruino-tools code into standard Espruino code. This conversion enables developers to take advantage of previously built Espruino tools such as their IDE. Additionally this package expands the ability for developers to write nested code in espruino-tools syntax due to the usage of AST conversion, transforming and generation.
-\subsubsection{Online Environment} The Online environment web application provides a space for developers to test their code on Espruino devices without the requirement to setup a local environment. Alongside this the web app allows developers access to information such as what their transpiled code looks like alongside what code is stored on their devices for easy debugging.
+\subsubsection{CLI tool} The CLI tool allows developers to utilise a single terminal command to construct an espruino-tools-enabled environment with customisation through flags.
+\subsubsection{Peer} The Peer package enables simplified device-to-device peer-to-peer connection via a scannable QR code. This package extends the developer's toolbox by allowing additional input devices from any connected device.
+\subsubsection{Transpiler} The transpiler package establishes espruino-tools as its own stand-alone language enabling the conversion of espruino-tools code into standard Espruino code. This conversion enables developers to take advantage of previously built Espruino tools, such as their IDE.
+\subsubsection{Online Environment} The Online environment web application provides a space for developers to test their code on Espruino devices without the requirement to set up a local environment.
 
 \section{Reflection}
 
@@ -1322,7 +1332,7 @@ Below is the individual MOSCOW analysis of each project. These will go further i
 \subsection{Should Have}
 \begin{itemize}
     \item Convert code regardless of syntax errors (for usage with newly released commands in espruino spec that arent currently supported).
-    \item Support modern javascript syntax such as classes and arrow functions.
+    \item Support modern javascript syntax (such as classes and arrow functions).
     \item Have options to transpile modules or scripts.
 
 \end{itemize}
@@ -1427,78 +1437,68 @@ Below is the individual MOSCOW analysis of each project. These will go further i
 \chapter{Project demos}
 
 
+
 \label{appendix:projdemos}
-
-\section{Core}
-
-\subsection{Puck Light Demo}
-A small program which utilises the pucks light sensor to activate the LED when the light levels are low(room is dark)
+All project demos are available through the demos hub web application built for the project \href{https://demos-mu.vercel.app}{here}.
+\\ \\
+For a breakdown of what each demo does look at the table below.
 
 
-\href{https://demos-mu.vercel.app/demo/light-sensor}{https://demos-mu.vercel.app/demo/light-sensor}
+\begin{tabular}{|p{4cm}|p{8.25cm}|p{0.75cm}|}
+ \hline
+ \multicolumn{3}{|c|}{Demos} \\
+ \hline
+ \textbf{Demo name}  & \textbf{What does it do?} & \textbf{link}\\
+ \hline
+ % PUCK DEMO
+Puck Light Demo  & A small program which utilises the pucks light sensor to activate the LED when the light levels
+are low(room is dark)& \href{https://demos-mu.vercel.app/demo/light-sensor}{here}\\ \hline
+% PIXL DEMO
+Pixl Game Demo& A small game playable through a mobile device via a scannable QR code&\href{https://demos-mu.vercel.app/demo/pixl-dinosaur-demo}{here}\\ \hline
+% PEER DEMO
+Peer Piano Demo&A piano web application that is controlled by a mobile phone with sound coming through the browser&\href{https://demos-mu.vercel.app/demo/piano-demo}{here} \\ \hline
+    % TRANSPILER DEMO
+Transpiler visualised&A demonstration of the online environment showing input and output of the transpiler package&\href{https://demos-mu.vercel.app/demo/transpiler}{here} \\ \hline
+    % CEA DEMO
+*CEA directory population&A short demo on the create-espruino-app directory initialisation from a single command&\href{https://demos-mu.vercel.app/demo/create-espruino-app}{here} \\ \hline
+*CEA speed comparison&A short comparison video showing the time required to get set up with standard uart.js vs with the *CEA cli tool&\href{https://demos-mu.vercel.app/demo/create-espruino-app-speed-comp}{here}\\
+ \hline
+    \end{tabular}
 
-\subsection{Pixl Game Demo}
-- Shows off upload functionality.
-- utilising functions to run the game.
-- extending functionality of core package.
-
-\subsection{Robot Demo}
-- Custom device
-- Non standard espruino device
-
-\section{Peer}
-
-\subsection{Piano Demo}
-- Sends data over peer package
-- utilises a mobile device not supported by webrtc
-\href{https://demos-mu.vercel.app/demo/piano-demo}{https://demos-mu.vercel.app/demo/piano-demo}
-
-\subsection{Sending Video}
-Hand tracking data sent over to device can control LED on espruino device
-
-\section{Transpiler}
-
-\subsection{Side by side comparison}
-From IDE show how the compiler changes the code
-\href{https://demos-mu.vercel.app/demo/transpiler}{https://demos-mu.vercel.app/demo/transpiler}
-
-\section{create-espruino-app}
-
-\subsection{Directory population}
-\href{https://demos-mu.vercel.app/demo/create-espruino-app}{https://demos-mu.vercel.app/demo/create-espruino-app}
+\textit{*CEA is an abbreviation of create-espruino-app, similar to React's create-react-app being shortened to CRA}
 
 \chapter{Wireframes}
 \label{appendix:wireframes}
 
 \section{Connection}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{dissertation/images/wireframe-connection.png}
-    \caption{Connection modal - Wireframe}
+    \caption{Proposed modal for device connection, with a design inspired from the React Mantine UI library aiming to make embedding Espruino connection into a web application cleaner and more suited to modern web design.}
     \label{fig:connection-wireframe}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{dissertation/images/wireframe-connection-style-guide.png}
-    \caption{Connection Style guide modal - Wireframe}
+    \caption{Wireframe for the style guide for the connection modal to allow developers an easy method of restyling to fit their own web pages design. This includes CSS variable names in BEM formatting due to the usage of JSS on the web page.}
     \label{fig:connection-style-wireframe}
 \end{figure}
 
 \section{Qr Code}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{dissertation/images/wireframe-qr.png}
-    \caption{QR Modal - Wireframe}
+    \caption{Proposed modal for peer-to-peer mobile device scanning through the addition of a QR code, styled to be consistent with the connection modal in \ref{fig:connection-wireframe}}
     \label{fig:qr-wireframe}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics{dissertation/images/wireframe-qr-icon.png}
-    \caption{QR Modal Icon - Wireframe}
+    \caption{Proposed icon to enable to peer-to-peer modal, this was designed to ensure ease of integration into customised website designs whilst being full replaceable if needed}
     \label{fig:qr-icon-wireframe}
 \end{figure}
 
@@ -1509,28 +1509,28 @@ From IDE show how the compiler changes the code
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=14cm]{dissertation/images/prog-survey-Q1.png}
-    \caption{Programming classes preparation - Survey}
+    \caption{Survey question on whether or not programming classes in university have aided students in developing their own production-grade systems.}
     \label{fig:survey-q1}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=14cm]{dissertation/images/prog-survey-Q2.png}
-    \caption{Self-learning - Survey}
+    \caption{Survey question on whether or not students have had to incorporate self learning into the schedule to keep up with building real software systems such as web or mobile applications}
     \label{fig:survey-q2}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics{dissertation/images/prog-survey-Q3.png}
-    \caption{What does university miss - Survey}
+    \caption{An open-ended survey question to gauge what students believe the university misses when it comes to preparing students for their work life after university}
     \label{fig:survey-q3}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics{dissertation/images/prog-survey-Q4.png}
-    \caption{University class wishlist - Survey}
+    \caption{An open-ended survey question to gauge what students wish the university had included in the curriculum to prepare them for work after graduation}
     \label{fig:survey-q4}
 \end{figure}
 
