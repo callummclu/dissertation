@@ -1,8 +1,10 @@
 # Espruino Tools
 
-An asynchronous JavaScript library to control remote embedded devices [JavaScript, Promise, Arduino]
+An exploration of remote embedded systems programming through modern web technologies.
 
 ## What is Espruino Tools?
+
+Espruino tools are a set of node packages built with the aim to make development on espruino devices as easy as possible.
 
 <!-- # Guidance
 This is a suggested template for a project. You can modify it as you please, but

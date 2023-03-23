@@ -610,7 +610,7 @@
 
 - _2 hours_ finalised first draft of summary.
 
-## Week 22 `<!-- thisWeek: XXhr, total: XXhr-->`
+## Week 22 `<!-- thisWeek: 20hr, total: 473.5hr-->`
 
 ### 14 Mar 2023 `<!-- 3 hours -->`
 
@@ -641,6 +641,26 @@
 - _1 hour_ made cli comparison demo for the presentation.
 - _1 hour_ read over dissertation and fixed grammatical errors at first glance.
 
-### 19 Mar 2023 `<!-- X hours -->`
+### 19 Mar 2023 `<!-- 2 hours -->`
+
+- _2 hours_ began making changes to the report from supervisor and peer feedback.
 
 ## Week 23 `<!-- thisWeek: XXhr, total:XXhr-->`
+
+### 20 Mar 2023 `<!-- 2 hours -->`
+
+- _2 hours_ began work on presentation through building demos.
+
+### 21 Mar 2023 `<!-- 4 hours -->`
+
+- _2 hours_ further work on project resolving all the comments.
+- _2 hours_ further work on presentation finalising a structure.
+
+### 22 Mar 2023 `<!-- 2 hours -->`
+
+- _1 hour_ met with supervisor.
+- _1 hour_ changes to presentation
+
+### 23 Mar 2023 `<!-- X hours -->`
+
+### 24 Mar 2023 `<!-- X hours -->`
