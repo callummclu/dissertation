@@ -81,10 +81,4 @@
 - **Week 16**
   - dissertation writing.
   - begin IDE implementation.
-- **Week 17**
-- **Week 19**
-- **Week 20**
-- **Week 21**
-- **Week 22**
-- **Week 23 [TERM ENDS]**
-- **Week 24** Dissertation submission deadline and presentations.
+- **Week 17 - 14** -_plan was discussed through powerpoint meetings in the meetings folder_

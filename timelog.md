@@ -645,7 +645,7 @@
 
 - _2 hours_ began making changes to the report from supervisor and peer feedback.
 
-## Week 23 `<!-- thisWeek: XXhr, total:XXhr-->`
+## Week 23 `<!-- thisWeek: 22hr, total:495.5hr-->`
 
 ### 20 Mar 2023 `<!-- 2 hours -->`
 
@@ -661,6 +661,15 @@
 - _1 hour_ met with supervisor.
 - _1 hour_ changes to presentation
 
-### 23 Mar 2023 `<!-- X hours -->`
+### 23 Mar 2023 `<!-- 8 hours -->`
 
-### 24 Mar 2023 `<!-- X hours -->`
+- _2 hours_ changes to presentation.
+- _3 hours_ finalising presentation.
+- _1 hour_ minor dissertation tweaks.
+- _2 hours_ dry runs at presentation.
+
+### 24 Mar 2023 `<!-- 6 hours -->`
+
+- _2 hours_ dry runs of presentation.
+- _1 hour_ final presentation alongside compression and exporting the video.
+- _3 hours_ final dissertation tweaks before submission.
