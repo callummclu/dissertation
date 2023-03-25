@@ -68,7 +68,7 @@ morestring=[b]`
 \pagenumbering{arabic} 
 
 
-\section{Motivation}
+\section{Motivation} % READ AND SOUNDS GOOD
 
 \text 
 \\ \\
@@ -81,10 +81,10 @@ This project aims to tackle these challenges by providing developers with a mode
 \\ \\
 This project further aims to help prepare future programmers and software engineers for work within the embedded systems, allowing them to achieve working systems and develop in-demand skills through modern JavaScript with easy access to work with any current JavaScript framework or library of their choice. Furthermore, by incorporating embedded device development into the learning process, beginner programmers can engage with tangible creations whilst introducing them to bringing other industry sectors into their programming. This idea of developing programming skills strengthens the fundamentals and enforces a rewarding process for beginners.
 
-\section{Aims}
+\section{Aims} % READ AND SOUNDS GOOD
 
 \text This effort will create a collection of packages to lower the threshold for individuals looking to get into programming in the remote embedded systems area yet still offering benefits for experienced coders by streamlining the current Espruino implementation. Additionally, these modules are constructed with a strong emphasis on web technologies, providing both novice and seasoned developers an opportunity to deepen their understanding of current web technologies while working on their embedded systems.
-\subsection{Goals}
+\subsection{Goals} % READ AND SOUNDS GOOD
 \text The problem is broken down into the following focal points from the aims stated above.
 \\
 \subsubsection{Beginner friendly platform} \hfill\\
@@ -107,7 +107,7 @@ This project further aims to help prepare future programmers and software engine
 
 
 %==================================================================================================================================
-\chapter{Background}
+\chapter{Background} % READ AND SOUNDS GOOD
 
 \section{The Current state of learning programming}
 
@@ -141,7 +141,7 @@ The trends in this survey show that whilst the standard route of learning at uni
 On the other side of the spectrum, many aspiring software engineers take the route of code "boot camps" such as \href{https://www.freecodecamp.org/}{freeCodeCamp} or \href{https://www.schoolofcode.co.uk/}{School of Code}. These intensive courses aim to produce work-ready skills whilst avoiding theoretical skills that help programmers better understand how the underlying programs work. These courses are usually highly specialized and web-focused, meaning developers can potentially finish with a lack of transferable skills harming the ability of developers to transfer to new technologies and grow as a developer. An issue that comes with code boot camps is programmers who have followed tutorials word for word without absorbing the content itself, resulting in people who believe they know how to develop systems without any real idea \citep{thayer2017barriers}.
 
 \subsection{The job market}
-The job market for software engineers is ever-evolving, which rewards a developer's skill to learn on the job constantly. Despite this, languages such as JavaScript remain the most used area within \cite{stack-overflow-dev-survey}'s Developer Survey we can see current trends. With an ever-evolving job market, anybody learning to program must be able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
+The job market for software engineers is ever-evolving, which rewards a developer's skill to learn on the job constantly. Despite this, we can see current trends in languages such as JavaScript remain the most used area within \cite{stack-overflow-dev-survey}'s Developer Survey. With an ever-evolving job market, anybody learning to program must be able to understand the fundamentals of systems through the construction of systems whilst also understanding why these systems work at the lower level.
 
 \section{Espruino Devices}
 \text 
@@ -182,7 +182,7 @@ Software packages are methods of extending the functionality of a given language
 
 
 \section{Device to device communication}
-The challenge of real-time communication between devices in web development is a difficult subject. Despite this real-time communication is widely used web applications and mobile apps such as WhatsApp and Facebook Messenger for sending text data between two devices. Another aspect to real-time communication is sending voice data, the popular \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} is widely used by services such as Skype or Zoom. All of these products have an overarching theme of using either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
+The challenge of real-time communication between devices in web development is a difficult subject. Despite this, real-time communication is widely used in web applications and mobile apps such as WhatsApp and Facebook Messenger for sending text data between two devices. Another aspect of real-time communication is sending voice data. The popular \href{https://developer.mozilla.org/en-US/docs/Glossary/VoIP}{Voice over Internet Protocol (VoIP)} is widely used by services such as Facetime or Discord. All of these products have an overarching theme of using either \href{https://developer.mozilla.org/en-US/docs/Web/API/WebSocket}{Web-Sockets} or \href{https://developer.mozilla.org/en-US/docs/Glossary/P2P}{Peer to Peer (P2P)} connection.
 
 \subsection{WebRTC}
 \href{https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API}{WebRTC (Web Real-Time Communication)} \text is an open-source project which extends the base functionality of JavaScript by supporting peer-to-peer data transfer between two web browsers without the need for external software. WebRTC uses signalling servers to initialise a connection between two browsers allowing for direct data transfer without additional server cost. This technology is highly effective in transferring data in the form of text, JSON, audio or video making it an ideal choice for video meetings or video game servers. Below in Figure \ref{fig:webRTC}, we can see the data flow between browsers and the signalling server.
@@ -217,7 +217,7 @@ The \href{https://www.espruino.com/ide/}{Espruino IDE} provides an online platfo
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
 
-\text Due to the nature of this project having multiple smaller packages/applications, these mini projects were analysed separately. To accomplish this, a MoSCoW analysis \citep{waters2009prioritization} was undertaken on each project individually. Below is a compilation of the main points from this individual analysis, including overlapping themes and essential points from each project with the complete MOSCOW requirements for each project, referenced within Appendix \ref{appendix:MOSCOWAnalysis}.
+\text Due to the nature of this project having multiple smaller packages/applications, these mini projects were analysed separately. A MoSCoW analysis \citep{waters2009prioritization} was undertaken on each project individually to accomplish this. Below is a compilation of the main points from this individual analysis, including overlapping themes and essential points from each project with the complete MOSCOW requirements for each project, referenced within Appendix \ref{appendix:MOSCOWAnalysis}.
 
 \section{Problem specification}
 \text The espruino platform provides an unopinionated approach to how users should work on their projects, resulting in a less-than-perfect catalogue of tools being utilised out of necessity. For beginners, these tools can be uninviting; alongside this, they lack an extensive tool library that may be useful to experienced programmers. When developing within the standard Espruino ecosystem of tools, there are areas where Espruino makes life harder for the developer; shown below, we can see some of the most prominent areas in need of improvement.
@@ -230,10 +230,6 @@ Espruino development cannot work with JavaScript modules, meaning that  projects
 
 \subsubsection{Code written as a string}\hfill\\
 To write code to an Espruino device in the current implementation, all code must be within a string to allow it to be sent over a WebBluetooth connection. An example of writing code to an Espruino device is shown in figure \ref{fig:OLD_UART_DEVICE_WRITING_CODE}
-
-
-
-
     \begin{figure}[H]
     \centering
     \begin{minipage}{8cm}
@@ -287,7 +283,7 @@ Another issue brought up through having to write code in a string is that no cod
 
 
 \section{Functional Requirements}
-The problem statement made an open-ended approach to the current challenge possible. By adopting a strategy that intended to enhance existing strategies while building a platform that enabled novice programmers to participate and learn. The following breakdown is the result of these considerations.
+The problem statement made an open-ended approach to the current challenge possible by adopting a strategy to enhance existing products whilst building a platform enabling novice programmers to participate and learn. The following breakdown is the result of these considerations.
 
 \subsection{Must Have}
 \begin{itemize}
@@ -341,7 +337,7 @@ A problem this presents is that \cite{mobile-os-market-share}'s Mobile Operating
     \label{fig:smartdeviceusage}
 \end{figure}
 
-Smartphones may be used within the remote embedded systems space due to the limitations of the embedded device. Mobile phones present multiple input and output interfaces that Espruino devices do not have such as cameras (used in tracking), microphones (used in voice commands), or even touch controls that allow for a more comprehensive feature set than the simple buttons provided.
+Smartphones may be used within the remote embedded systems space due to the limitations of the embedded device. Mobile phones present multiple input and output interfaces that Espruino devices do not have, such as cameras (used in tracking), microphones (used in voice commands), or even touch controls that allow for a more comprehensive feature set than the simple buttons provided.
 \\ 
 
 To bypass this issue and allow unsupported control over these devices, a solution of utilising a peer-to-peer communication package was developed to allow unsupported devices to connect to a main supported device as shown in figure \ref{fig:mobile-computer-connection}. 
@@ -408,7 +404,7 @@ To solve this problem, an approach which took inspiration from transpiled langua
 \end{itemize}
 
 \subsection{Online Environment}
-\text The original Espruino project includes an online environment which allows users to develop straight onto their Espruino devices, removing the need to set up a local environment to test smaller features. As this project utilises a new syntax whilst bringing many useful development tools such as gathering device code effectively, it made sense to take inspiration from the Espruino IDE and create an environment which supports this new style of programming on Espruino devices whilst incorporating functionality aimed at improving the experience for developers. For this aspect of the project to be effective, it had to meet the following criteria:
+\text The original Espruino project includes an online environment which allows users to develop straight onto their Espruino devices, removing the need to set up a local environment to test smaller features. As this project utilises a new syntax whilst bringing many useful development tools, such as gathering device code effectively, it made sense to take inspiration from the Espruino IDE and create an environment which supports this new style of programming on Espruino devices whilst incorporating functionality aimed at improving the experience for developers. For this aspect of the project to be effective, it had to meet the following criteria:
 \\
 \begin{itemize}
     \item It must support live development with the ability to run code and see device output to allow developers to catch any bugs that may be missed in standard development.
@@ -422,15 +418,15 @@ To solve this problem, an approach which took inspiration from transpiled langua
 
 \section{Development}
 
-Throughout the development of this project, multiple development approaches have been taken based on the project style. By utilising both a feedback-driven model alongside a test-driven approach, each aspect of the project has been allocated an appropriate development style to ensure robustness, cleanness and adequate feature sets. These approaches were enforced using agile methodologies by dividing specification points into work items and allocating them during week-long sprints furthering the quick approach to iterating the product.
+Throughout the development of this project, multiple development approaches have been taken based on the project style. By utilising both a feedback-driven model alongside a test-driven approach, each aspect of the project has been allocated an appropriate development style to ensure robustness, cleanness and adequate feature sets. Agile methodologies enforced these approaches by dividing specification points into work items and allocating them during week-long sprints, furthering the quick approach to iterating the product.
 
 \subsection{Feedback Driven Development}
-By utilising a feedback-driven approach, the project was able to constantly evolve into a product more suited to the people actually using it. To take full advantage of the Espruino community and ensure the project provided useful features three methods of gathering feedback were used.
+By utilising a feedback-driven approach, the project was able to evolve constantly into a product more suited to the people actually using it. To take full advantage of the Espruino community and ensure the project provided useful features, three methods of gathering feedback were used.
 
 \text \\
 
 \subsubsection{Espruino Forum}\hfill\\
-The Espruino Forum pictured in figure \ref{fig:espruino-forum} is a platform used by the community to share new projects or to ask for help with problems ran into within the development cycle. The forum allowed for direct communication with Gordan Williams the creator of the Espruino platform. Discussion and feedback on the shared project allowed for further iterations of the project to be made.
+The Espruino Forum pictured in figure \ref{fig:espruino-forum} is a platform used by the community to share new projects or to ask for help with problems run into within the development cycle. The forum allowed for direct communication with Gordan Williams, the creator of the Espruino platform. Discussion and feedback on the shared project allowed for further iterations of the project to be made.
 
 \begin{figure}[!ht]
     \centering
@@ -887,12 +883,12 @@ An example of the input and output of the Transpiler package can be seen below i
   \begin{lstlisting}[
     basicstyle=\footnotesize
 ]
-let p = new Puck()
-p.mag.onMag((val)=>{
+let p = new Puck();
+p.mag.onMag(val => {
     if(val > 2){
-        p.LED.on("blue")
+        p.LED.on("blue");
     } else {
-        p.LED.off("blue")
+        p.LED.off("blue");
     }
 })
 
@@ -1291,12 +1287,12 @@ Throughout the development of the transpiler package, it became apparent that th
 %  APPENDICES  
 
 \begin{appendices}
-\chapter{Individual MOSCOW Analysis}
+\chapter{Individual MoSCoW Analysis}
 
 
 \label{appendix:MOSCOWAnalysis}
 
-Below is the individual MOSCOW analysis of each project. These will go further into depth about the state of each individual project analysis and provide more detail surrounding the priorities.
+Below is the individual MoSCoW analysis of each project. These will go further into depth about the state of each individual project analysis and provide more detail surrounding the priorities.
 
 %== CORE
 
